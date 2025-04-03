@@ -50,6 +50,129 @@ def filter_unique_frames(frames_folder, similarity_threshold=0.80):
     
     print(f"Identified {len(unique_frames)} unique frames out of {len(frame_files)} total frames")
     return unique_frames
+
+def improved_lane_detection(frame, roi_mask):
+    """
+    Improved method for detecting lane markings in frames
+    
+    Args:
+        frame: Input image frame
+        roi_mask: Region of interest mask
+        
+    Returns:
+        Binary mask with lane markings
+    """
+    # Get dimensions
+    height, width = frame.shape[:2]
+    
+    # Apply bilateral filter to reduce noise while preserving edges
+    filtered_frame = cv2.bilateralFilter(frame, 7, 50, 50)
+    
+    # -------- HSV COLOR SPACE DETECTION --------
+    hsv = cv2.cvtColor(filtered_frame, cv2.COLOR_BGR2HSV)
+    
+    # White lanes detection (fine-tuned)
+    white_lower = np.array([0, 0, 210])
+    white_upper = np.array([180, 30, 255])
+    white_mask = cv2.inRange(hsv, white_lower, white_upper)
+    
+    # Orange/yellow lanes detection (fine-tuned)
+    orange_lower = np.array([10, 100, 160])
+    orange_upper = np.array([30, 255, 255])
+    orange_mask = cv2.inRange(hsv, orange_lower, orange_upper)
+    
+    # -------- HLS COLOR SPACE DETECTION --------
+    hls = cv2.cvtColor(filtered_frame, cv2.COLOR_BGR2HLS)
+    
+    # White in HLS
+    white_lower_hls = np.array([0, 200, 0])
+    white_upper_hls = np.array([180, 255, 255])
+    white_mask_hls = cv2.inRange(hls, white_lower_hls, white_upper_hls)
+    
+    # Yellow/orange in HLS 
+    yellow_lower_hls = np.array([15, 100, 50])
+    yellow_upper_hls = np.array([35, 205, 255])
+    yellow_mask_hls = cv2.inRange(hls, yellow_lower_hls, yellow_upper_hls)
+    
+    # Combine all color masks
+    color_mask = cv2.bitwise_or(white_mask, orange_mask)
+    hls_mask = cv2.bitwise_or(white_mask_hls, yellow_mask_hls)
+    combined_color_mask = cv2.bitwise_or(color_mask, hls_mask)
+    
+    # Apply ROI
+    combined_color_mask = cv2.bitwise_and(combined_color_mask, roi_mask)
+    
+    # Create a position-weighted mask (focus on bottom portion)
+    position_weight = np.ones_like(combined_color_mask, dtype=np.float32)
+    for y in range(height):
+        weight = 0.3 + 0.7 * (y / height)
+        position_weight[y, :] = weight
+    
+    # Apply the position weighting
+    weighted_mask = cv2.multiply(combined_color_mask.astype(np.float32), position_weight)
+    weighted_mask = weighted_mask.astype(np.uint8)
+    
+    # Apply small morphological close to connect nearby points
+    kernel_close = np.ones((3, 3), np.uint8)
+    processed_mask = cv2.morphologyEx(weighted_mask, cv2.MORPH_CLOSE, kernel_close)
+    
+    # Find and filter connected components
+    num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(processed_mask, connectivity=8)
+    
+    filtered_mask = np.zeros_like(processed_mask)
+    
+    for i in range(1, num_labels):
+        # Get component properties
+        area = stats[i, cv2.CC_STAT_AREA]
+        comp_width = stats[i, cv2.CC_STAT_WIDTH]
+        comp_height = stats[i, cv2.CC_STAT_HEIGHT]
+        x_pos = stats[i, cv2.CC_STAT_LEFT]
+        y_pos = stats[i, cv2.CC_STAT_TOP]
+        
+        # Calculate component center and relative positions
+        center_x = x_pos + comp_width/2
+        rel_x_pos = center_x / width
+        rel_y_pos = y_pos / height
+        
+        # Adaptive criteria based on position
+        min_area = 10 + 70 * (1.0 - rel_y_pos)
+        
+        # Lane-like shape calculations
+        aspect_ratio = comp_height / comp_width if comp_width > 0 else 999
+        is_lane_shaped = ((aspect_ratio > 1.5 and comp_height > 25) or 
+                         (comp_width < 80 and comp_height > 15) or
+                         (area > 80 and comp_width < 50))
+        
+        is_valid_position = (rel_y_pos > 0.3)
+        
+        if area > min_area and is_lane_shaped and is_valid_position and area < 8000:
+            component_mask = np.zeros_like(processed_mask)
+            component_mask[labels == i] = 255
+            filtered_mask = cv2.bitwise_or(filtered_mask, component_mask)
+    
+    # If nothing significant was detected, fall back to basic mask
+    if cv2.countNonZero(filtered_mask) < 10:
+        filtered_mask = processed_mask.copy()
+    
+    # Final cleanup for thin, clear lines
+    kernel_enhance = np.ones((3, 3), np.uint8)
+    filtered_mask = cv2.morphologyEx(filtered_mask, cv2.MORPH_CLOSE, kernel_enhance)
+    
+    # Very light dilation for slightly thicker lines where needed
+    kernel_dilate = np.ones((3, 3), np.uint8)
+    filtered_mask = cv2.dilate(filtered_mask, kernel_dilate, iterations=1)
+    
+    # Apply Gaussian blur
+    blurred_mask = cv2.GaussianBlur(filtered_mask, (3, 3), 0)
+    
+    # Final threshold for clear lines
+    _, final_mask = cv2.threshold(blurred_mask, 40, 255, cv2.THRESH_BINARY)
+    
+    # Apply ROI as final step
+    final_mask = cv2.bitwise_and(final_mask, roi_mask)
+    
+    return final_mask
+
 def detect_lanes_and_create_masks(frames_folder, masks_folder, unique_only=True, similarity_threshold=0.80):
     """
     Process frames to detect lanes and create binary masks for training
@@ -90,94 +213,8 @@ def detect_lanes_and_create_masks(frames_folder, masks_folder, unique_only=True,
         # Fill only the bottom portion of the image - adjust the 0.25 as needed
         roi_mask[int(height*0.25):height, 0:width] = 255
         
-        # ---------- COLOR-BASED DETECTION (FOCUSED ON WHITE & ORANGE) ----------
-        # Convert to HSV color space for better color detection
-        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-        
-        # Define range for orange lane (replaces yellow)
-        orange_lower = np.array([5, 80, 150])
-        orange_upper = np.array([25, 255, 255])
-        
-        # Define range for white lane (more strict)
-        white_lower = np.array([0, 0, 180])  # Higher value threshold for cleaner detection
-        white_upper = np.array([180, 40, 255])
-        
-        # Create binary masks for orange and white
-        orange_mask = cv2.inRange(hsv, orange_lower, orange_upper)
-        white_mask = cv2.inRange(hsv, white_lower, white_upper)
-        
-        # Combine orange and white masks
-        color_mask = cv2.bitwise_or(orange_mask, white_mask)
-        
-        # Apply ROI to color mask
-        color_mask = cv2.bitwise_and(color_mask, roi_mask)
-        
-        # Apply morphological operations to clean up the mask
-        # Use smaller kernels for thinner lines
-        kernel_close = np.ones((3, 3), np.uint8)
-        color_mask = cv2.morphologyEx(color_mask, cv2.MORPH_CLOSE, kernel_close)
-        
-        # Create a position-weighted mask to reduce noise in upper portion
-        position_weight = np.ones_like(color_mask, dtype=np.float32)
-        for y in range(height):
-            # Weight increases as we move down the image (1.0 at bottom, 0.3 at top)
-            weight = 0.3 + 0.7 * (y / height)
-            position_weight[y, :] = weight
-            
-        # Apply the position weighting - upper part becomes darker
-        weighted_mask = cv2.multiply(color_mask.astype(np.float32), position_weight)
-        weighted_mask = weighted_mask.astype(np.uint8)
-        
-        # Find connected components
-        num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(weighted_mask, connectivity=8)
-        
-        # Filter components with position-adaptive criteria
-        filtered_mask = np.zeros_like(color_mask)
-        
-        for i in range(1, num_labels):  # Skip background (0)
-            # Get component properties
-            area = stats[i, cv2.CC_STAT_AREA]
-            comp_width = stats[i, cv2.CC_STAT_WIDTH]
-            comp_height = stats[i, cv2.CC_STAT_HEIGHT]
-            y_pos = stats[i, cv2.CC_STAT_TOP]  # Y position from top
-            
-            # Calculate relative position in image (0 = top, 1 = bottom)
-            rel_position = y_pos / height
-            
-            # Adaptive criteria based on position
-            min_area = 15 + 80 * (1.0 - rel_position)  # Lower minimum area for thinner lines
-            shape_factor = 1.1 + 0.6 * (1.0 - rel_position)  # Less strict shape requirements
-            
-            # Apply adaptive criteria - adjusted for thinner lines
-            # Allow smaller components and less strict shape requirements
-            if area > min_area and (comp_height > comp_width * shape_factor or comp_width > 50) and area < 10000:
-                # Create mask for this component
-                component_mask = np.zeros_like(color_mask)
-                component_mask[labels == i] = 255
-                
-                # Add to filtered mask
-                filtered_mask = cv2.bitwise_or(filtered_mask, component_mask)
-        
-        # If nothing was detected, fall back to original weighted mask
-        if cv2.countNonZero(filtered_mask) < 10:
-            filtered_mask = weighted_mask.copy()
-        
-        # Enhance lane lines with a smaller kernel for thinner lines
-        kernel_enhance = np.ones((3, 3), np.uint8)  # Smaller kernel
-        filtered_mask = cv2.morphologyEx(filtered_mask, cv2.MORPH_CLOSE, kernel_enhance)
-        
-        # Less dilation for thinner lines
-        kernel_dilate = np.ones((3, 3), np.uint8)  # Smaller kernel
-        filtered_mask = cv2.dilate(filtered_mask, kernel_dilate, iterations=1)  # Fewer iterations
-        
-        # Apply Gaussian blur with smaller kernel
-        filtered_mask = cv2.GaussianBlur(filtered_mask, (3, 3), 0)
-        
-        # Binarize with higher threshold for thinner lines
-        _, final_mask = cv2.threshold(filtered_mask, 30, 255, cv2.THRESH_BINARY)
-        
-        # Apply ROI mask as a final step to ensure top portion is excluded
-        final_mask = cv2.bitwise_and(final_mask, roi_mask)
+        # Use improved lane detection method
+        final_mask = improved_lane_detection(frame, roi_mask)
         
         # Save the lane mask
         mask_filename = os.path.join(masks_folder, frame_file.replace('.jpg', '_mask.png'))
