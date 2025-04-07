@@ -385,6 +385,6 @@ def verify_and_correct_masks(frames_folder, masks_folder):
 
 if __name__ == "__main__":
     frames_folder = "frames"
-    masks_folder = "masks"
+    masks_folder = "masks_rec"
     
     verify_and_correct_masks(frames_folder, masks_folder)
