@@ -1,4 +1,4 @@
-# Dataset Repository for SEAME Lab
+# SEAME Lab: Datasets for Local Track and Carla Simulation
 
 This repository contains datasets and tools for computer vision and autonomous driving research at the SEAME laboratory.
 
