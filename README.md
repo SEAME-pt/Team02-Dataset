@@ -11,6 +11,7 @@ This repository hosts two primary datasets:
 
 ## Repository Structure
 
+```
 Dataset/
 ├── SEAME/
 │   ├── frames/        # Raw image frames from physical track
@@ -25,6 +26,7 @@ Dataset/
 │   ├── masks/              # Lane detection masks
 │   ├── correct.py/
 │   └── CarlaConverter.py/ 
+```
 
 ## Datasets
 
