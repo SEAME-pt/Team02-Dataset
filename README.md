@@ -51,3 +51,32 @@ This dataset is generated from the Carla autonomous driving simulator. It contai
 python CarlaConverter.py --input carla/frames --output carla/masks
 
 ```
+
+## Scripts
+
+### SEAME Dataset Scripts
+- **frames.py**: Extracts frames from the local track videos
+- **masks.py**: Generates masks for the extracted frames
+- **compare.py**: Compares generated masks with ground truth
+- **correct.py**: Tool for correcting/adjusting masks
+
+### Carla Dataset Scripts
+- **CarlaConverter.py**: Converts Carla simulator output to usable dataset format
+- **correct.py**: Tool for adjusting and correcting Carla masks
+
+## Future Work
+
+- Add extraction tools for Carla simulator data that can:
+  - Extract actor information
+  - Generate instance segmentation masks
+  - Create labeled datasets for object detection
+- Expand datasets with additional driving scenarios
+- Create benchmarking tools for evaluation
+
+## Getting Started
+
+1. Clone this repository
+2. Install dependencies
+3. Run the appropriate scripts to generate masks:
+   - For local track: `python SEAME/masks.py`
+   - For Carla data: `python carla/CarlaConverter.py`
