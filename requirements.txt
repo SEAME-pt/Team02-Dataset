@@ -1,11 +1,6 @@
-torch
-torchvision
-timm
 matplotlib
 pandas
 numpy
 opencv-python
-albumentations
-onnx
 scikit-learn
 scikit-image

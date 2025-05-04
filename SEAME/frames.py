@@ -88,16 +88,10 @@ if __name__ == "__main__":
     video_path = "assets/seame_data.mp4"
     output_folder = "frames"
     
-    # Choose one of the extraction methods:
-    
-    # Option 1: Extract only unique frames (recommended)
-    # Adjust similarity_threshold: 
-    # - Higher values (e.g., 0.98) = fewer frames saved
-    # - Lower values (e.g., 0.80) = more frames saved
     extract_unique_frames(
         video_path, 
         output_folder, 
-        similarity_threshold=0.98,  # Lowered from 0.95 to 0.80 for much more distinct frames
+        similarity_threshold=0.60,  # Lowered from 0.95 to 0.80 for much more distinct frames
         skip_frames=1             # Check every 5th frame for efficiency
     )
     
