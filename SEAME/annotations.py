@@ -383,8 +383,11 @@ def create_lane_annotations(frames_folder, output_json_path):
             save_confirm = input("Save annotations before quitting? (y/n): ")
             if save_confirm.lower() == 'y':
                 with open(output_json_path, 'w') as f:
-                    json.dump(annotations, f, indent=2)
-                print(f"Saved annotations to {output_json_path}")
+                    # Write each annotation as a separate line (JSONL format)
+                    for ann in annotations:
+                        if ann:  # Skip any None values
+                            f.write(json.dumps(ann) + '\n')
+                print(f"Saved {len(annotations)} annotations to {output_json_path} in JSON Lines format")
             break
             
         elif key == ord('n'):  # Next image
@@ -490,8 +493,12 @@ def create_lane_annotations(frames_folder, output_json_path):
             
         elif key == ord('s'):  # Save all annotations
             with open(output_json_path, 'w') as f:
-                json.dump(annotations, f, indent=2)
-            print(f"Saved {len(annotations)} annotations to {output_json_path}")
+                # Write each annotation as a separate line (JSONL format)
+                for ann in annotations:
+                    if ann:  # Skip any None values
+                        f.write(json.dumps(ann) + '\n')
+            print(f"Saved {len(annotations)} annotations to {output_json_path} in JSON Lines format")
+
             
         elif key == ord('h'):  # Help
             print("\nKEYBOARD SHORTCUTS:")
