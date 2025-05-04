@@ -85,7 +85,7 @@ def main():
     print(f"Dataset loaded with {len(dataset)} samples")
     
     # Visualize a few samples
-    num_samples = 5
+    num_samples = 91
     for i in range(min(num_samples, len(dataset))):
         print(f"Visualizing sample {i+1}/{num_samples}")
         
