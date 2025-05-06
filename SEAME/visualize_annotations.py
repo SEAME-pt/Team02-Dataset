@@ -96,4 +96,4 @@ def main():
         visualize_sample(image, binary_mask, instance_masks, n_lanes)
     
 if __name__ == "__main__":
-    main()
+    main()  

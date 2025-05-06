@@ -2,7 +2,24 @@ import cv2
 import os
 import numpy as np
 import json
-from collections import defaultdict
+
+def load_jsonl(file_path):
+    """
+    Load a JSON Lines file where each line is a separate JSON object
+    Returns a list of dictionaries
+    """
+    data = []
+    try:
+        with open(file_path, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('//'):
+                    data.append(json.loads(line))
+        print(f"Successfully loaded {len(data)} items from {file_path}")
+        return data
+    except Exception as e:
+        print(f"Error loading from {file_path}: {e}")
+        return []
 
 def create_lane_annotations(frames_folder, output_json_path):
     """
@@ -40,7 +57,7 @@ def create_lane_annotations(frames_folder, output_json_path):
     if os.path.exists(output_json_path):
         try:
             with open(output_json_path, 'r') as f:
-                annotations = json.load(f)
+                annotations = load_jsonl(output_json_path)
             print(f"Successfully loaded {len(annotations)} annotations from {output_json_path}")
             
             # Print the first few annotations to verify
