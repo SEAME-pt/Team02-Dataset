@@ -4,3 +4,12 @@ numpy
 opencv-python
 scikit-learn
 scikit-image
+torch
+torchvision
+timm
+albumentations
+onnx
+onnxruntime
+carla
+pygame
+pycocotools
