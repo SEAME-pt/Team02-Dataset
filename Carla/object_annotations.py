@@ -23,22 +23,9 @@ import carla
 
 
 # Create save directories
-save_path = "/home/luis_t2/CarlaSimulation/obj_dataset"
+save_path = "obj_dataset"
 os.makedirs(f"{save_path}/images", exist_ok=True)
 os.makedirs(f"{save_path}/masks", exist_ok=True)
-
-# Define class mapping
-class_map = {
-    1: 1,
-    14: 2,
-    7: 3,
-    8: 4,
-    12: 5,
-    2: 6,
-    15: 7,
-    16: 8,
-    18: 9,
-}
 
 frame_data = {}
 capture_frequency = 15
@@ -70,12 +57,7 @@ def semantic_camera_callback(semantic_image):
     # We need to extract this data from the red channel
     semantic_tags = array[:, :, 2]  # Red channel contains semantic tags
     
-    # Create mask image with zeros (background class)
-    mask = np.zeros_like(semantic_tags)
-    
-    # Apply class mapping to create final mask
-    for carla_class, target_class in class_map.items():
-        mask[semantic_tags == carla_class] = target_class
+    mask = semantic_tags.copy()
     
     # Store in frame_data with frame number as key
     frame_data.setdefault(semantic_image.frame, {})['semantic'] = mask
@@ -131,7 +113,7 @@ def semantic_camera_setup(ego_vehicle, bp_library, world):
 
 def setup_carla_environment():
     client = carla.Client('127.0.0.1', 2000)
-    client.load_world("Town04")
+    client.load_world("Town01")
     client.set_timeout(60.0)
 
     traffic_manager = client.get_trafficmanager()

@@ -22,7 +22,7 @@ except IndexError:
 import carla
 
 # Create save directories
-save_path = "/home/luis_t2/CarlaSimulation/lane_dataset"
+save_path = "lane_dataset"
 os.makedirs(f"{save_path}/images", exist_ok=True)
 os.makedirs(f"{save_path}/masks", exist_ok=True)
 
