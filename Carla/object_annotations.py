@@ -113,7 +113,7 @@ def semantic_camera_setup(ego_vehicle, bp_library, world):
 
 def setup_carla_environment():
     client = carla.Client('127.0.0.1', 2000)
-    client.load_world("Town03")
+    client.load_world("Town05")
     client.set_timeout(60.0)
 
     traffic_manager = client.get_trafficmanager()
