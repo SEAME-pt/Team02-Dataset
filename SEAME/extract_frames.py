@@ -91,7 +91,7 @@ if __name__ == "__main__":
     extract_unique_frames(
         video_path, 
         output_folder, 
-        similarity_threshold=0.70,  # Lowered from 0.95 to 0.80 for much more distinct frames
+        similarity_threshold=0.65,  # Lowered from 0.95 to 0.80 for much more distinct frames
         skip_frames=1             # Check every 5th frame for efficiency
     )
     
