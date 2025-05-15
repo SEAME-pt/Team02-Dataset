@@ -85,13 +85,13 @@ def extract_unique_frames(video_path, output_folder, similarity_threshold=0.80, 
     print(f"Achieved {saved_count/frame_count*100:.2f}% compression ratio")
 
 if __name__ == "__main__":
-    video_path = "assets/seame_data.mp4"
+    video_path = "assets/seame_data_new.mp4"
     output_folder = "frames"
     
     extract_unique_frames(
         video_path, 
         output_folder, 
-        similarity_threshold=0.60,  # Lowered from 0.95 to 0.80 for much more distinct frames
+        similarity_threshold=0.70,  # Lowered from 0.95 to 0.80 for much more distinct frames
         skip_frames=1             # Check every 5th frame for efficiency
     )
     
