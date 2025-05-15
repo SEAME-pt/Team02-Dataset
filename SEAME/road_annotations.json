@@ -1,0 +1,2 @@
+{"raw_file": "frame_00000.jpg", "image_height": 480, "image_width": 640, "annotations": [{"type": "drivable_area", "polygons": [[[6, 473], [4, 125], [119, 121], [238, 47], [274, 47], [272, 102], [372, 100], [637, 473]]]}]}
+{"raw_file": "frame_00002.jpg", "image_height": 480, "image_width": 640, "annotations": [{"type": "car", "polygons": [[[152, 76], [147, 45], [176, 40], [179, 8], [186, 8], [188, 35], [207, 35], [216, 66]]]}, {"type": "drivable_area", "polygons": [[[4, 474], [1, 107], [20, 104], [98, 59], [147, 55], [150, 79], [224, 71], [518, 476]]]}]}

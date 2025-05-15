@@ -23,18 +23,19 @@ def load_jsonl(file_path):
 
 def create_road_annotations(frames_folder, output_json_path):
     """
-    Interactive tool to create drivable road area annotations
+    Interactive tool to create road and car area annotations
     
     Controls:
     - N: Next image
     - P: Previous image
     - E: Toggle polygon point placement mode
     - A: Add current polygon and start a new one
-    - F: Finish road annotation for current image and save to JSON
+    - F: Finish annotation for current image and save to JSON
     - D: Delete last point placed
     - C: Clear current polygon
     - R: Reset all polygons on current image
     - S: Save annotations to JSON file
+    - T: Toggle between classes (road/car)
     - Q: Quit
     """
     # Get sorted list of all frames
@@ -52,6 +53,15 @@ def create_road_annotations(frames_folder, output_json_path):
     # Mode flags
     editing_mode = None  # None or "place_points"
     
+    # Define available classes and colors
+    available_classes = ["drivable_area", "car"]
+    current_class = "drivable_area"  # Default class
+    
+    class_colors = {
+        "drivable_area": [(0, 255, 0), (0, 165, 255), (0, 0, 255)],  # Green, Orange, Red
+        "car": [(255, 0, 0), (255, 0, 255), (255, 255, 0)]  # Blue, Magenta, Cyan
+    }
+    
     # Load existing annotations from JSON file if it exists
     annotations = []
     if os.path.exists(output_json_path):
@@ -62,20 +72,20 @@ def create_road_annotations(frames_folder, output_json_path):
             print(f"Error loading annotations from {output_json_path}: {e}")
             annotations = []
     
-    # Current image road areas (will be a list of polygons)
+    # Current image annotations (will be a list of dicts with points and class)
     current_polygons = []
-    active_polygon = []  # Points for the current polygon being created
+    active_polygon = {"points": [], "class": current_class}  # Points for the current polygon being created
     
     # Mouse position tracking for preview
     mouse_x, mouse_y = -1, -1
     
-    # Function to create road annotation in suitable format
-    def create_road_annotation(frame_path, polygons):
+    # Function to create annotation in suitable format
+    def create_annotation(frame_path, polygons):
         if not polygons:
             print("WARNING: No polygons provided")
             return None
-                
-        print(f"Processing {len(polygons)} polygons for road annotation")
+            
+        print(f"Processing {len(polygons)} polygons for annotation")
         
         # Get image dimensions
         img = cv2.imread(frame_path)
@@ -85,16 +95,30 @@ def create_road_annotations(frames_folder, output_json_path):
                 
         h, w = img.shape[:2]
         
+        # Group polygons by class
+        polygons_by_class = {}
+        for polygon in polygons:
+            obj_class = polygon["class"]
+            if obj_class not in polygons_by_class:
+                polygons_by_class[obj_class] = []
+            polygons_by_class[obj_class].append(polygon["points"])
+        
         # Create annotation
         annotation = {
             "raw_file": os.path.basename(frame_path),
             "image_height": h,
             "image_width": w,
-            "polygons": [polygon.copy() for polygon in polygons],
-            "type": "drivable_area"
+            "annotations": []
         }
         
-        print(f"Successfully created annotation with {len(polygons)} polygons")
+        # Add each class's polygons
+        for obj_class, class_polygons in polygons_by_class.items():
+            annotation["annotations"].append({
+                "type": obj_class,
+                "polygons": [polygon.copy() for polygon in class_polygons]
+            })
+        
+        print(f"Successfully created annotation with data for {len(polygons_by_class)} classes")
         return annotation
     
     # Function to handle mouse events
@@ -114,48 +138,46 @@ def create_road_annotations(frames_folder, output_json_path):
             
         # Place point
         if event == cv2.EVENT_LBUTTONDOWN and editing_mode == "place_points":
-            active_polygon.append((x, y))
-            print(f"Placed point at ({x}, {y})")
+            active_polygon["points"].append((x, y))
+            print(f"Placed point at ({x}, {y}) for class: {active_polygon['class']}")
             update_display()
     
     # Function to update the display
     def update_display():
         nonlocal current_frame, current_polygons, active_polygon, editing_mode
-        nonlocal mouse_x, mouse_y
+        nonlocal mouse_x, mouse_y, current_class
         
         # Create a display image
         display_image = current_frame.copy()
-        
-        # Colors for existing polygons
-        polygon_colors = [
-            (0, 255, 0),    # Green
-            (0, 165, 255),  # Orange
-            (0, 0, 255),    # Red
-            (255, 0, 0),    # Blue
-            (255, 0, 255),  # Magenta
-        ]
         
         # Create overlay for filled polygons
         overlay = display_image.copy()
         
         # Draw completed polygons as filled areas with transparency
         for i, polygon in enumerate(current_polygons):
-            if len(polygon) >= 3:  # Need at least 3 points for a polygon
-                color = polygon_colors[i % len(polygon_colors)]
-                pts = np.array(polygon, np.int32)
+            points = polygon["points"]
+            obj_class = polygon["class"]
+            
+            if len(points) >= 3:  # Need at least 3 points for a polygon
+                # Get color based on class
+                color_list = class_colors[obj_class]
+                color = color_list[i % len(color_list)]
+                
+                pts = np.array(points, np.int32)
                 pts = pts.reshape((-1, 1, 2))
                 # Draw filled polygon with transparency
                 cv2.fillPoly(overlay, [pts], color)
                 
                 # Draw polygon outline
-                for j in range(len(polygon)):
-                    next_j = (j + 1) % len(polygon)
-                    cv2.line(display_image, polygon[j], polygon[next_j], color, 2)
-                    cv2.circle(display_image, polygon[j], 5, color, -1)
+                for j in range(len(points)):
+                    next_j = (j + 1) % len(points)
+                    cv2.line(display_image, points[j], points[next_j], color, 2)
+                    cv2.circle(display_image, points[j], 5, color, -1)
                 
-                # Add polygon number
-                cv2.putText(display_image, f"Area {i+1}", 
-                           (polygon[0][0] + 10, polygon[0][1]), 
+                # Add polygon class and number
+                label = f"{obj_class.replace('_', ' ').title()} {i+1}"
+                cv2.putText(display_image, label, 
+                           (points[0][0] + 10, points[0][1]), 
                            cv2.FONT_HERSHEY_SIMPLEX, 0.7, color, 2)
         
         # Apply the overlay with transparency
@@ -163,30 +185,31 @@ def create_road_annotations(frames_folder, output_json_path):
         display_image = cv2.addWeighted(overlay, alpha, display_image, 1.0, 0)
             
         # Draw the active polygon (being created)
-        if active_polygon:
-            active_color = (255, 255, 0)  # Cyan
+        if active_polygon["points"]:
+            # Get color based on active class
+            active_color = class_colors[active_polygon["class"]][0]
             
             # Draw points
-            for point in active_polygon:
+            for point in active_polygon["points"]:
                 cv2.circle(display_image, point, 5, active_color, -1)
             
             # Draw lines connecting points
-            for j in range(len(active_polygon)):
-                next_j = (j + 1) % len(active_polygon) if editing_mode == "place_points" else j + 1
-                if next_j < len(active_polygon):
-                    cv2.line(display_image, active_polygon[j], active_polygon[next_j], active_color, 2)
+            for j in range(len(active_polygon["points"])):
+                next_j = (j + 1) % len(active_polygon["points"]) if editing_mode == "place_points" else j + 1
+                if next_j < len(active_polygon["points"]):
+                    cv2.line(display_image, active_polygon["points"][j], active_polygon["points"][next_j], active_color, 2)
             
             # Draw line from last point to mouse position when in point placement mode
-            if editing_mode == "place_points" and active_polygon and mouse_x >= 0 and mouse_y >= 0:
-                cv2.line(display_image, active_polygon[-1], (mouse_x, mouse_y), active_color, 2)
+            if editing_mode == "place_points" and active_polygon["points"] and mouse_x >= 0 and mouse_y >= 0:
+                cv2.line(display_image, active_polygon["points"][-1], (mouse_x, mouse_y), active_color, 2)
                 
                 # Add preview for closing polygon if at least 3 points
-                if len(active_polygon) >= 3:
-                    cv2.line(display_image, (mouse_x, mouse_y), active_polygon[0], active_color, 2)
+                if len(active_polygon["points"]) >= 3:
+                    cv2.line(display_image, (mouse_x, mouse_y), active_polygon["points"][0], active_color, 2)
                 
             # Label as active polygon
-            cv2.putText(display_image, "Active Area", 
-                       (active_polygon[0][0] + 10, active_polygon[0][1]), 
+            cv2.putText(display_image, f"Active {active_polygon['class'].replace('_', ' ').title()}", 
+                       (active_polygon["points"][0][0] + 10, active_polygon["points"][0][1]), 
                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, active_color, 2)
         
         # Show preview point at current mouse position if placing points
@@ -202,22 +225,27 @@ def create_road_annotations(frames_folder, output_json_path):
         mode_text = f"MODE: {'PLACING POINTS' if editing_mode == 'place_points' else 'VIEWING'}"
         cv2.putText(display_image, mode_text, (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
+        # Show class selection
+        class_text = f"Current class: {current_class.replace('_', ' ').title()}"
+        cv2.putText(display_image, class_text, (10, 90), 
+                   cv2.FONT_HERSHEY_SIMPLEX, 0.7, class_colors[current_class][0], 2)
+        
         # Show polygon count
-        polygon_text = f"Areas: {len(current_polygons)} completed + {1 if active_polygon else 0} active"
-        cv2.putText(display_image, polygon_text, (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        polygon_text = f"Areas: {len(current_polygons)} completed + {1 if active_polygon['points'] else 0} active"
+        cv2.putText(display_image, polygon_text, (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         # Show help info
-        cv2.putText(display_image, "Press H for help", (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        cv2.putText(display_image, "Press H for help", (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
-        cv2.imshow("Road Area Annotation", display_image)
+        cv2.imshow("Area Annotation", display_image)
     
     # Create window and set mouse callback
-    cv2.namedWindow("Road Area Annotation", cv2.WINDOW_NORMAL)
-    cv2.setMouseCallback("Road Area Annotation", mouse_callback)
+    cv2.namedWindow("Area Annotation", cv2.WINDOW_NORMAL)
+    cv2.setMouseCallback("Area Annotation", mouse_callback)
     
     # Function to load a frame and its annotations
     def load_frame(idx):
-        nonlocal current_polygons, active_polygon, mouse_x, mouse_y
+        nonlocal current_polygons, active_polygon, mouse_x, mouse_y, current_class
         
         # Get frame info
         frame_file = frame_files[idx]
@@ -239,21 +267,31 @@ def create_road_annotations(frames_folder, output_json_path):
                 break
         
         # Reset polygon data when loading a new frame
+        current_polygons = []
+        
         if existing_annotation:
-            # Load polygons
-            current_polygons = []
-            for polygon in existing_annotation.get("polygons", []):
-                if isinstance(polygon, list):
-                    # Convert the points to tuples
-                    current_polygons.append([(int(x), int(y)) for x, y in polygon])
-                else:
-                    current_polygons.append(polygon)
-            print(f"Loaded {len(current_polygons)} road areas")
+            # Check for new format with multiple classes
+            if "annotations" in existing_annotation:
+                for class_annotation in existing_annotation["annotations"]:
+                    obj_class = class_annotation["type"]
+                    for polygon in class_annotation["polygons"]:
+                        current_polygons.append({
+                            "class": obj_class,
+                            "points": [(int(x), int(y)) for x, y in polygon]
+                        })
+                print(f"Loaded {len(current_polygons)} areas from multi-class format")
+            # Legacy format with just road annotation
+            elif "polygons" in existing_annotation:
+                for polygon in existing_annotation["polygons"]:
+                    current_polygons.append({
+                        "class": "drivable_area",
+                        "points": [(int(x), int(y)) for x, y in polygon]
+                    })
+                print(f"Loaded {len(current_polygons)} areas from legacy format")
         else:
-            current_polygons = []
             print(f"No existing annotation found for {frame_file}")
         
-        active_polygon = []
+        active_polygon = {"points": [], "class": current_class}
         
         # Reset mouse position
         mouse_x, mouse_y = -1, -1
@@ -288,11 +326,11 @@ def create_road_annotations(frames_folder, output_json_path):
             
         elif key == ord('n'):  # Next image
             # Save current image annotation if polygons exist
-            if active_polygon:
+            if active_polygon["points"]:
                 print("You have an active polygon. Add it (A) or clear it (C) before continuing.")
             elif current_polygons:
                 # Add annotation for current frame
-                annotation = create_road_annotation(frame_path, current_polygons)
+                annotation = create_annotation(frame_path, current_polygons)
                 
                 # Update or add annotation
                 found = False
@@ -321,7 +359,7 @@ def create_road_annotations(frames_folder, output_json_path):
                     current_frame, frame_file, frame_path = load_frame(current_idx)
                     
         elif key == ord('p'):  # Previous image
-            if active_polygon:
+            if active_polygon["points"]:
                 print("You have an active polygon. Add it (A) or clear it (C) before continuing.")
             else:
                 current_idx -= 1
@@ -332,21 +370,28 @@ def create_road_annotations(frames_folder, output_json_path):
             print(f"Point placement mode {'activated' if editing_mode == 'place_points' else 'deactivated'}")
             update_display()
             
+        elif key == ord('t'):  # Toggle between classes
+            class_idx = (available_classes.index(current_class) + 1) % len(available_classes)
+            current_class = available_classes[class_idx]
+            active_polygon["class"] = current_class  # Update active polygon class
+            print(f"Switched to class: {current_class}")
+            update_display()
+            
         elif key == ord('a'):  # Add current polygon and start a new one
-            if active_polygon and len(active_polygon) >= 3:  # Need at least 3 points for a polygon
+            if active_polygon["points"] and len(active_polygon["points"]) >= 3:  # Need at least 3 points for a polygon
                 current_polygons.append(active_polygon.copy())  # Create a copy of the polygon before adding
-                print(f"Added polygon with {len(active_polygon)} points")
-                active_polygon = []
+                print(f"Added {active_polygon['class']} polygon with {len(active_polygon['points'])} points")
+                active_polygon = {"points": [], "class": current_class}
                 update_display()
             else:
                 print("Need at least 3 points to create a polygon")
                 
         elif key == ord('f'):  # Finish annotation for current image
-            if active_polygon:
+            if active_polygon["points"]:
                 print("You have an active polygon. Add it (A) or clear it (C) before finishing.")
             else:
                 # Create annotation for current frame
-                annotation = create_road_annotation(frame_path, current_polygons)
+                annotation = create_annotation(frame_path, current_polygons)
                 
                 # Update or add annotation
                 found = False
@@ -362,18 +407,18 @@ def create_road_annotations(frames_folder, output_json_path):
                 print(f"Finished annotation for {frame_file}")
                 
         elif key == ord('d'):  # Delete last point
-            if active_polygon:
-                active_polygon.pop()
+            if active_polygon["points"]:
+                active_polygon["points"].pop()
                 print("Removed last point")
                 update_display()
                 
         elif key == ord('c'):  # Clear current polygon
-            active_polygon = []
+            active_polygon["points"] = []
             print("Cleared active polygon")
             update_display()
             
         elif key == ord('r'):  # Reset all polygons for current image
-            active_polygon = []
+            active_polygon = {"points": [], "class": current_class}
             current_polygons = []
             
             # Remove any existing annotation
@@ -398,8 +443,9 @@ def create_road_annotations(frames_folder, output_json_path):
             print("N: Next image")
             print("P: Previous image")
             print("E: Toggle point placement mode")
+            print("T: Toggle between annotation classes (road/car)")
             print("A: Add current polygon and start a new one (needs 3+ points)")
-            print("F: Finish road annotation for current image and save to JSON")
+            print("F: Finish annotation for current image and save to JSON")
             print("D: Delete last point placed")
             print("C: Clear current polygon")
             print("R: Reset all polygons on current image")
