@@ -12,4 +12,3 @@ onnx
 onnxruntime
 carla
 pygame
-pycocotools
