@@ -4,87 +4,20 @@ import cv2
 import numpy as np
 import torch
 import torchvision.transforms as transforms
+from src.augmentation import LaneDetectionAugmentation
 from torch.utils.data import Dataset
 
-
 def get_binary_labels(height, width, pts, thickness=5):
-    """ Get the binary labels. this function is similar to
-    @get_binary_image, but it returns labels in 2 x H x W format
-    this label will be used in the CrossEntropyLoss function.
-
-    Args:
-        img: numpy array
-        pts: set of lanes, each lane is a set of points
-
-    Output:
-
-    """
     bin_img = np.zeros(shape=[height, width], dtype=np.uint8)
     for lane in pts:
         cv2.polylines(
             bin_img,
-            np.int32(
-                [lane]),
-            isClosed=False,
-            color=255,
-            thickness=thickness)
-
-    bin_labels = np.zeros_like(bin_img, dtype=bool)
-    bin_labels[bin_img != 0] = True
-    bin_labels = np.stack([~bin_labels, bin_labels]).astype(np.uint8)
-    return bin_labels
-
-def get_instance_labels(height, width, pts, thickness=5, max_lanes=5):
-    """  Get the instance segmentation labels.
-    this function is similar to @get_instance_image,
-    but it returns label in L x H x W format
-
-    Args:
-            image
-            pts
-
-    Output:
-            max Lanes x H x W, number of actual lanes
-    """
-    if len(pts) > max_lanes:
-        pts = pts[:max_lanes]
-
-    ins_labels = np.zeros(shape=[0, height, width], dtype=np.uint8)
-
-    n_lanes = 0
-    for lane in pts:
-        ins_img = np.zeros(shape=[height, width], dtype=np.uint8)
-        cv2.polylines(
-            ins_img,
-            np.int32(
-                [lane]),
+            np.int32([lane]),
             isClosed=False,
             color=1,
             thickness=thickness)
 
-        # there are some cases where the line could not be draw, such as one
-        # point, we need to remove these cases
-        # also, if there is overlapping among lanes, only the latest lane is
-        # labeled
-        if ins_img.sum() != 0:
-            # comment this line because it will zero out previous lane data,
-            # this leads to NaN error in computing the discriminative loss
-
-            # ins_labels[:, ins_img != 0] = 0
-            ins_labels = np.concatenate([ins_labels, ins_img[np.newaxis]])
-            n_lanes += 1
-
-    if n_lanes < max_lanes:
-        n_pad_lanes = max_lanes - n_lanes
-        pad_labels = np.zeros(
-            shape=[
-                n_pad_lanes,
-                height,
-                width],
-            dtype=np.uint8)
-        ins_labels = np.concatenate([ins_labels, pad_labels])
-
-    return ins_labels, n_lanes
+    return bin_img.astype(np.float32)[None, ...]
 
 def get_image_transform():
     normalizer = transforms.Normalize(mean=[0.485, 0.456, 0.406],
@@ -115,6 +48,12 @@ class SEAMEDataset(Dataset):
         self.img_dir = img_dir
         self.transform = get_image_transform()
         self.is_train = is_train
+
+        # Initialize augmentation
+        self.augmentation = LaneDetectionAugmentation(
+            height=height, 
+            width=width,
+        )
         
         # Load all samples from all json files
         self.samples = []
@@ -165,10 +104,11 @@ class SEAMEDataset(Dataset):
         pts = [[(int(round(x*x_rate)), int(round(y*y_rate)))
                 for (x, y) in lane] for lane in pts]
 
-        bin_labels = get_binary_labels(self.height, self.width, pts, thickness=self.thickness)
-        instance_labels, n_lanes = get_instance_labels(self.height, self.width, pts, thickness=self.thickness, max_lanes=4)
+        bin_labels = get_binary_labels(self.height, self.width, pts,
+                                    thickness=self.thickness)
 
-        image = self.transform(image)
-        bin_labels = torch.Tensor(bin_labels)
-        instance_labels = torch.Tensor(instance_labels)
-        return image, bin_labels, instance_labels, n_lanes
+        if self.is_train:
+            return self.augmentation(image, bin_labels)
+        else:
+            image = self.transform(image)
+            return image, bin_labels
