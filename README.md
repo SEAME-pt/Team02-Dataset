@@ -1,84 +1,214 @@
-# SEAME Lab: Datasets for Local Track and Carla Simulation
+# SEAME and Carla Dataset Tools
 
-This repository contains datasets and tools for computer vision and autonomous driving research at the SEAME laboratory.
+This repository contains tools for creating and using autonomous driving datasets from two sources:
+1. SEAME - A custom dataset for lane and road segmentation
+2. Carla - Synthetic data from the Carla simulator
 
-## Overview
+## SEAME Dataset Tools
 
-This repository hosts two primary datasets:
+This section contains tools for creating and using the SEAME dataset for autonomous driving tasks, including lane detection and road segmentation.
 
-1. **Local Track Dataset**: Contains frames captured from the physical track along with tools to generate corresponding masks
-2. **Carla Simulator Dataset**: Includes frames and masks specifically designed for lane detection algorithms
+### Annotation Tools
 
-## Repository Structure
+#### Lane Annotation Tool (`lane_annotations.py`)
 
-```
-Dataset/
-├── SEAME/
-│   ├── frames/        # Raw image frames from physical track
-│   ├── masks/         # Generated mask images for segmentation
-│   ├── assets/
-│   ├── compare.py   
-│   ├── correct.py   
-│   ├── frames.py   
-│   └── masks.py   
-├── carla/
-│   ├── frames/             # Frames captured from Carla simulator
-│   ├── masks/              # Lane detection masks
-│   ├── correct.py/
-│   └── CarlaConverter.py/ 
+An interactive tool for creating lane annotations in TuSimple format.
+
+**Features:**
+- Mark individual lane points with precise placement
+- Visual feedback with lane previews
+- Automatic export to TuSimple-compatible format
+- Ability to save and resume annotation work
+
+**Usage:**
+```bash
+python lane_annotations.py
 ```
 
-## Datasets
+**Controls:**
+- N: Next image
+- P: Previous image
+- E: Toggle point placement mode
+- A: Add current lane and start a new one
+- F: Finish annotation for current image
+- D: Delete last point placed
+- C: Clear current lane
+- R: Reset all lanes on current image
+- S: Save annotations to JSON file
+- Q: Quit
 
-### Local Track Dataset
+#### Road and Object Annotation Tool (`road_annotations.py`)
 
-This dataset contains frames captured from our physical test track. The accompanying mask generation program creates segmentation masks that can be used for training computer vision models.
+An interactive tool for creating polygon annotations for drivable areas and objects (cars).
 
-#### Usage
+**Features:**
+- Create polygon annotations for multiple classes
+- Toggle between classes (drivable_area, car)
+- Visual feedback with semi-transparent overlays
+- Saves annotations in JSONL format
 
+**Usage:**
+```bash
+python road_annotations.py
+```
+
+**Controls:**
+- N: Next image
+- P: Previous image
+- E: Toggle polygon point placement mode
+- T: Toggle between annotation classes (road/car)
+- A: Add current polygon and start a new one
+- F: Finish annotation for current image
+- D: Delete last point placed
+- C: Clear current polygon
+- R: Reset all polygons on current image
+- S: Save annotations to JSON file
+- Q: Quit
+
+### Dataset Implementations
+
+#### Lane Detection Dataset (`SEAMELaneDataset.py`)
+
+A PyTorch Dataset implementation for lane detection tasks.
+
+**Features:**
+- Loads TuSimple-format lane annotations
+- Provides binary lane segmentation labels
+- Applies data augmentation for training
+- Compatible with PyTorch DataLoader
+
+**Example Usage:**
 ```python
-# Example of using the mask generation tool
-python masks.py
+from torch.utils.data import DataLoader
+from SEAMELaneDataset import SEAMEDataset
 
+# Initialize dataset
+train_dataset = SEAMEDataset(
+    json_paths=['lane_annotations.json'],
+    img_dir='frames',
+    width=512,
+    height=256,
+    is_train=True
+)
+
+# Create data loader
+train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
+
+# Use in training loop
+for images, binary_labels in train_loader:
+    # Your model training code
+    pass
 ```
 
-### Carla Simulator Dataset
+#### Road Segmentation Dataset (`SEAMERoadDataset.py`)
 
-This dataset is generated from the Carla autonomous driving simulator. It contains both raw frames and corresponding lane masks for lane detection algorithms.
+A PyTorch Dataset implementation for multi-class segmentation tasks.
 
-#### Usage
+**Features:**
+- Supports multiple classes (background, drivable_area, car)
+- Loads polygon annotations
+- Applies data augmentation for training
+- Includes visualization tools
+- Compatible with PyTorch DataLoader
 
+**Example Usage:**
 ```python
-# Example of using the CarlaConverter tool
-python CarlaConverter.py --input carla/frames --output carla/masks
+from torch.utils.data import DataLoader
+from SEAMERoadDataset import SEAMESegmentationDataset
 
+# Initialize dataset
+train_dataset = SEAMESegmentationDataset(
+    img_dir='frames',
+    annotation_file='road_annotations.json',
+    width=256,
+    height=128,
+    is_train=True
+)
+
+# Create data loader
+train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
+
+# Use in training loop
+for images, masks in train_loader:
+    # Your model training code
+    pass
+
+# Visualize annotations
+dataset.visualize(0)  # Visualize the first sample
 ```
 
-## Scripts
+## Carla Dataset Tools
 
-### SEAME Dataset Scripts
-- **frames.py**: Extracts frames from the local track videos
-- **masks.py**: Generates masks for the extracted frames
-- **compare.py**: Compares generated masks with ground truth
-- **correct.py**: Tool for correcting/adjusting masks
+This section contains tools for creating synthetic datasets using the Carla simulator.
 
-### Carla Dataset Scripts
-- **CarlaConverter.py**: Converts Carla simulator output to usable dataset format
-- **correct.py**: Tool for adjusting and correcting Carla masks
+### Annotation Tools
 
-## Future Work
+#### Lane Annotation Tool (`lane_annotations.py`)
 
-- Add extraction tools for Carla simulator data that can:
-  - Extract actor information
-  - Generate instance segmentation masks
-  - Create labeled datasets for object detection
-- Expand datasets with additional driving scenarios
-- Create benchmarking tools for evaluation
+Similar to SEAME's lane annotation tool, this is an interactive tool for creating lane annotations from Carla simulation frames.
 
-## Getting Started
+**Features:**
+- Mark individual lane points with precise placement
+- Visual feedback with lane previews
+- Automatic export to TuSimple-compatible format
+- Enhanced visualization modes
+- Ability to save and resume annotation work
 
-1. Clone this repository
-2. Install dependencies
-3. Run the appropriate scripts to generate masks:
-   - For local track: `python SEAME/masks.py`
-   - For Carla data: `python carla/CarlaConverter.py`
+**Usage:**
+```bash
+python lane_annotations.py
+```
+
+The tool expects frames in the `lane_dataset/frames` directory and will save annotations to `lane_dataset/lane_annotations.json`.
+
+**Controls:**
+- N: Next image
+- P: Previous image
+- E: Toggle point placement mode
+- A: Add current lane and start a new one
+- F: Finish annotation for current image
+- D: Delete last point placed
+- C: Clear current lane
+- R: Reset all lanes on current image
+- S: Save annotations to JSON file
+- H: Show help
+- Q: Quit
+
+#### Object Annotation Tool (`object_annotations.py`)
+
+Automated tool that connects to the Carla simulator to capture RGB images and semantic segmentation masks for object detection and segmentation tasks.
+
+**Features:**
+- Direct integration with Carla simulator
+- Automatic capture of RGB images with corresponding semantic segmentation masks
+- Configurable capture frequency
+- Autopilot driving for varied scene capture
+- Semantic tag extraction for multiple object classes
+- No manual annotation required - uses Carla's built-in segmentation
+
+**Usage:**
+```bash
+python object_annotations.py
+```
+
+The tool will:
+1. Connect to the Carla simulator (must be running)
+2. Spawn a vehicle with attached RGB and semantic segmentation cameras
+3. Enable autopilot for automated driving
+4. Capture frames at specified intervals
+5. Save RGB images to `obj_dataset/images/`
+6. Save semantic masks to `obj_dataset/masks/`
+
+**Requirements:**
+- Carla simulator (tested with version 0.9.13)
+- Pygame for visualization
+- Properly configured Carla Python API
+
+## Dependencies
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+For Carla tools, you'll also need to set up the Carla simulator and Python API as described in the [Carla documentation](https://carla.readthedocs.io/).
