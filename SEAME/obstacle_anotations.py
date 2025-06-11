@@ -54,12 +54,14 @@ def create_road_annotations(frames_folder, output_json_path):
     editing_mode = None  # None or "place_points"
     
     # Define available classes and colors
-    available_classes = ["drivable_area", "car"]
+    available_classes = ["drivable_area", "car",  "sign", "lights"]
     current_class = "drivable_area"  # Default class
     
     class_colors = {
-        "drivable_area": [(0, 255, 0), (0, 165, 255), (0, 0, 255)],  # Green, Orange, Red
-        "car": [(255, 0, 0), (255, 0, 255), (255, 255, 0)]  # Blue, Magenta, Cyan
+        "drivable_area": [(0, 255, 0)], 
+        "car": [(255, 0, 0)], 
+        "sign": [(255, 0, 255)],
+        "lights": [(0, 165, 255)]
     }
     
     # Load existing annotations from JSON file if it exists
