@@ -192,47 +192,124 @@ def main():
     display = pygame.display.set_mode(
             (800, 600),
             pygame.HWSURFACE | pygame.DOUBLEBUF)
-    pygame.display.set_caption("CARLA Camera View")
+    pygame.display.set_caption("CARLA Dataset Collection")
 
     client = carla.Client('127.0.0.1', 2000)
-    client.load_world("Town04")
     client.set_timeout(60.0)
-
-    world = client.get_world()
-
+    
+    # Choose a single map and stick with it
+    map_name = "Town04"  # You can change this to any map you prefer
+    print(f"\n--- Loading map: {map_name} ---")
+    world = client.load_world(map_name)
+    
     # Target number of frames to collect
     target_frames = 3000
     frames_collected = 0
     scenario_count = 0
     
-    # Number of frames to collect per scenario
-    frames_per_scenario = 20
+    # Number of frames to collect per spawn point
+    frames_per_location = 40
+    
+    # Get all spawn points for this map
+    spawn_points = world.get_map().get_spawn_points()
+    random.shuffle(spawn_points)  # Randomize order
     
     try:
-        while frames_collected < target_frames:
+        # For each spawn point in this map
+        for spawn_index, spawn_point in enumerate(spawn_points):
+            # Break if we've collected enough frames
+            if frames_collected >= target_frames:
+                break
+            
             scenario_count += 1
-            print(f"\n--- Starting scenario #{scenario_count} ---")
+            print(f"\n--- Starting scenario #{scenario_count} at spawn point {spawn_index} ---")
             
-            # Setup new environment with randomized spawn points
-            vehicle, rgb_camera, semantic_camera = setup_carla_environment(client, world, num_traffic_vehicles=150)
+            # Configure world settings
+            settings = world.get_settings()
+            settings.synchronous_mode = True
+            settings.fixed_delta_seconds = 0.05
+            world.apply_settings(settings)
             
-            # Enable autopilot with aggressive driving behavior
-            vehicle.set_autopilot(True)
-            tm = client.get_trafficmanager()
-            tm.global_percentage_speed_difference(-20)  # Drive faster
-            tm.ignore_lights_percentage(vehicle, 100)
+            # Clear existing actors
+            for actor in world.get_actors():
+                if actor.type_id.startswith("vehicle") or actor.type_id.startswith("sensor"):
+                    actor.destroy()
             
-            # Set up camera listeners
+            # Set up traffic manager
+            traffic_manager = client.get_trafficmanager()
+            traffic_manager.set_synchronous_mode(True)
+            
+            # Create the Tesla ego vehicle
+            bp_library = world.get_blueprint_library()
+            vehicle_bp = bp_library.find('vehicle.tesla.model3')
+            
+            # Try to spawn at the selected point
+            ego_vehicle = world.try_spawn_actor(vehicle_bp, spawn_point)
+            if ego_vehicle is None:
+                print(f"Could not spawn at point {spawn_index}, skipping...")
+                continue
+            
+            print(f"Spawned Tesla at: {spawn_point.location}")
+            
+            # Find nearby spawn points for traffic vehicles
+            nearby_points = []
+            for other_point in spawn_points:
+                # Calculate distance to ego vehicle (within 50-100m is ideal)
+                distance = spawn_point.location.distance(other_point.location)
+                if distance < 30:  # Not too far
+                    nearby_points.append(other_point)
+            
+            # Randomize the number of vehicles (1-6)
+            num_vehicles = random.randint(4, 10)
+            
+            # Spawn traffic vehicles
+            vehicle_bps = bp_library.filter('vehicle.*')
+            traffic_vehicles = []
+            
+            # Pick random nearby points
+            random.shuffle(nearby_points)
+            for i in range(min(num_vehicles, len(nearby_points))):
+                traffic_bp = random.choice(vehicle_bps)
+                traffic_vehicle = world.try_spawn_actor(traffic_bp, nearby_points[i])
+                if traffic_vehicle:
+                    traffic_vehicle.set_autopilot(True)
+                    traffic_manager.set_desired_speed(traffic_vehicle, random.uniform(5, 20))
+                    traffic_vehicles.append(traffic_vehicle)
+            
+            print(f"Spawned {len(traffic_vehicles)} traffic vehicles")
+            
+            # Set up cameras
+            rgb_camera = rgb_camera_setup(ego_vehicle, bp_library, world)
+            semantic_camera = semantic_camera_setup(ego_vehicle, bp_library, world)
+            
+            # Let the simulation stabilize
+            for _ in range(10):
+                world.tick()
+            
+            # Set up listeners
             rgb_camera.listen(rgb_camera_callback)
             semantic_camera.listen(semantic_camera_callback)
             
-            # Run this scenario for a fixed number of frames
-            scenario_frames = 0
-            clock = pygame.time.Clock()
-            
-            print(f"Collecting {frames_per_scenario} frames for this scenario...")
-            
-            while scenario_frames < frames_per_scenario:
+            # Collect frames at this location
+            location_frames = 0
+            while location_frames < frames_per_location:
+                # Move both ego vehicle and traffic vehicles
+                if location_frames % 5 == 0:
+                    # Set ego vehicle to move randomly
+                    ego_control = carla.VehicleControl()
+                    ego_control.throttle = random.uniform(0.3, 0.6)  # Moderate speed
+                    ego_control.steer = random.uniform(-0.2, 0.2)    # Gentle steering
+                    ego_control.brake = 0.0
+                    ego_vehicle.apply_control(ego_control)
+                    
+                    # Also move traffic vehicles for variety
+                    for vehicle in traffic_vehicles:
+                        control = carla.VehicleControl()
+                        control.throttle = random.uniform(0.3, 0.7)
+                        control.steer = random.uniform(-0.3, 0.3)
+                        control.brake = random.uniform(0, 0.1)
+                        vehicle.apply_control(control)
+                
                 world.tick()
                 
                 # Process pygame events
@@ -243,29 +320,36 @@ def main():
                         if event.key == pygame.K_ESCAPE:
                             raise KeyboardInterrupt
                 
-                # Only increment for frames that will be captured (those divisible by capture_frequency)
+                # Only count frames that will be captured
                 if world.get_snapshot().frame % capture_frequency == 0:
-                    scenario_frames += 1
+                    # Make sure vehicle hasn't driven too far from the scene
+                    if any(ego_vehicle.get_location().distance(vehicle.get_location()) > 50 
+                        for vehicle in traffic_vehicles):
+                        # If vehicles are too spread out, end this location's collection
+                        print("\nVehicles spread too far apart. Moving to next spawn point...")
+                        break
+                        
+                    location_frames += 1
                     frames_collected += 1
                     
                     # Display progress
                     progress = (frames_collected / target_frames) * 100
-                    print(f"\rProgress: {frames_collected}/{target_frames} frames ({progress:.1f}%)", end="")
-                
-                clock.tick(20)
+                    print(f"\rLocation: {location_frames}/{frames_per_location}, " + 
+                        f"Total: {frames_collected}/{target_frames} ({progress:.1f}%)", end="")
+                    
+                    # Break if we've reached our target
+                    if frames_collected >= target_frames:
+                        break
             
-            # Clean up current scenario resources
+            # Clean up
             rgb_camera.stop()
             rgb_camera.destroy()
             semantic_camera.stop()
             semantic_camera.destroy()
-            vehicle.set_autopilot(False)
-            vehicle.destroy()
+            ego_vehicle.destroy()
             
-            # Clean up all other actors (traffic vehicles)
-            for actor in world.get_actors():
-                if actor.type_id.startswith("vehicle") or actor.type_id.startswith("sensor"):
-                    actor.destroy()
+            for vehicle in traffic_vehicles:
+                vehicle.destroy()
             
             print(f"\nFinished scenario #{scenario_count}. Total frames collected: {frames_collected}")
             
