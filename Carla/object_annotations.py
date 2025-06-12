@@ -111,40 +111,77 @@ def semantic_camera_setup(ego_vehicle, bp_library, world):
     camera = world.spawn_actor(camera_bp, camera_init_trans, attach_to=ego_vehicle)
     return camera
 
-def setup_carla_environment():
-    client = carla.Client('127.0.0.1', 2000)
-    client.load_world("Town03")
-    client.set_timeout(60.0)
-
-    traffic_manager = client.get_trafficmanager()
-    world = client.get_world()
+def setup_carla_environment(client, world, num_traffic_vehicles=150):
+    # Clear all existing actors first
+    for actor in world.get_actors():
+        if actor.type_id.startswith("vehicle") or actor.type_id.startswith("sensor"):
+            actor.destroy()
 
     settings = world.get_settings()
     settings.synchronous_mode = True
     settings.fixed_delta_seconds = 0.05
     world.apply_settings(settings)
-
-    traffic_manager.set_synchronous_mode(True)
     
     bp_library = world.get_blueprint_library()
     spawn_points = world.get_map().get_spawn_points()
 
-    vehicle_bp = bp_library.filter('vehicle.*')[0]
-    ego_vehicle = world.try_spawn_actor(vehicle_bp, random.choice(spawn_points))
-    if ego_vehicle is not None:
-        print(f"Spawned {vehicle_bp.id}")
-    else:
-        raise RuntimeError("Failed to spawn vehicle")
+    traffic_manager = client.get_trafficmanager()
+    traffic_manager.global_percentage_speed_difference(20)
+    traffic_manager.set_synchronous_mode(True)
 
-    spectator = world.get_spectator()
-    transform = spectator.get_transform()
-    location = transform.location
-    rotation = transform.rotation
+    # Safe random spawn point selection
+    max_spawn_index = min(len(spawn_points) - 1, 300)
+    main_spawn_index = random.randint(0, max_spawn_index)
+    main_spawn_point = spawn_points[main_spawn_index]
+    
+    
+    vehicle_bp = bp_library.find('vehicle.tesla.model3')
+    
+    print(f"Selected ego vehicle: {vehicle_bp.id}")
 
+    ego_vehicle = world.try_spawn_actor(vehicle_bp, main_spawn_point)
+    if ego_vehicle is None:
+        # Try another spawn point if this one failed
+        for i in range(len(spawn_points)):
+            if i != main_spawn_index:
+                ego_vehicle = world.try_spawn_actor(vehicle_bp, spawn_points[i])
+                if ego_vehicle is not None:
+                    main_spawn_index = i
+                    main_spawn_point = spawn_points[i]
+                    break
+    
+    if ego_vehicle is None:
+        raise RuntimeError("Failed to spawn Tesla vehicle at any location")
+    
+    print(f"Spawned main vehicle at: {main_spawn_point.location}")
+    
+    vehicle_bps = bp_library.filter('vehicle.*')
+    # Spawn traffic vehicles
+    remaining_spawn_points = [sp for i, sp in enumerate(spawn_points) if i != main_spawn_index]
+    random.shuffle(remaining_spawn_points)  # Randomize spawn points
+    
+    traffic_vehicles = []
+    
+    for i in range(min(num_traffic_vehicles, len(remaining_spawn_points))):
+        traffic_bp = random.choice(vehicle_bps)
+        
+        traffic_vehicle = world.try_spawn_actor(traffic_bp, remaining_spawn_points[i])
+        if traffic_vehicle:
+            traffic_vehicle.set_autopilot(True)
+            traffic_manager.set_desired_speed(traffic_vehicle, random.uniform(10, 25))  # Randomize speeds
+            traffic_vehicles.append(traffic_vehicle)
+    
+    print(f"Successfully spawned {len(traffic_vehicles)} traffic vehicles")
+
+    # Setup RGB and semantic cameras
     rgb_camera = rgb_camera_setup(ego_vehicle, bp_library, world)
     semantic_camera = semantic_camera_setup(ego_vehicle, bp_library, world)
 
-    return client, world, ego_vehicle, rgb_camera, semantic_camera
+    # Allow the world to stabilize
+    for _ in range(10):
+        world.tick()
+
+    return ego_vehicle, rgb_camera, semantic_camera
 
 def main():
     # Initialize pygame
@@ -157,59 +194,92 @@ def main():
             pygame.HWSURFACE | pygame.DOUBLEBUF)
     pygame.display.set_caption("CARLA Camera View")
 
-    # Run your simulation
-    client, world, vehicle, rgb_camera, semantic_camera = setup_carla_environment()
+    client = carla.Client('127.0.0.1', 2000)
+    client.load_world("Town04")
+    client.set_timeout(60.0)
 
-    # Enable autopilot
-    vehicle.set_autopilot(True)
+    world = client.get_world()
+
+    # Target number of frames to collect
+    target_frames = 3000
+    frames_collected = 0
+    scenario_count = 0
     
-    # Set a more aggressive driving behavior
-    tm = client.get_trafficmanager()
-    tm.global_percentage_speed_difference(-20)  # Drive faster
-
-    tm.ignore_lights_percentage(vehicle, 100)
+    # Number of frames to collect per scenario
+    frames_per_scenario = 20
     
-    # Set up camera listener with the callback method
-    rgb_camera.listen(rgb_camera_callback)
-    semantic_camera.listen(semantic_camera_callback)
-
     try:
-        print("Simulation running. Press Ctrl+C to exit.")
-        clock = pygame.time.Clock()
-        
-        while True:
-            world.tick()
+        while frames_collected < target_frames:
+            scenario_count += 1
+            print(f"\n--- Starting scenario #{scenario_count} ---")
             
-            # Process pygame events
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    raise KeyboardInterrupt
-                elif event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_ESCAPE:
+            # Setup new environment with randomized spawn points
+            vehicle, rgb_camera, semantic_camera = setup_carla_environment(client, world, num_traffic_vehicles=150)
+            
+            # Enable autopilot with aggressive driving behavior
+            vehicle.set_autopilot(True)
+            tm = client.get_trafficmanager()
+            tm.global_percentage_speed_difference(-20)  # Drive faster
+            tm.ignore_lights_percentage(vehicle, 100)
+            
+            # Set up camera listeners
+            rgb_camera.listen(rgb_camera_callback)
+            semantic_camera.listen(semantic_camera_callback)
+            
+            # Run this scenario for a fixed number of frames
+            scenario_frames = 0
+            clock = pygame.time.Clock()
+            
+            print(f"Collecting {frames_per_scenario} frames for this scenario...")
+            
+            while scenario_frames < frames_per_scenario:
+                world.tick()
+                
+                # Process pygame events
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
                         raise KeyboardInterrupt
+                    elif event.type == pygame.KEYDOWN:
+                        if event.key == pygame.K_ESCAPE:
+                            raise KeyboardInterrupt
+                
+                # Only increment for frames that will be captured (those divisible by capture_frequency)
+                if world.get_snapshot().frame % capture_frequency == 0:
+                    scenario_frames += 1
+                    frames_collected += 1
+                    
+                    # Display progress
+                    progress = (frames_collected / target_frames) * 100
+                    print(f"\rProgress: {frames_collected}/{target_frames} frames ({progress:.1f}%)", end="")
+                
+                clock.tick(20)
             
-            clock.tick(20)
-            
-    except KeyboardInterrupt:
-        print("Simulation stopped by user")
-    finally:
-        if 'rgb_camera' in locals() and rgb_camera:
+            # Clean up current scenario resources
             rgb_camera.stop()
             rgb_camera.destroy()
-        if 'semantic_camera' in locals() and semantic_camera:
             semantic_camera.stop()
             semantic_camera.destroy()
-        if 'vehicle' in locals() and vehicle:
             vehicle.set_autopilot(False)
             vehicle.destroy()
+            
+            # Clean up all other actors (traffic vehicles)
+            for actor in world.get_actors():
+                if actor.type_id.startswith("vehicle") or actor.type_id.startswith("sensor"):
+                    actor.destroy()
+            
+            print(f"\nFinished scenario #{scenario_count}. Total frames collected: {frames_collected}")
+            
+    except KeyboardInterrupt:
+        print("\nSimulation stopped by user")
+    finally:
+        # Final cleanup
         if 'world' in locals() and world:
             settings = world.get_settings()
             settings.synchronous_mode = False
             world.apply_settings(settings)
-    
         
         pygame.quit()
-        print("Simulation ended.")
+        print(f"Simulation ended. Collected {frames_collected}/{target_frames} frames across {scenario_count} scenarios.")
 
 if __name__ == "__main__":
     main()
