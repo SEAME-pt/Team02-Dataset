@@ -178,9 +178,9 @@ def create_road_annotations(frames_folder, output_json_path):
                 
                 # Add polygon class and number
                 label = f"{obj_class.replace('_', ' ').title()} {i+1}"
-                cv2.putText(display_image, label, 
-                           (points[0][0] + 10, points[0][1]), 
-                           cv2.FONT_HERSHEY_SIMPLEX, 0.7, color, 2)
+                #cv2.putText(display_image, label, 
+                #           (points[0][0] + 10, points[0][1]), 
+                 #          cv2.FONT_HERSHEY_SIMPLEX, 0.7, color, 2)
         
         # Apply the overlay with transparency
         alpha = 0.4  # Transparency factor
@@ -210,9 +210,9 @@ def create_road_annotations(frames_folder, output_json_path):
                     cv2.line(display_image, (mouse_x, mouse_y), active_polygon["points"][0], active_color, 2)
                 
             # Label as active polygon
-            cv2.putText(display_image, f"Active {active_polygon['class'].replace('_', ' ').title()}", 
-                       (active_polygon["points"][0][0] + 10, active_polygon["points"][0][1]), 
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.7, active_color, 2)
+            #cv2.putText(display_image, f"Active {active_polygon['class'].replace('_', ' ').title()}", 
+                      # (active_polygon["points"][0][0] + 10, active_polygon["points"][0][1]), 
+                      # cv2.FONT_HERSHEY_SIMPLEX, 0.7, active_color, 2)
         
         # Show preview point at current mouse position if placing points
         if editing_mode == "place_points" and mouse_x >= 0 and mouse_y >= 0:
@@ -220,24 +220,24 @@ def create_road_annotations(frames_folder, output_json_path):
         
         # Show frame info
         frame_file = frame_files[current_idx]
-        status_text = f"Frame: {current_idx+1}/{len(frame_files)} | {frame_file}"
-        cv2.putText(display_image, status_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        # status_text = f"Frame: {current_idx+1}/{len(frame_files)} | {frame_file}"
+        # cv2.putText(display_image, status_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         # Show mode info
-        mode_text = f"MODE: {'PLACING POINTS' if editing_mode == 'place_points' else 'VIEWING'}"
-        cv2.putText(display_image, mode_text, (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        # mode_text = f"MODE: {'PLACING POINTS' if editing_mode == 'place_points' else 'VIEWING'}"
+        # cv2.putText(display_image, mode_text, (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         # Show class selection
-        class_text = f"Current class: {current_class.replace('_', ' ').title()}"
-        cv2.putText(display_image, class_text, (10, 90), 
+        class_text = f"Mode: {current_class.replace('_', ' ').title()}"
+        cv2.putText(display_image, class_text, (10, 20), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, class_colors[current_class][0], 2)
         
         # Show polygon count
-        polygon_text = f"Areas: {len(current_polygons)} completed + {1 if active_polygon['points'] else 0} active"
-        cv2.putText(display_image, polygon_text, (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        polygon_text = f"A: {len(current_polygons)} c: {1 if active_polygon['points'] else 0} a"
+        # cv2.putText(display_image, polygon_text, (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         # Show help info
-        cv2.putText(display_image, "Press H for help", (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        # cv2.putText(display_image, "Press H for help", (10, 150), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         cv2.imshow("Area Annotation", display_image)
     
