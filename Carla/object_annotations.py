@@ -208,7 +208,7 @@ def main():
     scenario_count = 0
     
     # Number of frames to collect per spawn point
-    frames_per_location = 40
+    frames_per_location = 20
     
     # Get all spawn points for this map
     spawn_points = world.get_map().get_spawn_points()
@@ -230,13 +230,31 @@ def main():
             settings.fixed_delta_seconds = 0.05
             world.apply_settings(settings)
             
-            # Clear existing actors
-            for actor in world.get_actors():
-                if actor.type_id.startswith("vehicle") or actor.type_id.startswith("sensor"):
-                    actor.destroy()
+            # Clear existing actors - use a safe destroy pattern
+            actor_list = []
+            try:
+                for actor in world.get_actors():
+                    if actor.type_id.startswith("vehicle") or actor.type_id.startswith("sensor"):
+                        actor_list.append(actor)
+                
+                print(f"Destroying {len(actor_list)} existing actors...")
+                
+                # First stop all sensors to avoid callbacks during destruction
+                for actor in actor_list:
+                    if actor.type_id.startswith("sensor"):
+                        actor.stop()
+                
+                # Then destroy all actors
+                client.apply_batch([carla.command.DestroyActor(x) for x in actor_list])
+                
+                # Wait a moment to make sure all actors are properly destroyed
+                world.tick()
+                time.sleep(0.5)
+            except Exception as e:
+                print(f"Error during cleanup: {e}")
             
             # Set up traffic manager
-            traffic_manager = client.get_trafficmanager()
+            traffic_manager = client.get_trafficmanager(8000)  # Use port 8000 to avoid conflicts
             traffic_manager.set_synchronous_mode(True)
             
             # Create the Tesla ego vehicle
@@ -244,23 +262,142 @@ def main():
             vehicle_bp = bp_library.find('vehicle.tesla.model3')
             
             # Try to spawn at the selected point
-            ego_vehicle = world.try_spawn_actor(vehicle_bp, spawn_point)
+            ego_vehicle = None
+            try:
+                ego_vehicle = world.try_spawn_actor(vehicle_bp, spawn_point)
+                ego_vehicle.set_autopilot(True)
+                traffic_manager.set_desired_speed(ego_vehicle, random.uniform(8, 15))
+            except Exception as e:
+                print(f"Error spawning ego vehicle: {e}")
+                continue
+                
             if ego_vehicle is None:
                 print(f"Could not spawn at point {spawn_index}, skipping...")
                 continue
             
             print(f"Spawned Tesla at: {spawn_point.location}")
             
-            # Find nearby spawn points for traffic vehicles
-            nearby_points = []
+            for _ in range(5):
+                world.tick()
+
+            # Replace the forward points calculation with this more robust version:
+            print("Finding spawn points in front of the ego vehicle...")
+            forward_vector = ego_vehicle.get_transform().get_forward_vector()
+            ego_location = ego_vehicle.get_location()
+
+            # Debug the forward vector
+            print(f"Ego forward vector: ({forward_vector.x:.2f}, {forward_vector.y:.2f}, {forward_vector.z:.2f})")
+
+            forward_spawn_points = []
+            # Debug counters
+            total_points = 0
+            in_front_points = 0
+            in_distance_points = 0
+            in_angle_points = 0
+
             for other_point in spawn_points:
-                # Calculate distance to ego vehicle (within 50-100m is ideal)
-                distance = spawn_point.location.distance(other_point.location)
-                if distance < 30:  # Not too far
-                    nearby_points.append(other_point)
-            
-            # Randomize the number of vehicles (1-6)
-            num_vehicles = random.randint(4, 10)
+                if other_point.location == ego_location:
+                    continue  # Skip the point where ego vehicle is
+                    
+                total_points += 1
+                
+                # Calculate direction vector from ego vehicle to spawn point
+                direction = other_point.location - ego_location
+                
+                # Calculate distance
+                distance = ego_location.distance(other_point.location)
+                
+                # Calculate dot product between forward vector and direction
+                # Positive dot product means the point is in front
+                dot_product = forward_vector.x * direction.x + forward_vector.y * direction.y
+                
+                if dot_product > 0:
+                    in_front_points += 1
+                    
+                    # Check distance
+                    if 5 < distance < 90:  # More reasonable distance range
+                        in_distance_points += 1
+                        
+                        # Calculate angle between forward vector and direction
+                        direction_length = math.sqrt(direction.x**2 + direction.y**2)
+                        if direction_length > 0:
+                            cos_angle = dot_product / (direction_length * math.sqrt(forward_vector.x**2 + forward_vector.y**2))
+                            angle = math.acos(min(max(cos_angle, -1.0), 1.0)) * 180 / math.pi
+                            
+                            # Tighter cone (90 degrees total - 45 degrees each side)
+                            if angle < 45:
+                                in_angle_points += 1
+                                forward_spawn_points.append((other_point, distance, angle))
+                                # Debug output for the first few points
+                                if len(forward_spawn_points) <= 3:
+                                    print(f"  Found forward point at dist={distance:.1f}m, angle={angle:.1f}°")
+
+            # Print debug info
+            print(f"Points checked: {total_points}, In front: {in_front_points}, In distance: {in_distance_points}, In angle: {in_angle_points}")
+
+            # Sort by a weighted combination of distance and angle
+            forward_spawn_points.sort(key=lambda x: (x[1] * 0.5) + (x[2] * 0.5))  # Equal weight to distance and angle
+
+            # Extract just the spawn points from the sorted list
+            forward_points = [point[0] for point in forward_spawn_points]
+
+            # If we don't have enough points, try increasing the angle
+            if len(forward_points) < 5:
+                print("Not enough forward points, trying with a wider angle...")
+                forward_spawn_points = []
+                for other_point in spawn_points:
+                    if other_point.location == ego_location:
+                        continue
+                        
+                    direction = other_point.location - ego_location
+                    distance = ego_location.distance(other_point.location)
+                    dot_product = forward_vector.x * direction.x + forward_vector.y * direction.y
+                    
+                    if dot_product > 0 and 15 < distance < 120:
+                        direction_length = math.sqrt(direction.x**2 + direction.y**2)
+                        if direction_length > 0:
+                            cos_angle = dot_product / (direction_length * math.sqrt(forward_vector.x**2 + forward_vector.y**2))
+                            angle = math.acos(min(max(cos_angle, -1.0), 1.0)) * 180 / math.pi
+                            
+                            # Wider cone (120 degrees)
+                            if angle < 60:
+                                forward_spawn_points.append((other_point, distance, angle))
+                                
+                forward_spawn_points.sort(key=lambda x: (x[1] * 0.5) + (x[2] * 0.5))
+                forward_points = [point[0] for point in forward_spawn_points]
+                print(f"Found {len(forward_points)} points with wider angle")
+
+            # Use these points for vehicle spawning
+            if len(forward_points) >= 3:
+                nearby_points = forward_points
+                print(f"Using {len(nearby_points)} spawn points in front of ego vehicle")
+            else:
+                # Last resort: manual placement relative to ego vehicle
+                print("Not enough spawn points found, creating manual points...")
+                nearby_points = []
+                
+                # Create spawn points manually in front of the vehicle
+                ego_transform = ego_vehicle.get_transform()
+                for distance in range(20, 100, 15):
+                    for angle_deg in range(-30, 31, 15):
+                        angle_rad = math.radians(angle_deg)
+                        
+                        # Calculate position in front of vehicle
+                        x = ego_location.x + distance * (forward_vector.x * math.cos(angle_rad) - forward_vector.y * math.sin(angle_rad))
+                        y = ego_location.y + distance * (forward_vector.x * math.sin(angle_rad) + forward_vector.y * math.cos(angle_rad))
+                        z = ego_location.z + 0.5  # Slightly above ground
+                        
+                        # Create transform
+                        location = carla.Location(x, y, z)
+                        rotation = ego_transform.rotation
+                        transform = carla.Transform(location, rotation)
+                        
+                        nearby_points.append(transform)
+                        
+                print(f"Created {len(nearby_points)} manual spawn points")
+
+            # Limit number of vehicles to avoid overcrowding
+            num_vehicles = min(random.randint(10, 15), len(nearby_points))  # Fewer vehicles for better visibility
             
             # Spawn traffic vehicles
             vehicle_bps = bp_library.filter('vehicle.*')
@@ -268,99 +405,137 @@ def main():
             
             # Pick random nearby points
             random.shuffle(nearby_points)
-            for i in range(min(num_vehicles, len(nearby_points))):
-                traffic_bp = random.choice(vehicle_bps)
-                traffic_vehicle = world.try_spawn_actor(traffic_bp, nearby_points[i])
-                if traffic_vehicle:
-                    traffic_vehicle.set_autopilot(True)
-                    traffic_manager.set_desired_speed(traffic_vehicle, random.uniform(5, 20))
-                    traffic_vehicles.append(traffic_vehicle)
+            for i in range(num_vehicles):
+                try:
+                    traffic_bp = random.choice(vehicle_bps)
+                    traffic_vehicle = world.try_spawn_actor(traffic_bp, nearby_points[i])
+                    if traffic_vehicle:
+                        traffic_vehicle.set_autopilot(True)
+                        traffic_manager.set_desired_speed(traffic_vehicle, random.uniform(5, 15))
+                        traffic_vehicles.append(traffic_vehicle)
+                except Exception as e:
+                    print(f"Error spawning traffic vehicle: {e}")
             
             print(f"Spawned {len(traffic_vehicles)} traffic vehicles")
             
             # Set up cameras
-            rgb_camera = rgb_camera_setup(ego_vehicle, bp_library, world)
-            semantic_camera = semantic_camera_setup(ego_vehicle, bp_library, world)
+            rgb_camera = None
+            semantic_camera = None
+            try:
+                rgb_camera = rgb_camera_setup(ego_vehicle, bp_library, world)
+                semantic_camera = semantic_camera_setup(ego_vehicle, bp_library, world)
+            except Exception as e:
+                print(f"Error setting up cameras: {e}")
+                if ego_vehicle:
+                    ego_vehicle.destroy()
+                for v in traffic_vehicles:
+                    v.destroy()
+                continue
             
             # Let the simulation stabilize
             for _ in range(10):
-                world.tick()
+                try:
+                    world.tick()
+                except:
+                    break
             
             # Set up listeners
-            rgb_camera.listen(rgb_camera_callback)
-            semantic_camera.listen(semantic_camera_callback)
+            try:
+                rgb_camera.listen(rgb_camera_callback)
+                semantic_camera.listen(semantic_camera_callback)
+            except Exception as e:
+                print(f"Error setting up listeners: {e}")
+                # Clean up and continue to next scenario
+                if rgb_camera:
+                    rgb_camera.destroy()
+                if semantic_camera:
+                    semantic_camera.destroy()
+                if ego_vehicle:
+                    ego_vehicle.destroy()
+                for v in traffic_vehicles:
+                    v.destroy()
+                continue
             
             # Collect frames at this location
             location_frames = 0
-            while location_frames < frames_per_location:
-                # Move both ego vehicle and traffic vehicles
-                if location_frames % 5 == 0:
-                    # Set ego vehicle to move randomly
-                    ego_control = carla.VehicleControl()
-                    ego_control.throttle = random.uniform(0.3, 0.6)  # Moderate speed
-                    ego_control.steer = random.uniform(-0.2, 0.2)    # Gentle steering
-                    ego_control.brake = 0.0
-                    ego_vehicle.apply_control(ego_control)
+            try:
+                while location_frames < frames_per_location:
+                    # Move both ego vehicle and traffic vehicles more gently
+                    if location_frames % 5 == 0:
+                        # Also move traffic vehicles for variety
+                        for vehicle in traffic_vehicles:
+                            control = carla.VehicleControl()
+                            control.throttle = random.uniform(0.2, 0.4)
+                            control.steer = random.uniform(-0.1, 0.1)
+                            control.brake = random.uniform(0, 0.05)
+                            vehicle.apply_control(control)
                     
-                    # Also move traffic vehicles for variety
-                    for vehicle in traffic_vehicles:
-                        control = carla.VehicleControl()
-                        control.throttle = random.uniform(0.3, 0.7)
-                        control.steer = random.uniform(-0.3, 0.3)
-                        control.brake = random.uniform(0, 0.1)
-                        vehicle.apply_control(control)
-                
-                world.tick()
-                
-                # Process pygame events
-                for event in pygame.event.get():
-                    if event.type == pygame.QUIT:
-                        raise KeyboardInterrupt
-                    elif event.type == pygame.KEYDOWN:
-                        if event.key == pygame.K_ESCAPE:
+                    world.tick()
+                    
+                    # Process pygame events
+                    for event in pygame.event.get():
+                        if event.type == pygame.QUIT:
                             raise KeyboardInterrupt
-                
-                # Only count frames that will be captured
-                if world.get_snapshot().frame % capture_frequency == 0:
-                    # Make sure vehicle hasn't driven too far from the scene
-                    if any(ego_vehicle.get_location().distance(vehicle.get_location()) > 50 
-                        for vehicle in traffic_vehicles):
-                        # If vehicles are too spread out, end this location's collection
-                        print("\nVehicles spread too far apart. Moving to next spawn point...")
-                        break
+                        elif event.type == pygame.KEYDOWN:
+                            if event.key == pygame.K_ESCAPE:
+                                raise KeyboardInterrupt
+                    
+                    # Only count frames that will be captured
+                    if world.get_snapshot().frame % capture_frequency == 0:
+                        location_frames += 1
+                        frames_collected += 1
                         
-                    location_frames += 1
-                    frames_collected += 1
-                    
-                    # Display progress
-                    progress = (frames_collected / target_frames) * 100
-                    print(f"\rLocation: {location_frames}/{frames_per_location}, " + 
-                        f"Total: {frames_collected}/{target_frames} ({progress:.1f}%)", end="")
-                    
-                    # Break if we've reached our target
-                    if frames_collected >= target_frames:
-                        break
+                        # Display progress
+                        progress = (frames_collected / target_frames) * 100
+                        print(f"\rLocation: {location_frames}/{frames_per_location}, " + 
+                            f"Total: {frames_collected}/{target_frames} ({progress:.1f}%)", end="")
+                        
+                        # Break if we've reached our target
+                        if frames_collected >= target_frames:
+                            break
+            except Exception as e:
+                print(f"\nError during frame collection: {e}")
             
-            # Clean up
-            rgb_camera.stop()
-            rgb_camera.destroy()
-            semantic_camera.stop()
-            semantic_camera.destroy()
-            ego_vehicle.destroy()
-            
-            for vehicle in traffic_vehicles:
-                vehicle.destroy()
+            # Clean up - very careful destruction sequence
+            print("\nCleaning up scenario resources...")
+            try:
+                if rgb_camera:
+                    rgb_camera.stop()
+                    time.sleep(0.1)
+                    rgb_camera.destroy()
+                if semantic_camera:
+                    semantic_camera.stop()
+                    time.sleep(0.1)
+                    semantic_camera.destroy()
+                time.sleep(0.2)  # Give time for callbacks to complete
+                
+                # Destroy vehicles last
+                if ego_vehicle:
+                    ego_vehicle.destroy()
+                for vehicle in traffic_vehicles:
+                    vehicle.destroy()
+                
+                world.tick()  # Process the destruction
+                time.sleep(0.5)  # Wait for the world to update
+                
+            except Exception as e:
+                print(f"Error during cleanup: {e}")
             
             print(f"\nFinished scenario #{scenario_count}. Total frames collected: {frames_collected}")
             
     except KeyboardInterrupt:
         print("\nSimulation stopped by user")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
     finally:
         # Final cleanup
-        if 'world' in locals() and world:
-            settings = world.get_settings()
-            settings.synchronous_mode = False
-            world.apply_settings(settings)
+        try:
+            if 'world' in locals() and world:
+                settings = world.get_settings()
+                settings.synchronous_mode = False
+                world.apply_settings(settings)
+        except:
+            pass
         
         pygame.quit()
         print(f"Simulation ended. Collected {frames_collected}/{target_frames} frames across {scenario_count} scenarios.")
