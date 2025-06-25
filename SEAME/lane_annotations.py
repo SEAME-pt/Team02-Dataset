@@ -536,7 +536,7 @@ def create_lane_annotations(frames_folder, output_json_path):
     print("Annotation completed")
 
 if __name__ == "__main__":
-    frames_folder = "frames2"
-    output_json_path = "lane_annotations2.json"
+    frames_folder = "frames"
+    output_json_path = "lane_annotations.json"
     
     create_lane_annotations(frames_folder, output_json_path)
