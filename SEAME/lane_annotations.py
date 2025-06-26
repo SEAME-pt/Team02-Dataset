@@ -2,6 +2,7 @@ import cv2
 import os
 import numpy as np
 import json
+import scipy.interpolate
 
 def load_jsonl(file_path):
     """
@@ -78,113 +79,94 @@ def create_lane_annotations(frames_folder, output_json_path):
     mouse_x, mouse_y = -1, -1
     
     # Function to convert lanes to TuSimple format
+    
     def lanes_to_tusimple(frame_path, lanes):
         if not lanes:
             print("WARNING: No lanes provided to lanes_to_tusimple")
             return None
-                
+
         print(f"Processing {len(lanes)} lanes for TuSimple format")
-        
+
         # Get image dimensions
         img = cv2.imread(frame_path)
         if img is None:
             print(f"ERROR: Could not read image {frame_path}")
             return None
-                
+
         h, w = img.shape[:2]
-        
+
         # First determine the overall y-range to sample
         all_y_coords = []
         for lane in lanes:
             if len(lane) >= 2:
                 y_values = [p[1] for p in lane]
                 all_y_coords.extend(y_values)
-        
+
         if not all_y_coords:
             print("WARNING: No valid y-coordinates found in lanes")
             return None
-        
+
         # Get min and max y across all points
         min_y = min(all_y_coords)
         max_y = max(all_y_coords)
-        
+
         # Generate evenly spaced h_samples between min_y and max_y
         num_points = 50  # TuSimple format typically uses ~50 points
         h_samples = [int(y) for y in np.linspace(min_y, max_y, num_points)]
         print(f"Using {len(h_samples)} h_samples from y={min_y} to y={max_y}")
-        
-        # For each lane, create a polyline using original point order 
-        # then sample at the required y-coordinates
+
         x_lanes = []
         for lane_idx, lane in enumerate(lanes):
             if len(lane) < 2:
-                print(f"WARNING: Lane {lane_idx} with {len(lane)} points is too short, skipping")
+                print(f"WARNING: Lane {lane_idx} with {len(lane)} points is too short for interpolation.")
                 continue
-            
-            # Use points IN THE EXACT ORDER they were placed
-            lane_points = lane  # No sorting
-            lane_x = [p[0] for p in lane_points]
-            lane_y = [p[1] for p in lane_points]
-            
-            print(f"Lane {lane_idx}: Processing {len(lane_points)} points in original placement order")
-            
-            # Create a polyline connecting the points in the exact order they were placed
-            points = np.array(lane_points)
-            
-            # For each h_sample, find the closest point on the polyline
+
+            lane_x = [p[0] for p in lane]
+            lane_y = [p[1] for p in lane]
+
+            # Check if y is strictly increasing or decreasing
+            is_increasing = all(lane_y[i] < lane_y[i+1] for i in range(len(lane_y)-1))
+            is_decreasing = all(lane_y[i] > lane_y[i+1] for i in range(len(lane_y)-1))
+
+            if len(lane) >= 3 and (is_increasing or is_decreasing):
+                try:
+                    spline = scipy.interpolate.CubicSpline(lane_y, lane_x, extrapolate=False)
+                    interp_func = spline
+                except Exception as e:
+                    print(f"Error fitting spline for lane {lane_idx}: {e}")
+                    interp_func = lambda y: np.interp(y, lane_y, lane_x)
+            else:
+                if len(lane) >= 3:
+                    print(f"Lane {lane_idx} y-values are not monotonic, using linear interpolation.")
+                interp_func = lambda y: np.interp(y, lane_y, lane_x)
+
             lane_x_interp = []
-            
             for y_target in h_samples:
-                # Find if this y value is within the range of our manually placed points
-                min_lane_y = min(lane_y)
-                max_lane_y = max(lane_y)
-                
-                if min_lane_y <= y_target <= max_lane_y:
-                    # Find the line segment that contains this y value
-                    for i in range(len(lane_points) - 1):
-                        y1 = lane_points[i][1]
-                        y2 = lane_points[i+1][1]
-                        
-                        # Check if y_target is between y1 and y2 (inclusive)
-                        if (y1 <= y_target <= y2) or (y2 <= y_target <= y1):
-                            x1 = lane_points[i][0]
-                            x2 = lane_points[i+1][0]
-                            
-                            # If y1 equals y2, use the midpoint
-                            if y1 == y2:
-                                x_interp = (x1 + x2) // 2
-                            else:
-                                # Linear interpolation
-                                ratio = (y_target - y1) / (y2 - y1)
-                                x_interp = int(x1 + ratio * (x2 - x1))
-                            
-                            lane_x_interp.append(x_interp)
-                            break
+                # Only interpolate within the range of annotated points
+                if min(lane_y) <= y_target <= max(lane_y):
+                    x_interp = interp_func(y_target)
+                    if np.isnan(x_interp):
+                        lane_x_interp.append(-2)
                     else:
-                        # If we didn't find a segment, use the nearest point
-                        y_diffs = [abs(y - y_target) for y in lane_y]
-                        nearest_idx = y_diffs.index(min(y_diffs))
-                        lane_x_interp.append(lane_x[nearest_idx])
+                        lane_x_interp.append(int(round(float(x_interp))))
                 else:
-                    # Outside the range of our points
                     lane_x_interp.append(-2)
-            
+
             x_lanes.append(lane_x_interp)
             valid_points = len([x for x in lane_x_interp if x != -2])
-            print(f"Lane {lane_idx}: Generated {valid_points} valid points")
-        
+            print(f"Lane {lane_idx}: Generated {valid_points} valid points (curve)")
+
         if not x_lanes:
             print("WARNING: No valid lanes after processing")
             return None
-        
-        # Create TuSimple format annotation
+
         annotation = {
             "raw_file": os.path.basename(frame_path),
             "lanes": x_lanes,
             "h_samples": h_samples,
             "original_lanes": [lane.copy() for lane in lanes]
         }
-        
+
         print(f"Successfully created annotation with {len(x_lanes)} lanes")
         return annotation
     
@@ -337,6 +319,8 @@ def create_lane_annotations(frames_folder, output_json_path):
         existing_annotation = None
         print(f"Looking for annotation for {frame_file}")
         for ann in annotations:
+            if ann is None:
+                continue
             if ann.get("raw_file") == frame_file:
                 existing_annotation = ann
                 print(f"Found existing annotation for {frame_file}")
@@ -418,6 +402,8 @@ def create_lane_annotations(frames_folder, output_json_path):
                 # Update or add annotation
                 found = False
                 for i, ann in enumerate(annotations):
+                    if ann is None:
+                        continue
                     if ann.get("raw_file") == frame_file:
                         annotations[i] = annotation
                         found = True
