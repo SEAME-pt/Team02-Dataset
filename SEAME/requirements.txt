@@ -5,3 +5,4 @@ opencv-python
 scikit-learn
 scikit-image
 timm
+albumentations
