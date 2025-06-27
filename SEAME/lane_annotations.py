@@ -247,15 +247,15 @@ def create_lane_annotations(frames_folder, output_json_path):
                 if lane:
                     cv2.putText(overlay, f"Lane {i+1}", 
                                (lane[0][0] + 10, lane[0][1]), 
-                               cv2.FONT_HERSHEY_SIMPLEX, 0.7, color, 2)
+                               cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
             
             # Apply semi-transparent overlay
             alpha = 0.7  # Transparency factor
             display_image = cv2.addWeighted(overlay, alpha, display_image, 1 - alpha, 0)
             
             # Add an indicator that we're in enhanced view mode
-            cv2.putText(display_image, "ENHANCED VIEW MODE", (10, 150), 
-                      cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
+            #cv2.putText(display_image, "VIEW MODE", (10, 20), 
+                    #  cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
         
         else:
             # Standard editing display - draw completed lanes
@@ -272,9 +272,9 @@ def create_lane_annotations(frames_folder, output_json_path):
                     
                 # Label the lane
                 if lane:
-                    cv2.putText(display_image, f"Lane {i+1}", 
+                    cv2.putText(display_image, f"L {i+1}", 
                                (lane[0][0] + 10, lane[0][1]), 
-                                   cv2.FONT_HERSHEY_SIMPLEX, 0.7, color, 2)
+                                   cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
             
             # Draw the active lane (being created)
             if active_lane:
@@ -289,9 +289,9 @@ def create_lane_annotations(frames_folder, output_json_path):
                     cv2.line(display_image, active_lane[j], active_lane[j+1], active_color, 2)
                     
                 # Label as active lane
-                cv2.putText(display_image, f"Active Lane", 
-                           (active_lane[0][0] + 10, active_lane[0][1]), 
-                           cv2.FONT_HERSHEY_SIMPLEX, 0.7, active_color, 2)
+                # cv2.putText(display_image, f"Active Lane", 
+                #           (active_lane[0][0] + 10, active_lane[0][1]), 
+                #           cv2.FONT_HERSHEY_SIMPLEX, 0.7, active_color, 2)
             
             # Show preview point at current mouse position if placing points
             if editing_mode == "place_points" and mouse_x >= 0 and mouse_y >= 0:
@@ -300,18 +300,18 @@ def create_lane_annotations(frames_folder, output_json_path):
         # Show frame info
         frame_file = frame_files[current_idx]
         status_text = f"Frame: {current_idx+1}/{len(frame_files)} | {frame_file}"
-        cv2.putText(display_image, status_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        # cv2.putText(display_image, status_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         # Show mode info
         mode_text = f"MODE: {'PLACING POINTS' if editing_mode == 'place_points' else 'VIEWING'}"
-        cv2.putText(display_image, mode_text, (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        cv2.putText(display_image, mode_text, (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         # Show lane count
         lane_text = f"Lanes: {len(current_lanes)} completed + {1 if active_lane else 0} active"
-        cv2.putText(display_image, lane_text, (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        # cv2.putText(display_image, lane_text, (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         # Show help info
-        cv2.putText(display_image, "Press H for help", (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        # cv2.putText(display_image, "Press H for help", (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         cv2.imshow("Lane Annotation", display_image)
     
