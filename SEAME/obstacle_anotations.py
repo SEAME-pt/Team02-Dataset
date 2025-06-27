@@ -460,7 +460,7 @@ def create_road_annotations(frames_folder, output_json_path):
     print("Annotation completed")
 
 if __name__ == "__main__":
-    frames_folder = "frames_signals"
-    output_json_path = "signals_annotations.json"
+    frames_folder = "frames"
+    output_json_path = "obstacle_annotations.json"
     
     create_road_annotations(frames_folder, output_json_path)
