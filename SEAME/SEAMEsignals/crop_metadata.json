@@ -1,0 +1,2978 @@
+{
+  "crops": [
+    {
+      "filename": "frame_00238_20250628_182649_624.jpg",
+      "source_image": "frame_00238.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        137,
+        74,
+        185,
+        129
+      ],
+      "timestamp": "20250628_182649_624",
+      "crop_size": [
+        48,
+        55
+      ]
+    },
+    {
+      "filename": "frame_00238_20250628_182652_168.jpg",
+      "source_image": "frame_00238.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        178,
+        66,
+        236,
+        137
+      ],
+      "timestamp": "20250628_182652_168",
+      "crop_size": [
+        58,
+        71
+      ]
+    },
+    {
+      "filename": "frame_00238_20250628_182655_960.jpg",
+      "source_image": "frame_00238.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        320,
+        80,
+        340,
+        106
+      ],
+      "timestamp": "20250628_182655_960",
+      "crop_size": [
+        20,
+        26
+      ]
+    },
+    {
+      "filename": "frame_00220_20250628_182714_000.jpg",
+      "source_image": "frame_00220.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        503,
+        27,
+        567,
+        88
+      ],
+      "timestamp": "20250628_182714_000",
+      "crop_size": [
+        64,
+        61
+      ]
+    },
+    {
+      "filename": "frame_00220_20250628_182724_024.jpg",
+      "source_image": "frame_00220.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        227,
+        62,
+        260,
+        105
+      ],
+      "timestamp": "20250628_182724_024",
+      "crop_size": [
+        33,
+        43
+      ]
+    },
+    {
+      "filename": "frame_00220_20250628_182727_096.jpg",
+      "source_image": "frame_00220.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        198,
+        59,
+        232,
+        97
+      ],
+      "timestamp": "20250628_182727_096",
+      "crop_size": [
+        34,
+        38
+      ]
+    },
+    {
+      "filename": "frame_00291_20250628_182759_432.jpg",
+      "source_image": "frame_00291.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        117,
+        53,
+        146,
+        84
+      ],
+      "timestamp": "20250628_182759_432",
+      "crop_size": [
+        29,
+        31
+      ]
+    },
+    {
+      "filename": "frame_00291_20250628_182808_800.jpg",
+      "source_image": "frame_00291.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        121,
+        53,
+        149,
+        81
+      ],
+      "timestamp": "20250628_182808_800",
+      "crop_size": [
+        28,
+        28
+      ]
+    },
+    {
+      "filename": "frame_00291_20250628_182812_520.jpg",
+      "source_image": "frame_00291.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        108,
+        48,
+        151,
+        89
+      ],
+      "timestamp": "20250628_182812_520",
+      "crop_size": [
+        43,
+        41
+      ]
+    },
+    {
+      "filename": "frame_00291_20250628_182818_208.jpg",
+      "source_image": "frame_00291.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        217,
+        35,
+        245,
+        65
+      ],
+      "timestamp": "20250628_182818_208",
+      "crop_size": [
+        28,
+        30
+      ]
+    },
+    {
+      "filename": "frame_00291_20250628_182824_112.jpg",
+      "source_image": "frame_00291.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        219,
+        36,
+        244,
+        63
+      ],
+      "timestamp": "20250628_182824_112",
+      "crop_size": [
+        25,
+        27
+      ]
+    },
+    {
+      "filename": "frame_00291_20250628_182840_616.jpg",
+      "source_image": "frame_00291.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        455,
+        44,
+        474,
+        66
+      ],
+      "timestamp": "20250628_182840_616",
+      "crop_size": [
+        19,
+        22
+      ]
+    },
+    {
+      "filename": "frame_00305_20250628_182856_008.jpg",
+      "source_image": "frame_00305.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        213,
+        42,
+        237,
+        69
+      ],
+      "timestamp": "20250628_182856_008",
+      "crop_size": [
+        24,
+        27
+      ]
+    },
+    {
+      "filename": "frame_00305_20250628_182901_183.jpg",
+      "source_image": "frame_00305.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        237,
+        36,
+        256,
+        56
+      ],
+      "timestamp": "20250628_182901_183",
+      "crop_size": [
+        19,
+        20
+      ]
+    },
+    {
+      "filename": "frame_00305_20250628_182908_712.jpg",
+      "source_image": "frame_00305.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        345,
+        44,
+        379,
+        79
+      ],
+      "timestamp": "20250628_182908_712",
+      "crop_size": [
+        34,
+        35
+      ]
+    },
+    {
+      "filename": "frame_00307_20250628_182957_872.jpg",
+      "source_image": "frame_00307.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        194,
+        44,
+        217,
+        70
+      ],
+      "timestamp": "20250628_182957_872",
+      "crop_size": [
+        23,
+        26
+      ]
+    },
+    {
+      "filename": "frame_00307_20250628_183006_832.jpg",
+      "source_image": "frame_00307.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        222,
+        35,
+        241,
+        59
+      ],
+      "timestamp": "20250628_183006_832",
+      "crop_size": [
+        19,
+        24
+      ]
+    },
+    {
+      "filename": "frame_00307_20250628_183013_064.jpg",
+      "source_image": "frame_00307.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        193,
+        43,
+        217,
+        68
+      ],
+      "timestamp": "20250628_183013_064",
+      "crop_size": [
+        24,
+        25
+      ]
+    },
+    {
+      "filename": "frame_00313_20250628_183038_656.jpg",
+      "source_image": "frame_00313.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        307,
+        36,
+        328,
+        58
+      ],
+      "timestamp": "20250628_183038_656",
+      "crop_size": [
+        21,
+        22
+      ]
+    },
+    {
+      "filename": "frame_00313_20250628_183042_920.jpg",
+      "source_image": "frame_00313.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        38,
+        52,
+        75,
+        84
+      ],
+      "timestamp": "20250628_183042_920",
+      "crop_size": [
+        37,
+        32
+      ]
+    },
+    {
+      "filename": "frame_00313_20250628_183046_336.jpg",
+      "source_image": "frame_00313.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        109,
+        37,
+        134,
+        61
+      ],
+      "timestamp": "20250628_183046_336",
+      "crop_size": [
+        25,
+        24
+      ]
+    },
+    {
+      "filename": "frame_00315_20250628_183057_936.jpg",
+      "source_image": "frame_00315.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        266,
+        43,
+        301,
+        85
+      ],
+      "timestamp": "20250628_183057_936",
+      "crop_size": [
+        35,
+        42
+      ]
+    },
+    {
+      "filename": "frame_00315_20250628_183100_800.jpg",
+      "source_image": "frame_00315.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        367,
+        36,
+        391,
+        63
+      ],
+      "timestamp": "20250628_183100_800",
+      "crop_size": [
+        24,
+        27
+      ]
+    },
+    {
+      "filename": "frame_00316_20250628_183110_079.jpg",
+      "source_image": "frame_00316.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        323,
+        53,
+        347,
+        83
+      ],
+      "timestamp": "20250628_183110_079",
+      "crop_size": [
+        24,
+        30
+      ]
+    },
+    {
+      "filename": "frame_00317_20250628_183116_864.jpg",
+      "source_image": "frame_00317.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        331,
+        70,
+        367,
+        110
+      ],
+      "timestamp": "20250628_183116_864",
+      "crop_size": [
+        36,
+        40
+      ]
+    },
+    {
+      "filename": "frame_00317_20250628_183123_160.jpg",
+      "source_image": "frame_00317.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        334,
+        74,
+        363,
+        108
+      ],
+      "timestamp": "20250628_183123_160",
+      "crop_size": [
+        29,
+        34
+      ]
+    },
+    {
+      "filename": "frame_00318_20250628_183130_776.jpg",
+      "source_image": "frame_00318.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        365,
+        143,
+        443,
+        243
+      ],
+      "timestamp": "20250628_183130_776",
+      "crop_size": [
+        78,
+        100
+      ]
+    },
+    {
+      "filename": "frame_00320_20250628_183137_984.jpg",
+      "source_image": "frame_00320.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        221,
+        71,
+        291,
+        157
+      ],
+      "timestamp": "20250628_183137_984",
+      "crop_size": [
+        70,
+        86
+      ]
+    },
+    {
+      "filename": "frame_00320_20250628_183141_248.jpg",
+      "source_image": "frame_00320.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        393,
+        42,
+        443,
+        86
+      ],
+      "timestamp": "20250628_183141_248",
+      "crop_size": [
+        50,
+        44
+      ]
+    },
+    {
+      "filename": "frame_00320_20250628_183146_352.jpg",
+      "source_image": "frame_00320.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        403,
+        47,
+        439,
+        84
+      ],
+      "timestamp": "20250628_183146_352",
+      "crop_size": [
+        36,
+        37
+      ]
+    },
+    {
+      "filename": "frame_00321_20250628_183158_071.jpg",
+      "source_image": "frame_00321.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        155,
+        98,
+        241,
+        187
+      ],
+      "timestamp": "20250628_183158_071",
+      "crop_size": [
+        86,
+        89
+      ]
+    },
+    {
+      "filename": "frame_00321_20250628_183202_416.jpg",
+      "source_image": "frame_00321.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        356,
+        50,
+        398,
+        92
+      ],
+      "timestamp": "20250628_183202_416",
+      "crop_size": [
+        42,
+        42
+      ]
+    },
+    {
+      "filename": "frame_00326_20250628_183215_183.jpg",
+      "source_image": "frame_00326.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        187,
+        67,
+        245,
+        123
+      ],
+      "timestamp": "20250628_183215_183",
+      "crop_size": [
+        58,
+        56
+      ]
+    },
+    {
+      "filename": "frame_00327_20250628_183225_055.jpg",
+      "source_image": "frame_00327.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        152,
+        74,
+        224,
+        143
+      ],
+      "timestamp": "20250628_183225_055",
+      "crop_size": [
+        72,
+        69
+      ]
+    },
+    {
+      "filename": "frame_00327_20250628_183253_136.jpg",
+      "source_image": "frame_00327.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        612,
+        62,
+        638,
+        113
+      ],
+      "timestamp": "20250628_183253_136",
+      "crop_size": [
+        26,
+        51
+      ]
+    },
+    {
+      "filename": "frame_00329_20250628_183304_319.jpg",
+      "source_image": "frame_00329.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        0,
+        133,
+        116,
+        253
+      ],
+      "timestamp": "20250628_183304_319",
+      "crop_size": [
+        116,
+        120
+      ]
+    },
+    {
+      "filename": "frame_00331_20250628_183315_119.jpg",
+      "source_image": "frame_00331.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        5,
+        30,
+        35,
+        62
+      ],
+      "timestamp": "20250628_183315_119",
+      "crop_size": [
+        30,
+        32
+      ]
+    },
+    {
+      "filename": "frame_00343_20250628_183331_343.jpg",
+      "source_image": "frame_00343.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        96,
+        74,
+        150,
+        131
+      ],
+      "timestamp": "20250628_183331_343",
+      "crop_size": [
+        54,
+        57
+      ]
+    },
+    {
+      "filename": "frame_00354_20250628_183341_719.jpg",
+      "source_image": "frame_00354.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        289,
+        66,
+        348,
+        138
+      ],
+      "timestamp": "20250628_183341_719",
+      "crop_size": [
+        59,
+        72
+      ]
+    },
+    {
+      "filename": "frame_00354_20250628_183345_624.jpg",
+      "source_image": "frame_00354.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        242,
+        40,
+        288,
+        85
+      ],
+      "timestamp": "20250628_183345_624",
+      "crop_size": [
+        46,
+        45
+      ]
+    },
+    {
+      "filename": "frame_00355_20250628_183349_639.jpg",
+      "source_image": "frame_00355.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        315,
+        41,
+        377,
+        119
+      ],
+      "timestamp": "20250628_183349_639",
+      "crop_size": [
+        62,
+        78
+      ]
+    },
+    {
+      "filename": "frame_00355_20250628_183352_679.jpg",
+      "source_image": "frame_00355.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        431,
+        134,
+        536,
+        268
+      ],
+      "timestamp": "20250628_183352_679",
+      "crop_size": [
+        105,
+        134
+      ]
+    },
+    {
+      "filename": "frame_00355_20250628_183356_527.jpg",
+      "source_image": "frame_00355.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        421,
+        117,
+        549,
+        276
+      ],
+      "timestamp": "20250628_183356_527",
+      "crop_size": [
+        128,
+        159
+      ]
+    },
+    {
+      "filename": "frame_00355_20250628_183359_959.jpg",
+      "source_image": "frame_00355.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        318,
+        42,
+        384,
+        124
+      ],
+      "timestamp": "20250628_183359_959",
+      "crop_size": [
+        66,
+        82
+      ]
+    },
+    {
+      "filename": "frame_00356_20250628_183405_519.jpg",
+      "source_image": "frame_00356.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        321,
+        37,
+        375,
+        99
+      ],
+      "timestamp": "20250628_183405_519",
+      "crop_size": [
+        54,
+        62
+      ]
+    },
+    {
+      "filename": "frame_00356_20250628_183409_911.jpg",
+      "source_image": "frame_00356.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        381,
+        89,
+        479,
+        193
+      ],
+      "timestamp": "20250628_183409_911",
+      "crop_size": [
+        98,
+        104
+      ]
+    },
+    {
+      "filename": "frame_00358_20250628_183424_839.jpg",
+      "source_image": "frame_00358.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        449,
+        25,
+        494,
+        74
+      ],
+      "timestamp": "20250628_183424_839",
+      "crop_size": [
+        45,
+        49
+      ]
+    },
+    {
+      "filename": "frame_00358_20250628_183430_751.jpg",
+      "source_image": "frame_00358.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        487,
+        60,
+        536,
+        119
+      ],
+      "timestamp": "20250628_183430_751",
+      "crop_size": [
+        49,
+        59
+      ]
+    },
+    {
+      "filename": "frame_00359_20250628_183440_992.jpg",
+      "source_image": "frame_00359.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        536,
+        67,
+        594,
+        125
+      ],
+      "timestamp": "20250628_183440_992",
+      "crop_size": [
+        58,
+        58
+      ]
+    },
+    {
+      "filename": "frame_00359_20250628_183445_319.jpg",
+      "source_image": "frame_00359.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        501,
+        34,
+        538,
+        78
+      ],
+      "timestamp": "20250628_183445_319",
+      "crop_size": [
+        37,
+        44
+      ]
+    },
+    {
+      "filename": "frame_00372_20250628_183459_167.jpg",
+      "source_image": "frame_00372.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        340,
+        39,
+        395,
+        102
+      ],
+      "timestamp": "20250628_183459_167",
+      "crop_size": [
+        55,
+        63
+      ]
+    },
+    {
+      "filename": "frame_00372_20250628_183503_023.jpg",
+      "source_image": "frame_00372.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        487,
+        92,
+        577,
+        207
+      ],
+      "timestamp": "20250628_183503_023",
+      "crop_size": [
+        90,
+        115
+      ]
+    },
+    {
+      "filename": "frame_00373_20250628_183511_783.jpg",
+      "source_image": "frame_00373.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        371,
+        43,
+        469,
+        140
+      ],
+      "timestamp": "20250628_183511_783",
+      "crop_size": [
+        98,
+        97
+      ]
+    },
+    {
+      "filename": "frame_00373_20250628_183515_663.jpg",
+      "source_image": "frame_00373.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        387,
+        51,
+        453,
+        133
+      ],
+      "timestamp": "20250628_183515_663",
+      "crop_size": [
+        66,
+        82
+      ]
+    },
+    {
+      "filename": "frame_00374_20250628_183519_959.jpg",
+      "source_image": "frame_00374.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        453,
+        64,
+        545,
+        166
+      ],
+      "timestamp": "20250628_183519_959",
+      "crop_size": [
+        92,
+        102
+      ]
+    },
+    {
+      "filename": "frame_00375_20250628_183524_999.jpg",
+      "source_image": "frame_00375.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        500,
+        64,
+        616,
+        197
+      ],
+      "timestamp": "20250628_183524_999",
+      "crop_size": [
+        116,
+        133
+      ]
+    },
+    {
+      "filename": "frame_00376_20250628_183532_191.jpg",
+      "source_image": "frame_00376.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        530,
+        75,
+        637,
+        209
+      ],
+      "timestamp": "20250628_183532_191",
+      "crop_size": [
+        107,
+        134
+      ]
+    },
+    {
+      "filename": "frame_00386_20250628_183544_791.jpg",
+      "source_image": "frame_00386.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        603,
+        37,
+        638,
+        86
+      ],
+      "timestamp": "20250628_183544_791",
+      "crop_size": [
+        35,
+        49
+      ]
+    },
+    {
+      "filename": "frame_00386_20250628_183548_191.jpg",
+      "source_image": "frame_00386.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        483,
+        23,
+        509,
+        52
+      ],
+      "timestamp": "20250628_183548_191",
+      "crop_size": [
+        26,
+        29
+      ]
+    },
+    {
+      "filename": "frame_00386_20250628_183553_463.jpg",
+      "source_image": "frame_00386.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        602,
+        44,
+        639,
+        86
+      ],
+      "timestamp": "20250628_183553_463",
+      "crop_size": [
+        37,
+        42
+      ]
+    },
+    {
+      "filename": "frame_00388_20250628_183603_855.jpg",
+      "source_image": "frame_00388.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        470,
+        48,
+        516,
+        99
+      ],
+      "timestamp": "20250628_183603_855",
+      "crop_size": [
+        46,
+        51
+      ]
+    },
+    {
+      "filename": "frame_00388_20250628_183607_231.jpg",
+      "source_image": "frame_00388.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        323,
+        27,
+        357,
+        57
+      ],
+      "timestamp": "20250628_183607_231",
+      "crop_size": [
+        34,
+        30
+      ]
+    },
+    {
+      "filename": "frame_00388_20250628_183610_935.jpg",
+      "source_image": "frame_00388.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        473,
+        56,
+        518,
+        96
+      ],
+      "timestamp": "20250628_183610_935",
+      "crop_size": [
+        45,
+        40
+      ]
+    },
+    {
+      "filename": "frame_00390_20250628_183619_063.jpg",
+      "source_image": "frame_00390.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        409,
+        84,
+        478,
+        167
+      ],
+      "timestamp": "20250628_183619_063",
+      "crop_size": [
+        69,
+        83
+      ]
+    },
+    {
+      "filename": "frame_00390_20250628_183626_895.jpg",
+      "source_image": "frame_00390.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        406,
+        85,
+        480,
+        173
+      ],
+      "timestamp": "20250628_183626_895",
+      "crop_size": [
+        74,
+        88
+      ]
+    },
+    {
+      "filename": "frame_00390_20250628_183630_239.jpg",
+      "source_image": "frame_00390.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        402,
+        209,
+        469,
+        258
+      ],
+      "timestamp": "20250628_183630_239",
+      "crop_size": [
+        67,
+        49
+      ]
+    },
+    {
+      "filename": "frame_00390_20250628_183636_623.jpg",
+      "source_image": "frame_00390.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        234,
+        130,
+        266,
+        163
+      ],
+      "timestamp": "20250628_183636_623",
+      "crop_size": [
+        32,
+        33
+      ]
+    },
+    {
+      "filename": "frame_00390_20250628_183640_159.jpg",
+      "source_image": "frame_00390.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        224,
+        31,
+        267,
+        84
+      ],
+      "timestamp": "20250628_183640_159",
+      "crop_size": [
+        43,
+        53
+      ]
+    },
+    {
+      "filename": "frame_00391_20250628_183649_231.jpg",
+      "source_image": "frame_00391.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        512,
+        6,
+        639,
+        157
+      ],
+      "timestamp": "20250628_183649_231",
+      "crop_size": [
+        127,
+        151
+      ]
+    },
+    {
+      "filename": "frame_00398_20250628_183702_671.jpg",
+      "source_image": "frame_00398.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        464,
+        23,
+        494,
+        51
+      ],
+      "timestamp": "20250628_183702_671",
+      "crop_size": [
+        30,
+        28
+      ]
+    },
+    {
+      "filename": "frame_00400_20250628_183707_703.jpg",
+      "source_image": "frame_00400.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        335,
+        44,
+        351,
+        65
+      ],
+      "timestamp": "20250628_183707_703",
+      "crop_size": [
+        16,
+        21
+      ]
+    },
+    {
+      "filename": "frame_00401_20250628_183712_007.jpg",
+      "source_image": "frame_00401.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        329,
+        43,
+        355,
+        76
+      ],
+      "timestamp": "20250628_183712_007",
+      "crop_size": [
+        26,
+        33
+      ]
+    },
+    {
+      "filename": "frame_00406_20250628_183719_479.jpg",
+      "source_image": "frame_00406.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        449,
+        49,
+        478,
+        81
+      ],
+      "timestamp": "20250628_183719_479",
+      "crop_size": [
+        29,
+        32
+      ]
+    },
+    {
+      "filename": "frame_00420_20250628_183729_335.jpg",
+      "source_image": "frame_00420.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        456,
+        43,
+        507,
+        105
+      ],
+      "timestamp": "20250628_183729_335",
+      "crop_size": [
+        51,
+        62
+      ]
+    },
+    {
+      "filename": "frame_00625_20250628_183813_367.jpg",
+      "source_image": "frame_00625.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        431,
+        28,
+        489,
+        96
+      ],
+      "timestamp": "20250628_183813_367",
+      "crop_size": [
+        58,
+        68
+      ]
+    },
+    {
+      "filename": "frame_00632_20250628_183818_871.jpg",
+      "source_image": "frame_00632.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        357,
+        40,
+        399,
+        75
+      ],
+      "timestamp": "20250628_183818_871",
+      "crop_size": [
+        42,
+        35
+      ]
+    },
+    {
+      "filename": "frame_00635_20250628_183822_199.jpg",
+      "source_image": "frame_00635.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        367,
+        40,
+        403,
+        73
+      ],
+      "timestamp": "20250628_183822_199",
+      "crop_size": [
+        36,
+        33
+      ]
+    },
+    {
+      "filename": "frame_01001_20250628_183849_335.jpg",
+      "source_image": "frame_01001.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        115,
+        32,
+        157,
+        80
+      ],
+      "timestamp": "20250628_183849_335",
+      "crop_size": [
+        42,
+        48
+      ]
+    },
+    {
+      "filename": "frame_01002_20250628_183853_207.jpg",
+      "source_image": "frame_01002.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        112,
+        32,
+        159,
+        80
+      ],
+      "timestamp": "20250628_183853_207",
+      "crop_size": [
+        47,
+        48
+      ]
+    },
+    {
+      "filename": "frame_01004_20250628_183900_471.jpg",
+      "source_image": "frame_01004.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        115,
+        36,
+        155,
+        78
+      ],
+      "timestamp": "20250628_183900_471",
+      "crop_size": [
+        40,
+        42
+      ]
+    },
+    {
+      "filename": "frame_01005_20250628_183904_143.jpg",
+      "source_image": "frame_01005.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        107,
+        27,
+        161,
+        83
+      ],
+      "timestamp": "20250628_183904_143",
+      "crop_size": [
+        54,
+        56
+      ]
+    },
+    {
+      "filename": "frame_01006_20250628_183908_607.jpg",
+      "source_image": "frame_01006.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        71,
+        29,
+        127,
+        84
+      ],
+      "timestamp": "20250628_183908_607",
+      "crop_size": [
+        56,
+        55
+      ]
+    },
+    {
+      "filename": "frame_01013_20250628_183930_295.jpg",
+      "source_image": "frame_01013.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        450,
+        24,
+        501,
+        83
+      ],
+      "timestamp": "20250628_183930_295",
+      "crop_size": [
+        51,
+        59
+      ]
+    },
+    {
+      "filename": "frame_01014_20250628_183935_607.jpg",
+      "source_image": "frame_01014.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        536,
+        14,
+        629,
+        110
+      ],
+      "timestamp": "20250628_183935_607",
+      "crop_size": [
+        93,
+        96
+      ]
+    },
+    {
+      "filename": "frame_01020_20250628_183944_343.jpg",
+      "source_image": "frame_01020.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        230,
+        30,
+        267,
+        66
+      ],
+      "timestamp": "20250628_183944_343",
+      "crop_size": [
+        37,
+        36
+      ]
+    },
+    {
+      "filename": "frame_01021_20250628_183949_263.jpg",
+      "source_image": "frame_01021.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        226,
+        34,
+        272,
+        76
+      ],
+      "timestamp": "20250628_183949_263",
+      "crop_size": [
+        46,
+        42
+      ]
+    },
+    {
+      "filename": "frame_01022_20250628_183953_911.jpg",
+      "source_image": "frame_01022.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        347,
+        36,
+        401,
+        82
+      ],
+      "timestamp": "20250628_183953_911",
+      "crop_size": [
+        54,
+        46
+      ]
+    },
+    {
+      "filename": "frame_01023_20250628_183958_542.jpg",
+      "source_image": "frame_01023.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        466,
+        13,
+        536,
+        86
+      ],
+      "timestamp": "20250628_183958_542",
+      "crop_size": [
+        70,
+        73
+      ]
+    },
+    {
+      "filename": "frame_01024_20250628_184009_190.jpg",
+      "source_image": "frame_01024.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        707,
+        19,
+        797,
+        124
+      ],
+      "timestamp": "20250628_184009_190",
+      "crop_size": [
+        90,
+        105
+      ]
+    },
+    {
+      "filename": "frame_01031_20250628_184019_389.jpg",
+      "source_image": "frame_01031.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        142,
+        36,
+        182,
+        75
+      ],
+      "timestamp": "20250628_184019_389",
+      "crop_size": [
+        40,
+        39
+      ]
+    },
+    {
+      "filename": "frame_01032_20250628_184022_653.jpg",
+      "source_image": "frame_01032.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        205,
+        31,
+        251,
+        74
+      ],
+      "timestamp": "20250628_184022_653",
+      "crop_size": [
+        46,
+        43
+      ]
+    },
+    {
+      "filename": "frame_01033_20250628_184026_797.jpg",
+      "source_image": "frame_01033.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        353,
+        30,
+        388,
+        70
+      ],
+      "timestamp": "20250628_184026_797",
+      "crop_size": [
+        35,
+        40
+      ]
+    },
+    {
+      "filename": "frame_01034_20250628_184031_157.jpg",
+      "source_image": "frame_01034.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        527,
+        20,
+        599,
+        86
+      ],
+      "timestamp": "20250628_184031_157",
+      "crop_size": [
+        72,
+        66
+      ]
+    },
+    {
+      "filename": "frame_01043_20250628_184049_532.jpg",
+      "source_image": "frame_01043.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        622,
+        3,
+        710,
+        86
+      ],
+      "timestamp": "20250628_184049_532",
+      "crop_size": [
+        88,
+        83
+      ]
+    },
+    {
+      "filename": "frame_01044_20250628_184056_740.jpg",
+      "source_image": "frame_01044.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        307,
+        14,
+        386,
+        109
+      ],
+      "timestamp": "20250628_184056_740",
+      "crop_size": [
+        79,
+        95
+      ]
+    },
+    {
+      "filename": "frame_01053_20250628_184106_372.jpg",
+      "source_image": "frame_01053.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        295,
+        16,
+        402,
+        144
+      ],
+      "timestamp": "20250628_184106_372",
+      "crop_size": [
+        107,
+        128
+      ]
+    },
+    {
+      "filename": "frame_01055_20250628_184112_923.jpg",
+      "source_image": "frame_01055.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        239,
+        60,
+        273,
+        98
+      ],
+      "timestamp": "20250628_184112_923",
+      "crop_size": [
+        34,
+        38
+      ]
+    },
+    {
+      "filename": "frame_01055_20250628_184118_283.jpg",
+      "source_image": "frame_01055.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        642,
+        7,
+        720,
+        83
+      ],
+      "timestamp": "20250628_184118_283",
+      "crop_size": [
+        78,
+        76
+      ]
+    },
+    {
+      "filename": "frame_01056_20250628_184124_267.jpg",
+      "source_image": "frame_01056.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        631,
+        12,
+        720,
+        94
+      ],
+      "timestamp": "20250628_184124_267",
+      "crop_size": [
+        89,
+        82
+      ]
+    },
+    {
+      "filename": "frame_01057_20250628_184128_627.jpg",
+      "source_image": "frame_01057.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        596,
+        12,
+        678,
+        96
+      ],
+      "timestamp": "20250628_184128_627",
+      "crop_size": [
+        82,
+        84
+      ]
+    },
+    {
+      "filename": "frame_01057_20250628_184135_339.jpg",
+      "source_image": "frame_01057.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        596,
+        14,
+        679,
+        97
+      ],
+      "timestamp": "20250628_184135_339",
+      "crop_size": [
+        83,
+        83
+      ]
+    },
+    {
+      "filename": "frame_01057_20250628_184138_579.jpg",
+      "source_image": "frame_01057.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        594,
+        10,
+        681,
+        100
+      ],
+      "timestamp": "20250628_184138_579",
+      "crop_size": [
+        87,
+        90
+      ]
+    },
+    {
+      "filename": "frame_01058_20250628_184144_074.jpg",
+      "source_image": "frame_01058.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        565,
+        10,
+        680,
+        121
+      ],
+      "timestamp": "20250628_184144_074",
+      "crop_size": [
+        115,
+        111
+      ]
+    },
+    {
+      "filename": "frame_01058_20250628_184147_594.jpg",
+      "source_image": "frame_01058.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        579,
+        18,
+        674,
+        114
+      ],
+      "timestamp": "20250628_184147_594",
+      "crop_size": [
+        95,
+        96
+      ]
+    },
+    {
+      "filename": "frame_01059_20250628_184151_746.jpg",
+      "source_image": "frame_01059.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        526,
+        18,
+        624,
+        125
+      ],
+      "timestamp": "20250628_184151_746",
+      "crop_size": [
+        98,
+        107
+      ]
+    },
+    {
+      "filename": "frame_01060_20250628_184156_538.jpg",
+      "source_image": "frame_01060.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        462,
+        20,
+        563,
+        134
+      ],
+      "timestamp": "20250628_184156_538",
+      "crop_size": [
+        101,
+        114
+      ]
+    },
+    {
+      "filename": "frame_01061_20250628_184200_946.jpg",
+      "source_image": "frame_01061.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        472,
+        12,
+        599,
+        153
+      ],
+      "timestamp": "20250628_184200_946",
+      "crop_size": [
+        127,
+        141
+      ]
+    },
+    {
+      "filename": "frame_01062_20250628_184208_961.jpg",
+      "source_image": "frame_01062.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        483,
+        19,
+        591,
+        146
+      ],
+      "timestamp": "20250628_184208_961",
+      "crop_size": [
+        108,
+        127
+      ]
+    },
+    {
+      "filename": "frame_01063_20250628_184216_033.jpg",
+      "source_image": "frame_01063.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        584,
+        2,
+        799,
+        172
+      ],
+      "timestamp": "20250628_184216_033",
+      "crop_size": [
+        215,
+        170
+      ]
+    },
+    {
+      "filename": "frame_01064_20250628_184221_049.jpg",
+      "source_image": "frame_01064.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        483,
+        39,
+        541,
+        111
+      ],
+      "timestamp": "20250628_184221_049",
+      "crop_size": [
+        58,
+        72
+      ]
+    },
+    {
+      "filename": "frame_01065_20250628_184225_457.jpg",
+      "source_image": "frame_01065.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        640,
+        37,
+        745,
+        150
+      ],
+      "timestamp": "20250628_184225_457",
+      "crop_size": [
+        105,
+        113
+      ]
+    },
+    {
+      "filename": "frame_01065_20250628_184227_225.jpg",
+      "source_image": "frame_01065.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        644,
+        150,
+        765,
+        256
+      ],
+      "timestamp": "20250628_184227_225",
+      "crop_size": [
+        121,
+        106
+      ]
+    },
+    {
+      "filename": "frame_01074_20250628_184238_696.jpg",
+      "source_image": "frame_01074.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        14,
+        35,
+        94,
+        117
+      ],
+      "timestamp": "20250628_184238_696",
+      "crop_size": [
+        80,
+        82
+      ]
+    },
+    {
+      "filename": "frame_01075_20250628_184244_216.jpg",
+      "source_image": "frame_01075.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        508,
+        9,
+        553,
+        69
+      ],
+      "timestamp": "20250628_184244_216",
+      "crop_size": [
+        45,
+        60
+      ]
+    },
+    {
+      "filename": "frame_01076_20250628_184250_024.jpg",
+      "source_image": "frame_01076.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        453,
+        13,
+        507,
+        72
+      ],
+      "timestamp": "20250628_184250_024",
+      "crop_size": [
+        54,
+        59
+      ]
+    },
+    {
+      "filename": "frame_01076_20250628_184255_208.jpg",
+      "source_image": "frame_01076.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        360,
+        24,
+        391,
+        59
+      ],
+      "timestamp": "20250628_184255_208",
+      "crop_size": [
+        31,
+        35
+      ]
+    },
+    {
+      "filename": "frame_01077_20250628_184301_119.jpg",
+      "source_image": "frame_01077.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        538,
+        2,
+        631,
+        89
+      ],
+      "timestamp": "20250628_184301_119",
+      "crop_size": [
+        93,
+        87
+      ]
+    },
+    {
+      "filename": "frame_01077_20250628_184304_799.jpg",
+      "source_image": "frame_01077.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        396,
+        24,
+        428,
+        60
+      ],
+      "timestamp": "20250628_184304_799",
+      "crop_size": [
+        32,
+        36
+      ]
+    },
+    {
+      "filename": "frame_01078_20250628_184311_839.jpg",
+      "source_image": "frame_01078.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        410,
+        36,
+        450,
+        75
+      ],
+      "timestamp": "20250628_184311_839",
+      "crop_size": [
+        40,
+        39
+      ]
+    },
+    {
+      "filename": "frame_01079_20250628_184317_984.jpg",
+      "source_image": "frame_01079.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        439,
+        27,
+        480,
+        74
+      ],
+      "timestamp": "20250628_184317_984",
+      "crop_size": [
+        41,
+        47
+      ]
+    },
+    {
+      "filename": "frame_01080_20250628_184323_015.jpg",
+      "source_image": "frame_01080.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        560,
+        29,
+        640,
+        108
+      ],
+      "timestamp": "20250628_184323_015",
+      "crop_size": [
+        80,
+        79
+      ]
+    },
+    {
+      "filename": "frame_01086_20250628_184333_262.jpg",
+      "source_image": "frame_01086.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        246,
+        34,
+        285,
+        77
+      ],
+      "timestamp": "20250628_184333_262",
+      "crop_size": [
+        39,
+        43
+      ]
+    },
+    {
+      "filename": "frame_01087_20250628_184336_022.jpg",
+      "source_image": "frame_01087.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        278,
+        29,
+        328,
+        83
+      ],
+      "timestamp": "20250628_184336_022",
+      "crop_size": [
+        50,
+        54
+      ]
+    },
+    {
+      "filename": "frame_01088_20250628_184341_438.jpg",
+      "source_image": "frame_01088.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        522,
+        10,
+        615,
+        87
+      ],
+      "timestamp": "20250628_184341_438",
+      "crop_size": [
+        93,
+        77
+      ]
+    },
+    {
+      "filename": "frame_01100_20250628_184354_830.jpg",
+      "source_image": "frame_01100.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        209,
+        28,
+        250,
+        71
+      ],
+      "timestamp": "20250628_184354_830",
+      "crop_size": [
+        41,
+        43
+      ]
+    },
+    {
+      "filename": "frame_01101_20250628_184402_318.jpg",
+      "source_image": "frame_01101.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        418,
+        24,
+        473,
+        81
+      ],
+      "timestamp": "20250628_184402_318",
+      "crop_size": [
+        55,
+        57
+      ]
+    },
+    {
+      "filename": "frame_01105_20250628_184408_861.jpg",
+      "source_image": "frame_01105.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        626,
+        7,
+        702,
+        76
+      ],
+      "timestamp": "20250628_184408_861",
+      "crop_size": [
+        76,
+        69
+      ]
+    },
+    {
+      "filename": "frame_01112_20250628_184424_845.jpg",
+      "source_image": "frame_01112.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        392,
+        26,
+        453,
+        100
+      ],
+      "timestamp": "20250628_184424_845",
+      "crop_size": [
+        61,
+        74
+      ]
+    },
+    {
+      "filename": "frame_01113_20250628_184428_677.jpg",
+      "source_image": "frame_01113.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        598,
+        1,
+        776,
+        162
+      ],
+      "timestamp": "20250628_184428_677",
+      "crop_size": [
+        178,
+        161
+      ]
+    },
+    {
+      "filename": "frame_01127_20250628_184448_892.jpg",
+      "source_image": "frame_01127.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        142,
+        39,
+        190,
+        81
+      ],
+      "timestamp": "20250628_184448_892",
+      "crop_size": [
+        48,
+        42
+      ]
+    },
+    {
+      "filename": "frame_01128_20250628_184454_700.jpg",
+      "source_image": "frame_01128.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        126,
+        27,
+        178,
+        80
+      ],
+      "timestamp": "20250628_184454_700",
+      "crop_size": [
+        52,
+        53
+      ]
+    },
+    {
+      "filename": "frame_01129_20250628_184458_396.jpg",
+      "source_image": "frame_01129.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        126,
+        24,
+        203,
+        98
+      ],
+      "timestamp": "20250628_184458_396",
+      "crop_size": [
+        77,
+        74
+      ]
+    },
+    {
+      "filename": "frame_01130_20250628_184509_980.jpg",
+      "source_image": "frame_01130.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        1,
+        28,
+        96,
+        140
+      ],
+      "timestamp": "20250628_184509_980",
+      "crop_size": [
+        95,
+        112
+      ]
+    },
+    {
+      "filename": "frame_01132_20250628_184519_907.jpg",
+      "source_image": "frame_01132.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        507,
+        14,
+        539,
+        53
+      ],
+      "timestamp": "20250628_184519_907",
+      "crop_size": [
+        32,
+        39
+      ]
+    },
+    {
+      "filename": "frame_01134_20250628_184528_427.jpg",
+      "source_image": "frame_01134.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        640,
+        7,
+        712,
+        78
+      ],
+      "timestamp": "20250628_184528_427",
+      "crop_size": [
+        72,
+        71
+      ]
+    },
+    {
+      "filename": "frame_01135_20250628_184536_923.jpg",
+      "source_image": "frame_01135.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        697,
+        4,
+        798,
+        99
+      ],
+      "timestamp": "20250628_184536_923",
+      "crop_size": [
+        101,
+        95
+      ]
+    },
+    {
+      "filename": "frame_01144_20250628_184546_299.jpg",
+      "source_image": "frame_01144.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        376,
+        28,
+        426,
+        82
+      ],
+      "timestamp": "20250628_184546_299",
+      "crop_size": [
+        50,
+        54
+      ]
+    },
+    {
+      "filename": "frame_01145_20250628_184602_234.jpg",
+      "source_image": "frame_01145.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        579,
+        1,
+        668,
+        88
+      ],
+      "timestamp": "20250628_184602_234",
+      "crop_size": [
+        89,
+        87
+      ]
+    },
+    {
+      "filename": "frame_01153_20250628_184608_690.jpg",
+      "source_image": "frame_01153.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        367,
+        19,
+        415,
+        79
+      ],
+      "timestamp": "20250628_184608_690",
+      "crop_size": [
+        48,
+        60
+      ]
+    },
+    {
+      "filename": "frame_01157_20250628_184619_082.jpg",
+      "source_image": "frame_01157.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        667,
+        2,
+        790,
+        81
+      ],
+      "timestamp": "20250628_184619_082",
+      "crop_size": [
+        123,
+        79
+      ]
+    },
+    {
+      "filename": "frame_01158_20250628_184629_466.jpg",
+      "source_image": "frame_01158.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        724,
+        4,
+        799,
+        94
+      ],
+      "timestamp": "20250628_184629_466",
+      "crop_size": [
+        75,
+        90
+      ]
+    },
+    {
+      "filename": "frame_01168_20250628_184643_137.jpg",
+      "source_image": "frame_01168.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        79,
+        36,
+        137,
+        93
+      ],
+      "timestamp": "20250628_184643_137",
+      "crop_size": [
+        58,
+        57
+      ]
+    },
+    {
+      "filename": "frame_01169_20250628_184650_705.jpg",
+      "source_image": "frame_01169.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        291,
+        26,
+        367,
+        106
+      ],
+      "timestamp": "20250628_184650_705",
+      "crop_size": [
+        76,
+        80
+      ]
+    },
+    {
+      "filename": "frame_02089_20250628_184721_504.jpg",
+      "source_image": "frame_02089.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        107,
+        1,
+        239,
+        143
+      ],
+      "timestamp": "20250628_184721_504",
+      "crop_size": [
+        132,
+        142
+      ]
+    },
+    {
+      "filename": "frame_02089_20250628_184723_200.jpg",
+      "source_image": "frame_02089.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        128,
+        314,
+        273,
+        407
+      ],
+      "timestamp": "20250628_184723_200",
+      "crop_size": [
+        145,
+        93
+      ]
+    },
+    {
+      "filename": "frame_02090_20250628_184735_720.jpg",
+      "source_image": "frame_02090.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        714,
+        2,
+        796,
+        93
+      ],
+      "timestamp": "20250628_184735_720",
+      "crop_size": [
+        82,
+        91
+      ]
+    },
+    {
+      "filename": "frame_02103_20250628_184744_304.jpg",
+      "source_image": "frame_02103.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        298,
+        2,
+        413,
+        137
+      ],
+      "timestamp": "20250628_184744_304",
+      "crop_size": [
+        115,
+        135
+      ]
+    },
+    {
+      "filename": "frame_02103_20250628_184748_079.jpg",
+      "source_image": "frame_02103.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        288,
+        304,
+        412,
+        396
+      ],
+      "timestamp": "20250628_184748_079",
+      "crop_size": [
+        124,
+        92
+      ]
+    },
+    {
+      "filename": "frame_02107_20250628_184756_488.jpg",
+      "source_image": "frame_02107.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        482,
+        197,
+        537,
+        253
+      ],
+      "timestamp": "20250628_184756_488",
+      "crop_size": [
+        55,
+        56
+      ]
+    },
+    {
+      "filename": "frame_02107_20250628_184759_367.jpg",
+      "source_image": "frame_02107.jpg",
+      "class_id": 6,
+      "class_name": "Unknown",
+      "crop_coords": [
+        490,
+        16,
+        556,
+        97
+      ],
+      "timestamp": "20250628_184759_367",
+      "crop_size": [
+        66,
+        81
+      ]
+    },
+    {
+      "filename": "frame_03013_20250628_184818_983.jpg",
+      "source_image": "frame_03013.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        148,
+        21,
+        226,
+        104
+      ],
+      "timestamp": "20250628_184818_983",
+      "crop_size": [
+        78,
+        83
+      ]
+    },
+    {
+      "filename": "frame_03017_20250628_184826_703.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        27,
+        13,
+        137,
+        121
+      ],
+      "timestamp": "20250628_184826_703",
+      "crop_size": [
+        110,
+        108
+      ]
+    },
+    {
+      "filename": "frame_03017_20250628_184829_871.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        212,
+        12,
+        260,
+        72
+      ],
+      "timestamp": "20250628_184829_871",
+      "crop_size": [
+        48,
+        60
+      ]
+    },
+    {
+      "filename": "frame_03017_20250628_184832_823.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        274,
+        13,
+        312,
+        56
+      ],
+      "timestamp": "20250628_184832_823",
+      "crop_size": [
+        38,
+        43
+      ]
+    },
+    {
+      "filename": "frame_03017_20250628_184836_014.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        309,
+        7,
+        346,
+        55
+      ],
+      "timestamp": "20250628_184836_014",
+      "crop_size": [
+        37,
+        48
+      ]
+    },
+    {
+      "filename": "frame_03017_20250628_184838_542.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        315,
+        10,
+        342,
+        48
+      ],
+      "timestamp": "20250628_184838_542",
+      "crop_size": [
+        27,
+        38
+      ]
+    },
+    {
+      "filename": "frame_03014_20250628_184847_814.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        267,
+        25,
+        316,
+        83
+      ],
+      "timestamp": "20250628_184847_814",
+      "crop_size": [
+        49,
+        58
+      ]
+    },
+    {
+      "filename": "frame_03014_20250628_184851_718.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        168,
+        12,
+        246,
+        105
+      ],
+      "timestamp": "20250628_184851_718",
+      "crop_size": [
+        78,
+        93
+      ]
+    },
+    {
+      "filename": "frame_03014_20250628_184855_454.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        316,
+        27,
+        348,
+        73
+      ],
+      "timestamp": "20250628_184855_454",
+      "crop_size": [
+        32,
+        46
+      ]
+    },
+    {
+      "filename": "frame_03014_20250628_184904_590.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        350,
+        25,
+        378,
+        55
+      ],
+      "timestamp": "20250628_184904_590",
+      "crop_size": [
+        28,
+        30
+      ]
+    },
+    {
+      "filename": "frame_03014_20250628_184907_910.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        374,
+        18,
+        396,
+        54
+      ],
+      "timestamp": "20250628_184907_910",
+      "crop_size": [
+        22,
+        36
+      ]
+    },
+    {
+      "filename": "frame_03014_20250628_184911_046.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        389,
+        23,
+        413,
+        51
+      ],
+      "timestamp": "20250628_184911_046",
+      "crop_size": [
+        24,
+        28
+      ]
+    },
+    {
+      "filename": "frame_03018_20250628_184917_334.jpg",
+      "source_image": "frame_03018.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        228,
+        24,
+        295,
+        93
+      ],
+      "timestamp": "20250628_184917_334",
+      "crop_size": [
+        67,
+        69
+      ]
+    },
+    {
+      "filename": "frame_03018_20250628_184920_278.jpg",
+      "source_image": "frame_03018.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        318,
+        19,
+        355,
+        70
+      ],
+      "timestamp": "20250628_184920_278",
+      "crop_size": [
+        37,
+        51
+      ]
+    },
+    {
+      "filename": "frame_03018_20250628_184923_702.jpg",
+      "source_image": "frame_03018.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        359,
+        23,
+        392,
+        62
+      ],
+      "timestamp": "20250628_184923_702",
+      "crop_size": [
+        33,
+        39
+      ]
+    },
+    {
+      "filename": "frame_03019_20250628_184929_166.jpg",
+      "source_image": "frame_03019.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        157,
+        29,
+        239,
+        121
+      ],
+      "timestamp": "20250628_184929_166",
+      "crop_size": [
+        82,
+        92
+      ]
+    },
+    {
+      "filename": "frame_03019_20250628_184931_933.jpg",
+      "source_image": "frame_03019.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        275,
+        28,
+        324,
+        85
+      ],
+      "timestamp": "20250628_184931_933",
+      "crop_size": [
+        49,
+        57
+      ]
+    },
+    {
+      "filename": "frame_03019_20250628_184934_581.jpg",
+      "source_image": "frame_03019.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        331,
+        30,
+        372,
+        78
+      ],
+      "timestamp": "20250628_184934_581",
+      "crop_size": [
+        41,
+        48
+      ]
+    },
+    {
+      "filename": "frame_03020_20250628_184942_157.jpg",
+      "source_image": "frame_03020.jpg",
+      "class_id": 2,
+      "class_name": "Yield",
+      "crop_coords": [
+        7,
+        35,
+        131,
+        157
+      ],
+      "timestamp": "20250628_184942_157",
+      "crop_size": [
+        124,
+        122
+      ]
+    },
+    {
+      "filename": "frame_03020_20250628_184945_885.jpg",
+      "source_image": "frame_03020.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        211,
+        32,
+        275,
+        101
+      ],
+      "timestamp": "20250628_184945_885",
+      "crop_size": [
+        64,
+        69
+      ]
+    },
+    {
+      "filename": "frame_03020_20250628_184948_557.jpg",
+      "source_image": "frame_03020.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        287,
+        32,
+        331,
+        83
+      ],
+      "timestamp": "20250628_184948_557",
+      "crop_size": [
+        44,
+        51
+      ]
+    },
+    {
+      "filename": "frame_03021_20250628_184952_029.jpg",
+      "source_image": "frame_03021.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        110,
+        26,
+        203,
+        116
+      ],
+      "timestamp": "20250628_184952_029",
+      "crop_size": [
+        93,
+        90
+      ]
+    },
+    {
+      "filename": "frame_03022_20250628_184957_109.jpg",
+      "source_image": "frame_03022.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        249,
+        18,
+        330,
+        104
+      ],
+      "timestamp": "20250628_184957_109",
+      "crop_size": [
+        81,
+        86
+      ]
+    },
+    {
+      "filename": "frame_03023_20250628_185004_125.jpg",
+      "source_image": "frame_03023.jpg",
+      "class_id": 3,
+      "class_name": "Stop",
+      "crop_coords": [
+        274,
+        15,
+        374,
+        124
+      ],
+      "timestamp": "20250628_185004_125",
+      "crop_size": [
+        100,
+        109
+      ]
+    }
+  ],
+  "session_info": [
+    {
+      "timestamp": "2025-06-28T18:50:16.245028",
+      "total_crops": 174,
+      "crops_per_class": {
+        "0": 17,
+        "1": 23,
+        "2": 25,
+        "3": 30,
+        "4": 23,
+        "5": 25,
+        "6": 31
+      },
+      "images_processed": 1039
+    }
+  ]
+}
