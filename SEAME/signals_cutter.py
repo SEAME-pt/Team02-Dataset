@@ -125,27 +125,13 @@ class SignalCutter:
         class_text = f"Current Class: {self.current_class} - {self.class_names[self.current_class]}"
         cv2.putText(display, class_text, (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
         
-        # Add statistics
-        stats_text = f"Total Crops: {self.total_crops}"
-        cv2.putText(display, stats_text, (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
-        
-        # Add class counts
-        y_pos = 120
-        for i, count in self.crops_saved.items():
-            if count > 0:
-                count_text = f"{self.class_names[i]}: {count}"
-                cv2.putText(display, count_text, (10, y_pos), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
-                y_pos += 25
         
         # Add instructions
         instructions = [
-            "Controls:",
-            "Mouse: Drag to select crop area",
             "SPACE: Save crop with current class",
             "0-6: Change class",
             "N: Next image",
             "P: Previous image",
-            "R: Reset crop selection",
             "S: Save metadata",
             "H: Show help",
             "Q: Quit"
