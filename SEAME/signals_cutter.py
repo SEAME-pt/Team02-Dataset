@@ -24,7 +24,8 @@ class SignalCutter:
             "Stop",              # 3
             "Danger",            # 4
             "Crosswalk",         # 5
-            "Unknown"            # 6
+            "Unknown",            # 6
+            "TrafficLight"       # 7
         ]
         
         # Create output directories for each class
@@ -310,7 +311,7 @@ class SignalCutter:
             elif key == ord('h'):  # Help
                 self.show_help()
                 
-            elif ord('0') <= key <= ord('6'):  # Change class
+            elif ord('0') <= key <= ord('7'):  # Change class
                 class_id = key - ord('0')
                 self.change_class(class_id)
         

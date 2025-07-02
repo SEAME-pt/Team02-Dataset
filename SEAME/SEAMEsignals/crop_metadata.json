@@ -13021,6 +13021,23 @@
         181,
         181
       ]
+    },
+    {
+      "filename": "frame_00194_20250702_140730_266.jpg",
+      "source_image": "frame_00194.jpg",
+      "class_id": 6,
+      "class_name": "UnknownTrafficLight",
+      "crop_coords": [
+        175,
+        60,
+        380,
+        165
+      ],
+      "timestamp": "20250702_140730_266",
+      "crop_size": [
+        205,
+        105
+      ]
     }
   ],
   "session_info": [
@@ -13051,6 +13068,20 @@
         "6": 134
       },
       "images_processed": 848
+    },
+    {
+      "timestamp": "2025-07-02T14:07:38.208929",
+      "total_crops": 1,
+      "crops_per_class": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 1
+      },
+      "images_processed": 168
     }
   ]
 }
