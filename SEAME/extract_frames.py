@@ -36,7 +36,7 @@ def extract_unique_frames(video_path, output_folder, similarity_threshold=0.80, 
     
     # Initialize variables
     frame_number = 0
-    saved_count = 0
+    saved_count = 2000
     prev_frame_gray = None
     last_saved_frame_gray = None
     
@@ -85,13 +85,13 @@ def extract_unique_frames(video_path, output_folder, similarity_threshold=0.80, 
     print(f"Achieved {saved_count/frame_count*100:.2f}% compression ratio")
 
 if __name__ == "__main__":
-    video_path = "assets/seame_data_new.mp4"
+    video_path = "assets/video_curves.mp4"
     output_folder = "frames"
     
     extract_unique_frames(
         video_path, 
         output_folder, 
-        similarity_threshold=0.65,  # Lowered from 0.95 to 0.80 for much more distinct frames
-        skip_frames=1             # Check every 5th frame for efficiency
+        similarity_threshold=1,  # Lowered from 0.95 to 0.80 for much more distinct frames
+        skip_frames=5             # Check every 5th frame for efficiency
     )
     
