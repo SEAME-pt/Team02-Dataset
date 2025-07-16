@@ -24,10 +24,10 @@ class SignalCutter:
             "Stop",              # 3
             "Danger",            # 4
             "Crosswalk",         # 5
-            "Unknown",            # 6
-            "Traffic Green",       # 7
+            "Traffic Green",     # 6
             "Traffic Red",       # 7
-            "Traffic Yellow"       # 7
+            "Traffic Yellow",    # 8
+            "Unknown",           # 9
         ]
         
         # Create output directories for each class
@@ -132,7 +132,7 @@ class SignalCutter:
         # Add instructions
         instructions = [
             "SPACE: Save crop with current class",
-            "0-6: Change class",
+            "0-9: Change class",
             "N: Next image",
             "P: Previous image",
             "S: Save metadata",
