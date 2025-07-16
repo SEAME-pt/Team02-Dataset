@@ -341,7 +341,7 @@ class SignalCutter:
 def main():
     """Main function to run the signal cutter"""
     # Set up paths
-    frames_folder = "framesTrafficLights"
+    frames_folder = "frames"
     signals_folder = "SEAMEsignals"
     
     # Check if frames folder exists
