@@ -19022,6 +19022,2709 @@
         15,
         62
       ]
+    },
+    {
+      "filename": "frame_00011_20250716_094443_049.jpg",
+      "source_image": "frame_00011.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        202,
+        51,
+        230,
+        74
+      ],
+      "timestamp": "20250716_094443_049",
+      "crop_size": [
+        28,
+        23
+      ]
+    },
+    {
+      "filename": "frame_00011_20250716_094446_168.jpg",
+      "source_image": "frame_00011.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        282,
+        52,
+        303,
+        79
+      ],
+      "timestamp": "20250716_094446_168",
+      "crop_size": [
+        21,
+        27
+      ]
+    },
+    {
+      "filename": "frame_00130_20250716_094508_982.jpg",
+      "source_image": "frame_00130.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        550,
+        203,
+        618,
+        287
+      ],
+      "timestamp": "20250716_094508_982",
+      "crop_size": [
+        68,
+        84
+      ]
+    },
+    {
+      "filename": "frame_00132_20250716_094512_862.jpg",
+      "source_image": "frame_00132.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        533,
+        213,
+        635,
+        278
+      ],
+      "timestamp": "20250716_094512_862",
+      "crop_size": [
+        102,
+        65
+      ]
+    },
+    {
+      "filename": "frame_00139_20250716_094522_854.jpg",
+      "source_image": "frame_00139.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        68,
+        43,
+        86,
+        63
+      ],
+      "timestamp": "20250716_094522_854",
+      "crop_size": [
+        18,
+        20
+      ]
+    },
+    {
+      "filename": "frame_00139_20250716_094525_621.jpg",
+      "source_image": "frame_00139.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        48,
+        44,
+        70,
+        62
+      ],
+      "timestamp": "20250716_094525_621",
+      "crop_size": [
+        22,
+        18
+      ]
+    },
+    {
+      "filename": "frame_00139_20250716_094527_198.jpg",
+      "source_image": "frame_00139.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        47,
+        42,
+        72,
+        63
+      ],
+      "timestamp": "20250716_094527_198",
+      "crop_size": [
+        25,
+        21
+      ]
+    },
+    {
+      "filename": "frame_00146_20250716_094532_137.jpg",
+      "source_image": "frame_00146.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        439,
+        26,
+        471,
+        88
+      ],
+      "timestamp": "20250716_094532_137",
+      "crop_size": [
+        32,
+        62
+      ]
+    },
+    {
+      "filename": "frame_00146_20250716_094534_382.jpg",
+      "source_image": "frame_00146.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        426,
+        16,
+        480,
+        87
+      ],
+      "timestamp": "20250716_094534_382",
+      "crop_size": [
+        54,
+        71
+      ]
+    },
+    {
+      "filename": "frame_00146_20250716_094536_734.jpg",
+      "source_image": "frame_00146.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        428,
+        118,
+        483,
+        211
+      ],
+      "timestamp": "20250716_094536_734",
+      "crop_size": [
+        55,
+        93
+      ]
+    },
+    {
+      "filename": "frame_00148_20250716_094543_638.jpg",
+      "source_image": "frame_00148.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        438,
+        52,
+        485,
+        80
+      ],
+      "timestamp": "20250716_094543_638",
+      "crop_size": [
+        47,
+        28
+      ]
+    },
+    {
+      "filename": "frame_00148_20250716_094545_581.jpg",
+      "source_image": "frame_00148.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        507,
+        38,
+        564,
+        85
+      ],
+      "timestamp": "20250716_094545_581",
+      "crop_size": [
+        57,
+        47
+      ]
+    },
+    {
+      "filename": "frame_00148_20250716_094548_883.jpg",
+      "source_image": "frame_00148.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        251,
+        42,
+        316,
+        108
+      ],
+      "timestamp": "20250716_094548_883",
+      "crop_size": [
+        65,
+        66
+      ]
+    },
+    {
+      "filename": "frame_00148_20250716_094550_878.jpg",
+      "source_image": "frame_00148.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        230,
+        28,
+        326,
+        110
+      ],
+      "timestamp": "20250716_094550_878",
+      "crop_size": [
+        96,
+        82
+      ]
+    },
+    {
+      "filename": "frame_00148_20250716_094552_982.jpg",
+      "source_image": "frame_00148.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        271,
+        137,
+        326,
+        219
+      ],
+      "timestamp": "20250716_094552_982",
+      "crop_size": [
+        55,
+        82
+      ]
+    },
+    {
+      "filename": "frame_00148_20250716_094555_336.jpg",
+      "source_image": "frame_00148.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        243,
+        124,
+        334,
+        232
+      ],
+      "timestamp": "20250716_094555_336",
+      "crop_size": [
+        91,
+        108
+      ]
+    },
+    {
+      "filename": "frame_00149_20250716_094559_184.jpg",
+      "source_image": "frame_00149.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        229,
+        16,
+        297,
+        116
+      ],
+      "timestamp": "20250716_094559_184",
+      "crop_size": [
+        68,
+        100
+      ]
+    },
+    {
+      "filename": "frame_00149_20250716_094600_744.jpg",
+      "source_image": "frame_00149.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        247,
+        51,
+        296,
+        107
+      ],
+      "timestamp": "20250716_094600_744",
+      "crop_size": [
+        49,
+        56
+      ]
+    },
+    {
+      "filename": "frame_00149_20250716_094602_179.jpg",
+      "source_image": "frame_00149.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        226,
+        36,
+        303,
+        112
+      ],
+      "timestamp": "20250716_094602_179",
+      "crop_size": [
+        77,
+        76
+      ]
+    },
+    {
+      "filename": "frame_00155_20250716_094606_051.jpg",
+      "source_image": "frame_00155.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        311,
+        40,
+        370,
+        109
+      ],
+      "timestamp": "20250716_094606_051",
+      "crop_size": [
+        59,
+        69
+      ]
+    },
+    {
+      "filename": "frame_00190_20250716_094612_939.jpg",
+      "source_image": "frame_00190.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        524,
+        116,
+        588,
+        191
+      ],
+      "timestamp": "20250716_094612_939",
+      "crop_size": [
+        64,
+        75
+      ]
+    },
+    {
+      "filename": "frame_00190_20250716_094614_865.jpg",
+      "source_image": "frame_00190.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        513,
+        148,
+        551,
+        184
+      ],
+      "timestamp": "20250716_094614_865",
+      "crop_size": [
+        38,
+        36
+      ]
+    },
+    {
+      "filename": "frame_00190_20250716_094617_985.jpg",
+      "source_image": "frame_00190.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        522,
+        147,
+        543,
+        168
+      ],
+      "timestamp": "20250716_094617_985",
+      "crop_size": [
+        21,
+        21
+      ]
+    },
+    {
+      "filename": "frame_00190_20250716_094619_861.jpg",
+      "source_image": "frame_00190.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        531,
+        18,
+        592,
+        94
+      ],
+      "timestamp": "20250716_094619_861",
+      "crop_size": [
+        61,
+        76
+      ]
+    },
+    {
+      "filename": "frame_00192_20250716_094622_921.jpg",
+      "source_image": "frame_00192.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        209,
+        81,
+        280,
+        132
+      ],
+      "timestamp": "20250716_094622_921",
+      "crop_size": [
+        71,
+        51
+      ]
+    },
+    {
+      "filename": "frame_00192_20250716_094625_006.jpg",
+      "source_image": "frame_00192.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        282,
+        81,
+        352,
+        118
+      ],
+      "timestamp": "20250716_094625_006",
+      "crop_size": [
+        70,
+        37
+      ]
+    },
+    {
+      "filename": "frame_00192_20250716_094626_858.jpg",
+      "source_image": "frame_00192.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        203,
+        82,
+        352,
+        118
+      ],
+      "timestamp": "20250716_094626_858",
+      "crop_size": [
+        149,
+        36
+      ]
+    },
+    {
+      "filename": "frame_00218_20250716_094632_721.jpg",
+      "source_image": "frame_00218.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        200,
+        56,
+        228,
+        101
+      ],
+      "timestamp": "20250716_094632_721",
+      "crop_size": [
+        28,
+        45
+      ]
+    },
+    {
+      "filename": "frame_00218_20250716_094634_486.jpg",
+      "source_image": "frame_00218.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        227,
+        59,
+        262,
+        106
+      ],
+      "timestamp": "20250716_094634_486",
+      "crop_size": [
+        35,
+        47
+      ]
+    },
+    {
+      "filename": "frame_00218_20250716_094636_237.jpg",
+      "source_image": "frame_00218.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        236,
+        70,
+        247,
+        87
+      ],
+      "timestamp": "20250716_094636_237",
+      "crop_size": [
+        11,
+        17
+      ]
+    },
+    {
+      "filename": "frame_00218_20250716_094637_915.jpg",
+      "source_image": "frame_00218.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        229,
+        58,
+        264,
+        110
+      ],
+      "timestamp": "20250716_094637_915",
+      "crop_size": [
+        35,
+        52
+      ]
+    },
+    {
+      "filename": "frame_00218_20250716_094640_662.jpg",
+      "source_image": "frame_00218.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        196,
+        55,
+        267,
+        110
+      ],
+      "timestamp": "20250716_094640_662",
+      "crop_size": [
+        71,
+        55
+      ]
+    },
+    {
+      "filename": "frame_00221_20250716_094643_278.jpg",
+      "source_image": "frame_00221.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        201,
+        52,
+        240,
+        100
+      ],
+      "timestamp": "20250716_094643_278",
+      "crop_size": [
+        39,
+        48
+      ]
+    },
+    {
+      "filename": "frame_00221_20250716_094644_772.jpg",
+      "source_image": "frame_00221.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        206,
+        61,
+        229,
+        112
+      ],
+      "timestamp": "20250716_094644_772",
+      "crop_size": [
+        23,
+        51
+      ]
+    },
+    {
+      "filename": "frame_00221_20250716_094646_272.jpg",
+      "source_image": "frame_00221.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        224,
+        65,
+        268,
+        110
+      ],
+      "timestamp": "20250716_094646_272",
+      "crop_size": [
+        44,
+        45
+      ]
+    },
+    {
+      "filename": "frame_00221_20250716_094647_792.jpg",
+      "source_image": "frame_00221.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        201,
+        57,
+        265,
+        106
+      ],
+      "timestamp": "20250716_094647_792",
+      "crop_size": [
+        64,
+        49
+      ]
+    },
+    {
+      "filename": "frame_00224_20250716_094651_746.jpg",
+      "source_image": "frame_00224.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        200,
+        59,
+        283,
+        120
+      ],
+      "timestamp": "20250716_094651_746",
+      "crop_size": [
+        83,
+        61
+      ]
+    },
+    {
+      "filename": "frame_00229_20250716_094655_210.jpg",
+      "source_image": "frame_00229.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        232,
+        45,
+        276,
+        79
+      ],
+      "timestamp": "20250716_094655_210",
+      "crop_size": [
+        44,
+        34
+      ]
+    },
+    {
+      "filename": "frame_00229_20250716_094656_264.jpg",
+      "source_image": "frame_00229.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        254,
+        48,
+        277,
+        74
+      ],
+      "timestamp": "20250716_094656_264",
+      "crop_size": [
+        23,
+        26
+      ]
+    },
+    {
+      "filename": "frame_00236_20250716_094700_176.jpg",
+      "source_image": "frame_00236.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        167,
+        67,
+        216,
+        132
+      ],
+      "timestamp": "20250716_094700_176",
+      "crop_size": [
+        49,
+        65
+      ]
+    },
+    {
+      "filename": "frame_00236_20250716_094701_694.jpg",
+      "source_image": "frame_00236.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        119,
+        64,
+        209,
+        131
+      ],
+      "timestamp": "20250716_094701_694",
+      "crop_size": [
+        90,
+        67
+      ]
+    },
+    {
+      "filename": "frame_00240_20250716_094705_516.jpg",
+      "source_image": "frame_00240.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        153,
+        61,
+        196,
+        116
+      ],
+      "timestamp": "20250716_094705_516",
+      "crop_size": [
+        43,
+        55
+      ]
+    },
+    {
+      "filename": "frame_00245_20250716_094710_933.jpg",
+      "source_image": "frame_00245.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        485,
+        35,
+        525,
+        82
+      ],
+      "timestamp": "20250716_094710_933",
+      "crop_size": [
+        40,
+        47
+      ]
+    },
+    {
+      "filename": "frame_00245_20250716_094712_816.jpg",
+      "source_image": "frame_00245.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        486,
+        30,
+        520,
+        82
+      ],
+      "timestamp": "20250716_094712_816",
+      "crop_size": [
+        34,
+        52
+      ]
+    },
+    {
+      "filename": "frame_00245_20250716_094714_420.jpg",
+      "source_image": "frame_00245.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        481,
+        26,
+        501,
+        81
+      ],
+      "timestamp": "20250716_094714_420",
+      "crop_size": [
+        20,
+        55
+      ]
+    },
+    {
+      "filename": "frame_00245_20250716_094715_892.jpg",
+      "source_image": "frame_00245.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        469,
+        23,
+        517,
+        80
+      ],
+      "timestamp": "20250716_094715_892",
+      "crop_size": [
+        48,
+        57
+      ]
+    },
+    {
+      "filename": "frame_00245_20250716_094718_162.jpg",
+      "source_image": "frame_00245.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        498,
+        23,
+        528,
+        83
+      ],
+      "timestamp": "20250716_094718_162",
+      "crop_size": [
+        30,
+        60
+      ]
+    },
+    {
+      "filename": "frame_00250_20250716_094722_422.jpg",
+      "source_image": "frame_00250.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        536,
+        29,
+        589,
+        108
+      ],
+      "timestamp": "20250716_094722_422",
+      "crop_size": [
+        53,
+        79
+      ]
+    },
+    {
+      "filename": "frame_00265_20250716_094727_086.jpg",
+      "source_image": "frame_00265.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        333,
+        29,
+        380,
+        112
+      ],
+      "timestamp": "20250716_094727_086",
+      "crop_size": [
+        47,
+        83
+      ]
+    },
+    {
+      "filename": "frame_00265_20250716_094728_711.jpg",
+      "source_image": "frame_00265.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        466,
+        51,
+        502,
+        97
+      ],
+      "timestamp": "20250716_094728_711",
+      "crop_size": [
+        36,
+        46
+      ]
+    },
+    {
+      "filename": "frame_00265_20250716_094730_377.jpg",
+      "source_image": "frame_00265.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        469,
+        45,
+        527,
+        97
+      ],
+      "timestamp": "20250716_094730_377",
+      "crop_size": [
+        58,
+        52
+      ]
+    },
+    {
+      "filename": "frame_00265_20250716_094731_961.jpg",
+      "source_image": "frame_00265.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        316,
+        41,
+        385,
+        103
+      ],
+      "timestamp": "20250716_094731_961",
+      "crop_size": [
+        69,
+        62
+      ]
+    },
+    {
+      "filename": "frame_00269_20250716_094736_281.jpg",
+      "source_image": "frame_00269.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        390,
+        42,
+        458,
+        133
+      ],
+      "timestamp": "20250716_094736_281",
+      "crop_size": [
+        68,
+        91
+      ]
+    },
+    {
+      "filename": "frame_00270_20250716_094744_774.jpg",
+      "source_image": "frame_00270.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        506,
+        54,
+        584,
+        171
+      ],
+      "timestamp": "20250716_094744_774",
+      "crop_size": [
+        78,
+        117
+      ]
+    },
+    {
+      "filename": "frame_00279_20250716_094749_830.jpg",
+      "source_image": "frame_00279.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        478,
+        47,
+        501,
+        86
+      ],
+      "timestamp": "20250716_094749_830",
+      "crop_size": [
+        23,
+        39
+      ]
+    },
+    {
+      "filename": "frame_00279_20250716_094751_884.jpg",
+      "source_image": "frame_00279.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        478,
+        44,
+        521,
+        92
+      ],
+      "timestamp": "20250716_094751_884",
+      "crop_size": [
+        43,
+        48
+      ]
+    },
+    {
+      "filename": "frame_00281_20250716_094755_797.jpg",
+      "source_image": "frame_00281.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        550,
+        53,
+        601,
+        120
+      ],
+      "timestamp": "20250716_094755_797",
+      "crop_size": [
+        51,
+        67
+      ]
+    },
+    {
+      "filename": "frame_00281_20250716_094800_542.jpg",
+      "source_image": "frame_00281.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        547,
+        55,
+        638,
+        131
+      ],
+      "timestamp": "20250716_094800_542",
+      "crop_size": [
+        91,
+        76
+      ]
+    },
+    {
+      "filename": "frame_00297_20250716_094808_029.jpg",
+      "source_image": "frame_00297.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        222,
+        72,
+        280,
+        142
+      ],
+      "timestamp": "20250716_094808_029",
+      "crop_size": [
+        58,
+        70
+      ]
+    },
+    {
+      "filename": "frame_00297_20250716_094810_612.jpg",
+      "source_image": "frame_00297.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        247,
+        75,
+        281,
+        134
+      ],
+      "timestamp": "20250716_094810_612",
+      "crop_size": [
+        34,
+        59
+      ]
+    },
+    {
+      "filename": "frame_00297_20250716_094812_621.jpg",
+      "source_image": "frame_00297.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        369,
+        101,
+        444,
+        132
+      ],
+      "timestamp": "20250716_094812_621",
+      "crop_size": [
+        75,
+        31
+      ]
+    },
+    {
+      "filename": "frame_00297_20250716_094815_047.jpg",
+      "source_image": "frame_00297.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        222,
+        65,
+        262,
+        136
+      ],
+      "timestamp": "20250716_094815_047",
+      "crop_size": [
+        40,
+        71
+      ]
+    },
+    {
+      "filename": "frame_00299_20250716_094817_429.jpg",
+      "source_image": "frame_00299.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        243,
+        89,
+        302,
+        181
+      ],
+      "timestamp": "20250716_094817_429",
+      "crop_size": [
+        59,
+        92
+      ]
+    },
+    {
+      "filename": "frame_00299_20250716_094818_902.jpg",
+      "source_image": "frame_00299.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        181,
+        69,
+        291,
+        162
+      ],
+      "timestamp": "20250716_094818_902",
+      "crop_size": [
+        110,
+        93
+      ]
+    },
+    {
+      "filename": "frame_00304_20250716_094822_827.jpg",
+      "source_image": "frame_00304.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        345,
+        39,
+        385,
+        83
+      ],
+      "timestamp": "20250716_094822_827",
+      "crop_size": [
+        40,
+        44
+      ]
+    },
+    {
+      "filename": "frame_00304_20250716_094823_975.jpg",
+      "source_image": "frame_00304.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        349,
+        36,
+        380,
+        75
+      ],
+      "timestamp": "20250716_094823_975",
+      "crop_size": [
+        31,
+        39
+      ]
+    },
+    {
+      "filename": "frame_00304_20250716_094825_566.jpg",
+      "source_image": "frame_00304.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        340,
+        24,
+        385,
+        88
+      ],
+      "timestamp": "20250716_094825_566",
+      "crop_size": [
+        45,
+        64
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094831_334.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        164,
+        68,
+        300,
+        209
+      ],
+      "timestamp": "20250716_094831_334",
+      "crop_size": [
+        136,
+        141
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094833_781.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        208,
+        118,
+        266,
+        185
+      ],
+      "timestamp": "20250716_094833_781",
+      "crop_size": [
+        58,
+        67
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094840_259.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        262,
+        74,
+        306,
+        111
+      ],
+      "timestamp": "20250716_094840_259",
+      "crop_size": [
+        44,
+        37
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094841_888.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        260,
+        170,
+        310,
+        202
+      ],
+      "timestamp": "20250716_094841_888",
+      "crop_size": [
+        50,
+        32
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094843_533.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        226,
+        191,
+        261,
+        224
+      ],
+      "timestamp": "20250716_094843_533",
+      "crop_size": [
+        35,
+        33
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094845_157.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        180,
+        183,
+        221,
+        226
+      ],
+      "timestamp": "20250716_094845_157",
+      "crop_size": [
+        41,
+        43
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094846_979.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        137,
+        145,
+        183,
+        188
+      ],
+      "timestamp": "20250716_094846_979",
+      "crop_size": [
+        46,
+        43
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094848_826.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        157,
+        90,
+        202,
+        133
+      ],
+      "timestamp": "20250716_094848_826",
+      "crop_size": [
+        45,
+        43
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094850_435.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        187,
+        51,
+        233,
+        97
+      ],
+      "timestamp": "20250716_094850_435",
+      "crop_size": [
+        46,
+        46
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094852_403.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        207,
+        101,
+        274,
+        180
+      ],
+      "timestamp": "20250716_094852_403",
+      "crop_size": [
+        67,
+        79
+      ]
+    },
+    {
+      "filename": "frame_00308_20250716_094854_558.jpg",
+      "source_image": "frame_00308.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        158,
+        44,
+        308,
+        216
+      ],
+      "timestamp": "20250716_094854_558",
+      "crop_size": [
+        150,
+        172
+      ]
+    },
+    {
+      "filename": "frame_00312_20250716_094859_164.jpg",
+      "source_image": "frame_00312.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        398,
+        62,
+        532,
+        98
+      ],
+      "timestamp": "20250716_094859_164",
+      "crop_size": [
+        134,
+        36
+      ]
+    },
+    {
+      "filename": "frame_00312_20250716_094900_937.jpg",
+      "source_image": "frame_00312.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        417,
+        103,
+        493,
+        142
+      ],
+      "timestamp": "20250716_094900_937",
+      "crop_size": [
+        76,
+        39
+      ]
+    },
+    {
+      "filename": "frame_00312_20250716_094902_827.jpg",
+      "source_image": "frame_00312.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        401,
+        54,
+        512,
+        173
+      ],
+      "timestamp": "20250716_094902_827",
+      "crop_size": [
+        111,
+        119
+      ]
+    },
+    {
+      "filename": "frame_00312_20250716_094904_462.jpg",
+      "source_image": "frame_00312.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        383,
+        10,
+        440,
+        48
+      ],
+      "timestamp": "20250716_094904_462",
+      "crop_size": [
+        57,
+        38
+      ]
+    },
+    {
+      "filename": "frame_00312_20250716_094905_961.jpg",
+      "source_image": "frame_00312.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        401,
+        97,
+        464,
+        122
+      ],
+      "timestamp": "20250716_094905_961",
+      "crop_size": [
+        63,
+        25
+      ]
+    },
+    {
+      "filename": "frame_00312_20250716_094907_834.jpg",
+      "source_image": "frame_00312.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        395,
+        48,
+        505,
+        171
+      ],
+      "timestamp": "20250716_094907_834",
+      "crop_size": [
+        110,
+        123
+      ]
+    },
+    {
+      "filename": "frame_00314_20250716_094916_755.jpg",
+      "source_image": "frame_00314.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        189,
+        34,
+        269,
+        109
+      ],
+      "timestamp": "20250716_094916_755",
+      "crop_size": [
+        80,
+        75
+      ]
+    },
+    {
+      "filename": "frame_00314_20250716_094918_297.jpg",
+      "source_image": "frame_00314.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        191,
+        39,
+        267,
+        66
+      ],
+      "timestamp": "20250716_094918_297",
+      "crop_size": [
+        76,
+        27
+      ]
+    },
+    {
+      "filename": "frame_00314_20250716_094923_568.jpg",
+      "source_image": "frame_00314.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        203,
+        75,
+        265,
+        110
+      ],
+      "timestamp": "20250716_094923_568",
+      "crop_size": [
+        62,
+        35
+      ]
+    },
+    {
+      "filename": "frame_00396_20250716_094937_260.jpg",
+      "source_image": "frame_00396.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        354,
+        28,
+        375,
+        58
+      ],
+      "timestamp": "20250716_094937_260",
+      "crop_size": [
+        21,
+        30
+      ]
+    },
+    {
+      "filename": "frame_00396_20250716_094939_264.jpg",
+      "source_image": "frame_00396.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        320,
+        131,
+        453,
+        295
+      ],
+      "timestamp": "20250716_094939_264",
+      "crop_size": [
+        133,
+        164
+      ]
+    },
+    {
+      "filename": "frame_00396_20250716_094940_997.jpg",
+      "source_image": "frame_00396.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        0,
+        89,
+        65,
+        128
+      ],
+      "timestamp": "20250716_094940_997",
+      "crop_size": [
+        65,
+        39
+      ]
+    },
+    {
+      "filename": "frame_00396_20250716_094943_090.jpg",
+      "source_image": "frame_00396.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        317,
+        0,
+        334,
+        43
+      ],
+      "timestamp": "20250716_094943_090",
+      "crop_size": [
+        17,
+        43
+      ]
+    },
+    {
+      "filename": "frame_00396_20250716_094945_143.jpg",
+      "source_image": "frame_00396.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        338,
+        14,
+        371,
+        63
+      ],
+      "timestamp": "20250716_094945_143",
+      "crop_size": [
+        33,
+        49
+      ]
+    },
+    {
+      "filename": "frame_00398_20250716_094948_937.jpg",
+      "source_image": "frame_00398.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        218,
+        160,
+        314,
+        277
+      ],
+      "timestamp": "20250716_094948_937",
+      "crop_size": [
+        96,
+        117
+      ]
+    },
+    {
+      "filename": "frame_00400_20250716_094955_144.jpg",
+      "source_image": "frame_00400.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        349,
+        46,
+        374,
+        56
+      ],
+      "timestamp": "20250716_094955_144",
+      "crop_size": [
+        25,
+        10
+      ]
+    },
+    {
+      "filename": "frame_00402_20250716_094957_377.jpg",
+      "source_image": "frame_00402.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        330,
+        121,
+        399,
+        177
+      ],
+      "timestamp": "20250716_094957_377",
+      "crop_size": [
+        69,
+        56
+      ]
+    },
+    {
+      "filename": "frame_00402_20250716_094959_658.jpg",
+      "source_image": "frame_00402.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        347,
+        48,
+        363,
+        66
+      ],
+      "timestamp": "20250716_094959_658",
+      "crop_size": [
+        16,
+        18
+      ]
+    },
+    {
+      "filename": "frame_00405_20250716_095003_344.jpg",
+      "source_image": "frame_00405.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        460,
+        55,
+        474,
+        78
+      ],
+      "timestamp": "20250716_095003_344",
+      "crop_size": [
+        14,
+        23
+      ]
+    },
+    {
+      "filename": "frame_00405_20250716_095005_057.jpg",
+      "source_image": "frame_00405.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        460,
+        41,
+        474,
+        78
+      ],
+      "timestamp": "20250716_095005_057",
+      "crop_size": [
+        14,
+        37
+      ]
+    },
+    {
+      "filename": "frame_00405_20250716_095006_788.jpg",
+      "source_image": "frame_00405.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        218,
+        148,
+        341,
+        257
+      ],
+      "timestamp": "20250716_095006_788",
+      "crop_size": [
+        123,
+        109
+      ]
+    },
+    {
+      "filename": "frame_00410_20250716_095011_830.jpg",
+      "source_image": "frame_00410.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        259,
+        55,
+        283,
+        78
+      ],
+      "timestamp": "20250716_095011_830",
+      "crop_size": [
+        24,
+        23
+      ]
+    },
+    {
+      "filename": "frame_00421_20250716_095017_757.jpg",
+      "source_image": "frame_00421.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        506,
+        199,
+        548,
+        227
+      ],
+      "timestamp": "20250716_095017_757",
+      "crop_size": [
+        42,
+        28
+      ]
+    },
+    {
+      "filename": "frame_00421_20250716_095019_296.jpg",
+      "source_image": "frame_00421.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        504,
+        180,
+        560,
+        246
+      ],
+      "timestamp": "20250716_095019_296",
+      "crop_size": [
+        56,
+        66
+      ]
+    },
+    {
+      "filename": "frame_00421_20250716_095020_777.jpg",
+      "source_image": "frame_00421.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        474,
+        183,
+        589,
+        248
+      ],
+      "timestamp": "20250716_095020_777",
+      "crop_size": [
+        115,
+        65
+      ]
+    },
+    {
+      "filename": "frame_00421_20250716_095022_305.jpg",
+      "source_image": "frame_00421.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        502,
+        189,
+        580,
+        222
+      ],
+      "timestamp": "20250716_095022_305",
+      "crop_size": [
+        78,
+        33
+      ]
+    },
+    {
+      "filename": "frame_00438_20250716_095029_463.jpg",
+      "source_image": "frame_00438.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        13,
+        136,
+        44,
+        195
+      ],
+      "timestamp": "20250716_095029_463",
+      "crop_size": [
+        31,
+        59
+      ]
+    },
+    {
+      "filename": "frame_00438_20250716_095031_047.jpg",
+      "source_image": "frame_00438.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        23,
+        174,
+        43,
+        202
+      ],
+      "timestamp": "20250716_095031_047",
+      "crop_size": [
+        20,
+        28
+      ]
+    },
+    {
+      "filename": "frame_00455_20250716_095036_301.jpg",
+      "source_image": "frame_00455.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        386,
+        74,
+        400,
+        104
+      ],
+      "timestamp": "20250716_095036_301",
+      "crop_size": [
+        14,
+        30
+      ]
+    },
+    {
+      "filename": "frame_00462_20250716_095041_868.jpg",
+      "source_image": "frame_00462.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        8,
+        110,
+        43,
+        158
+      ],
+      "timestamp": "20250716_095041_868",
+      "crop_size": [
+        35,
+        48
+      ]
+    },
+    {
+      "filename": "frame_00486_20250716_095049_990.jpg",
+      "source_image": "frame_00486.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        230,
+        194,
+        279,
+        265
+      ],
+      "timestamp": "20250716_095049_990",
+      "crop_size": [
+        49,
+        71
+      ]
+    },
+    {
+      "filename": "frame_00486_20250716_095051_194.jpg",
+      "source_image": "frame_00486.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        237,
+        181,
+        279,
+        270
+      ],
+      "timestamp": "20250716_095051_194",
+      "crop_size": [
+        42,
+        89
+      ]
+    },
+    {
+      "filename": "frame_00486_20250716_095052_575.jpg",
+      "source_image": "frame_00486.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        235,
+        178,
+        272,
+        263
+      ],
+      "timestamp": "20250716_095052_575",
+      "crop_size": [
+        37,
+        85
+      ]
+    },
+    {
+      "filename": "frame_00489_20250716_095055_131.jpg",
+      "source_image": "frame_00489.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        219,
+        186,
+        282,
+        269
+      ],
+      "timestamp": "20250716_095055_131",
+      "crop_size": [
+        63,
+        83
+      ]
+    },
+    {
+      "filename": "frame_00489_20250716_095056_505.jpg",
+      "source_image": "frame_00489.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        218,
+        167,
+        268,
+        265
+      ],
+      "timestamp": "20250716_095056_505",
+      "crop_size": [
+        50,
+        98
+      ]
+    },
+    {
+      "filename": "frame_00489_20250716_095058_177.jpg",
+      "source_image": "frame_00489.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        224,
+        175,
+        261,
+        260
+      ],
+      "timestamp": "20250716_095058_177",
+      "crop_size": [
+        37,
+        85
+      ]
+    },
+    {
+      "filename": "frame_00489_20250716_095059_716.jpg",
+      "source_image": "frame_00489.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        320,
+        135,
+        356,
+        206
+      ],
+      "timestamp": "20250716_095059_716",
+      "crop_size": [
+        36,
+        71
+      ]
+    },
+    {
+      "filename": "frame_00500_20250716_095104_120.jpg",
+      "source_image": "frame_00500.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        220,
+        201,
+        273,
+        285
+      ],
+      "timestamp": "20250716_095104_120",
+      "crop_size": [
+        53,
+        84
+      ]
+    },
+    {
+      "filename": "frame_00501_20250716_095105_826.jpg",
+      "source_image": "frame_00501.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        195,
+        210,
+        247,
+        309
+      ],
+      "timestamp": "20250716_095105_826",
+      "crop_size": [
+        52,
+        99
+      ]
+    },
+    {
+      "filename": "frame_00501_20250716_095107_720.jpg",
+      "source_image": "frame_00501.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        306,
+        146,
+        341,
+        200
+      ],
+      "timestamp": "20250716_095107_720",
+      "crop_size": [
+        35,
+        54
+      ]
+    },
+    {
+      "filename": "frame_00565_20250716_095115_855.jpg",
+      "source_image": "frame_00565.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        428,
+        73,
+        459,
+        110
+      ],
+      "timestamp": "20250716_095115_855",
+      "crop_size": [
+        31,
+        37
+      ]
+    },
+    {
+      "filename": "frame_00565_20250716_095117_599.jpg",
+      "source_image": "frame_00565.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        329,
+        63,
+        363,
+        104
+      ],
+      "timestamp": "20250716_095117_599",
+      "crop_size": [
+        34,
+        41
+      ]
+    },
+    {
+      "filename": "frame_00594_20250716_095123_638.jpg",
+      "source_image": "frame_00594.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        435,
+        65,
+        472,
+        130
+      ],
+      "timestamp": "20250716_095123_638",
+      "crop_size": [
+        37,
+        65
+      ]
+    },
+    {
+      "filename": "frame_00644_20250716_095130_690.jpg",
+      "source_image": "frame_00644.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        467,
+        34,
+        515,
+        80
+      ],
+      "timestamp": "20250716_095130_690",
+      "crop_size": [
+        48,
+        46
+      ]
+    },
+    {
+      "filename": "frame_00644_20250716_095132_274.jpg",
+      "source_image": "frame_00644.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        371,
+        26,
+        405,
+        79
+      ],
+      "timestamp": "20250716_095132_274",
+      "crop_size": [
+        34,
+        53
+      ]
+    },
+    {
+      "filename": "frame_00696_20250716_095153_002.jpg",
+      "source_image": "frame_00696.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        26,
+        203,
+        86,
+        295
+      ],
+      "timestamp": "20250716_095153_002",
+      "crop_size": [
+        60,
+        92
+      ]
+    },
+    {
+      "filename": "frame_00696_20250716_095154_639.jpg",
+      "source_image": "frame_00696.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        144,
+        140,
+        172,
+        187
+      ],
+      "timestamp": "20250716_095154_639",
+      "crop_size": [
+        28,
+        47
+      ]
+    },
+    {
+      "filename": "frame_01006_20250716_095208_686.jpg",
+      "source_image": "frame_01006.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        371,
+        55,
+        385,
+        72
+      ],
+      "timestamp": "20250716_095208_686",
+      "crop_size": [
+        14,
+        17
+      ]
+    },
+    {
+      "filename": "frame_01014_20250716_095213_077.jpg",
+      "source_image": "frame_01014.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        286,
+        142,
+        324,
+        183
+      ],
+      "timestamp": "20250716_095213_077",
+      "crop_size": [
+        38,
+        41
+      ]
+    },
+    {
+      "filename": "frame_01014_20250716_095214_871.jpg",
+      "source_image": "frame_01014.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        405,
+        121,
+        471,
+        185
+      ],
+      "timestamp": "20250716_095214_871",
+      "crop_size": [
+        66,
+        64
+      ]
+    },
+    {
+      "filename": "frame_01014_20250716_095216_129.jpg",
+      "source_image": "frame_01014.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        405,
+        131,
+        456,
+        185
+      ],
+      "timestamp": "20250716_095216_129",
+      "crop_size": [
+        51,
+        54
+      ]
+    },
+    {
+      "filename": "frame_01014_20250716_095217_398.jpg",
+      "source_image": "frame_01014.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        273,
+        133,
+        343,
+        187
+      ],
+      "timestamp": "20250716_095217_398",
+      "crop_size": [
+        70,
+        54
+      ]
+    },
+    {
+      "filename": "frame_01019_20250716_095221_951.jpg",
+      "source_image": "frame_01019.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        6,
+        348,
+        35,
+        397
+      ],
+      "timestamp": "20250716_095221_951",
+      "crop_size": [
+        29,
+        49
+      ]
+    },
+    {
+      "filename": "frame_01019_20250716_095223_336.jpg",
+      "source_image": "frame_01019.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        29,
+        316,
+        78,
+        346
+      ],
+      "timestamp": "20250716_095223_336",
+      "crop_size": [
+        49,
+        30
+      ]
+    },
+    {
+      "filename": "frame_01019_20250716_095224_783.jpg",
+      "source_image": "frame_01019.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        0,
+        372,
+        37,
+        398
+      ],
+      "timestamp": "20250716_095224_783",
+      "crop_size": [
+        37,
+        26
+      ]
+    },
+    {
+      "filename": "frame_01018_20250716_095228_886.jpg",
+      "source_image": "frame_01018.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        181,
+        178,
+        264,
+        209
+      ],
+      "timestamp": "20250716_095228_886",
+      "crop_size": [
+        83,
+        31
+      ]
+    },
+    {
+      "filename": "frame_01025_20250716_095233_945.jpg",
+      "source_image": "frame_01025.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        234,
+        98,
+        253,
+        128
+      ],
+      "timestamp": "20250716_095233_945",
+      "crop_size": [
+        19,
+        30
+      ]
+    },
+    {
+      "filename": "frame_01029_20250716_095236_974.jpg",
+      "source_image": "frame_01029.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        277,
+        154,
+        302,
+        199
+      ],
+      "timestamp": "20250716_095236_974",
+      "crop_size": [
+        25,
+        45
+      ]
+    },
+    {
+      "filename": "frame_01037_20250716_095241_075.jpg",
+      "source_image": "frame_01037.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        317,
+        88,
+        332,
+        109
+      ],
+      "timestamp": "20250716_095241_075",
+      "crop_size": [
+        15,
+        21
+      ]
+    },
+    {
+      "filename": "frame_01037_20250716_095243_058.jpg",
+      "source_image": "frame_01037.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        383,
+        90,
+        401,
+        115
+      ],
+      "timestamp": "20250716_095243_058",
+      "crop_size": [
+        18,
+        25
+      ]
+    },
+    {
+      "filename": "frame_01061_20250716_095249_095.jpg",
+      "source_image": "frame_01061.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        377,
+        99,
+        415,
+        155
+      ],
+      "timestamp": "20250716_095249_095",
+      "crop_size": [
+        38,
+        56
+      ]
+    },
+    {
+      "filename": "frame_01068_20250716_095257_645.jpg",
+      "source_image": "frame_01068.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        299,
+        208,
+        325,
+        305
+      ],
+      "timestamp": "20250716_095257_645",
+      "crop_size": [
+        26,
+        97
+      ]
+    },
+    {
+      "filename": "frame_01065_20250716_095301_383.jpg",
+      "source_image": "frame_01065.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        676,
+        47,
+        706,
+        153
+      ],
+      "timestamp": "20250716_095301_383",
+      "crop_size": [
+        30,
+        106
+      ]
+    },
+    {
+      "filename": "frame_01065_20250716_095302_725.jpg",
+      "source_image": "frame_01065.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        664,
+        27,
+        702,
+        151
+      ],
+      "timestamp": "20250716_095302_725",
+      "crop_size": [
+        38,
+        124
+      ]
+    },
+    {
+      "filename": "frame_01078_20250716_095310_733.jpg",
+      "source_image": "frame_01078.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        321,
+        45,
+        349,
+        74
+      ],
+      "timestamp": "20250716_095310_733",
+      "crop_size": [
+        28,
+        29
+      ]
+    },
+    {
+      "filename": "frame_01078_20250716_095312_549.jpg",
+      "source_image": "frame_01078.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        255,
+        111,
+        265,
+        142
+      ],
+      "timestamp": "20250716_095312_549",
+      "crop_size": [
+        10,
+        31
+      ]
+    },
+    {
+      "filename": "frame_01084_20250716_095321_233.jpg",
+      "source_image": "frame_01084.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        115,
+        182,
+        267,
+        206
+      ],
+      "timestamp": "20250716_095321_233",
+      "crop_size": [
+        152,
+        24
+      ]
+    },
+    {
+      "filename": "frame_01087_20250716_095404_253.jpg",
+      "source_image": "frame_01087.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        272,
+        165,
+        331,
+        226
+      ],
+      "timestamp": "20250716_095404_253",
+      "crop_size": [
+        59,
+        61
+      ]
+    },
+    {
+      "filename": "frame_01087_20250716_095405_923.jpg",
+      "source_image": "frame_01087.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        268,
+        167,
+        313,
+        220
+      ],
+      "timestamp": "20250716_095405_923",
+      "crop_size": [
+        45,
+        53
+      ]
+    },
+    {
+      "filename": "frame_01088_20250716_095409_147.jpg",
+      "source_image": "frame_01088.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        253,
+        220,
+        355,
+        314
+      ],
+      "timestamp": "20250716_095409_147",
+      "crop_size": [
+        102,
+        94
+      ]
+    },
+    {
+      "filename": "frame_01088_20250716_095410_517.jpg",
+      "source_image": "frame_01088.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        263,
+        209,
+        336,
+        313
+      ],
+      "timestamp": "20250716_095410_517",
+      "crop_size": [
+        73,
+        104
+      ]
+    },
+    {
+      "filename": "frame_01101_20250716_095421_575.jpg",
+      "source_image": "frame_01101.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        15,
+        161,
+        99,
+        231
+      ],
+      "timestamp": "20250716_095421_575",
+      "crop_size": [
+        84,
+        70
+      ]
+    },
+    {
+      "filename": "frame_01118_20250716_095427_684.jpg",
+      "source_image": "frame_01118.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        145,
+        109,
+        188,
+        140
+      ],
+      "timestamp": "20250716_095427_684",
+      "crop_size": [
+        43,
+        31
+      ]
+    },
+    {
+      "filename": "frame_01121_20250716_095429_969.jpg",
+      "source_image": "frame_01121.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        175,
+        128,
+        208,
+        174
+      ],
+      "timestamp": "20250716_095429_969",
+      "crop_size": [
+        33,
+        46
+      ]
+    },
+    {
+      "filename": "frame_01124_20250716_095432_506.jpg",
+      "source_image": "frame_01124.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        174,
+        385,
+        318,
+        574
+      ],
+      "timestamp": "20250716_095432_506",
+      "crop_size": [
+        144,
+        189
+      ]
+    },
+    {
+      "filename": "frame_01129_20250716_095440_239.jpg",
+      "source_image": "frame_01129.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        43,
+        74,
+        105,
+        200
+      ],
+      "timestamp": "20250716_095440_239",
+      "crop_size": [
+        62,
+        126
+      ]
+    },
+    {
+      "filename": "frame_01129_20250716_095441_552.jpg",
+      "source_image": "frame_01129.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        43,
+        89,
+        99,
+        196
+      ],
+      "timestamp": "20250716_095441_552",
+      "crop_size": [
+        56,
+        107
+      ]
+    },
+    {
+      "filename": "frame_01129_20250716_095442_988.jpg",
+      "source_image": "frame_01129.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        43,
+        78,
+        94,
+        185
+      ],
+      "timestamp": "20250716_095442_988",
+      "crop_size": [
+        51,
+        107
+      ]
+    },
+    {
+      "filename": "frame_01128_20250716_095446_646.jpg",
+      "source_image": "frame_01128.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        118,
+        71,
+        143,
+        132
+      ],
+      "timestamp": "20250716_095446_646",
+      "crop_size": [
+        25,
+        61
+      ]
+    },
+    {
+      "filename": "frame_01129_20250716_095448_259.jpg",
+      "source_image": "frame_01129.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        50,
+        75,
+        85,
+        198
+      ],
+      "timestamp": "20250716_095448_259",
+      "crop_size": [
+        35,
+        123
+      ]
+    },
+    {
+      "filename": "frame_01129_20250716_095449_326.jpg",
+      "source_image": "frame_01129.jpg",
+      "class_id": 9,
+      "class_name": "Unknown",
+      "crop_coords": [
+        55,
+        84,
+        112,
+        185
+      ],
+      "timestamp": "20250716_095449_326",
+      "crop_size": [
+        57,
+        101
+      ]
     }
   ],
   "session_info": [
@@ -19160,6 +21863,56 @@
         "7": 50
       },
       "images_processed": 95
+    },
+    {
+      "timestamp": "2025-07-16T09:43:13.868736",
+      "total_crops": 0,
+      "crops_per_class": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "images_processed": 2
+    },
+    {
+      "timestamp": "2025-07-16T09:44:26.474872",
+      "total_crops": 0,
+      "crops_per_class": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      },
+      "images_processed": 1
+    },
+    {
+      "timestamp": "2025-07-16T09:54:54.085142",
+      "total_crops": 159,
+      "crops_per_class": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 159
+      },
+      "images_processed": 859
     }
   ]
 }
