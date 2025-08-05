@@ -36,7 +36,7 @@ def extract_unique_frames(video_path, output_folder, similarity_threshold=0.80, 
     
     # Initialize variables
     frame_number = 0
-    saved_count = 7000
+    saved_count = 8000
     prev_frame_gray = None
     last_saved_frame_gray = None
     
@@ -85,8 +85,8 @@ def extract_unique_frames(video_path, output_folder, similarity_threshold=0.80, 
     print(f"Achieved {saved_count/frame_count*100:.2f}% compression ratio")
 
 if __name__ == "__main__":
-    video_path = "assets/lights.mp4"
-    output_folder = "framesTrafficLights"
+    video_path = "assets/video.mp4"
+    output_folder = "frames"
     
     extract_unique_frames(
         video_path, 
