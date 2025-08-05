@@ -25465,6 +25465,2080 @@
         42,
         65
       ]
+    },
+    {
+      "filename": "frame_01000_20250805_153121_644.jpg",
+      "source_image": "frame_01000.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        107,
+        30,
+        165,
+        86
+      ],
+      "timestamp": "20250805_153121_644",
+      "crop_size": [
+        58,
+        56
+      ]
+    },
+    {
+      "filename": "frame_01000_20250805_153130_040.jpg",
+      "source_image": "frame_01000.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        99,
+        20,
+        172,
+        96
+      ],
+      "timestamp": "20250805_153130_040",
+      "crop_size": [
+        73,
+        76
+      ]
+    },
+    {
+      "filename": "frame_01000_20250805_153132_564.jpg",
+      "source_image": "frame_01000.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        112,
+        32,
+        151,
+        91
+      ],
+      "timestamp": "20250805_153132_564",
+      "crop_size": [
+        39,
+        59
+      ]
+    },
+    {
+      "filename": "frame_01000_20250805_153135_829.jpg",
+      "source_image": "frame_01000.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        116,
+        38,
+        171,
+        92
+      ],
+      "timestamp": "20250805_153135_829",
+      "crop_size": [
+        55,
+        54
+      ]
+    },
+    {
+      "filename": "frame_01000_20250805_153140_492.jpg",
+      "source_image": "frame_01000.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        119,
+        38,
+        152,
+        76
+      ],
+      "timestamp": "20250805_153140_492",
+      "crop_size": [
+        33,
+        38
+      ]
+    },
+    {
+      "filename": "frame_01005_20250805_153151_054.jpg",
+      "source_image": "frame_01005.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        115,
+        38,
+        178,
+        104
+      ],
+      "timestamp": "20250805_153151_054",
+      "crop_size": [
+        63,
+        66
+      ]
+    },
+    {
+      "filename": "frame_01005_20250805_153153_526.jpg",
+      "source_image": "frame_01005.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        106,
+        21,
+        153,
+        80
+      ],
+      "timestamp": "20250805_153153_526",
+      "crop_size": [
+        47,
+        59
+      ]
+    },
+    {
+      "filename": "frame_01005_20250805_153156_270.jpg",
+      "source_image": "frame_01005.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        117,
+        36,
+        153,
+        78
+      ],
+      "timestamp": "20250805_153156_270",
+      "crop_size": [
+        36,
+        42
+      ]
+    },
+    {
+      "filename": "frame_01005_20250805_153158_277.jpg",
+      "source_image": "frame_01005.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        117,
+        37,
+        153,
+        78
+      ],
+      "timestamp": "20250805_153158_277",
+      "crop_size": [
+        36,
+        41
+      ]
+    },
+    {
+      "filename": "frame_01005_20250805_153200_247.jpg",
+      "source_image": "frame_01005.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        117,
+        37,
+        152,
+        78
+      ],
+      "timestamp": "20250805_153200_247",
+      "crop_size": [
+        35,
+        41
+      ]
+    },
+    {
+      "filename": "frame_01013_20250805_153238_499.jpg",
+      "source_image": "frame_01013.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        452,
+        27,
+        521,
+        104
+      ],
+      "timestamp": "20250805_153238_499",
+      "crop_size": [
+        69,
+        77
+      ]
+    },
+    {
+      "filename": "frame_01013_20250805_153240_867.jpg",
+      "source_image": "frame_01013.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        439,
+        11,
+        504,
+        129
+      ],
+      "timestamp": "20250805_153240_867",
+      "crop_size": [
+        65,
+        118
+      ]
+    },
+    {
+      "filename": "frame_01013_20250805_153243_406.jpg",
+      "source_image": "frame_01013.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        446,
+        19,
+        502,
+        122
+      ],
+      "timestamp": "20250805_153243_406",
+      "crop_size": [
+        56,
+        103
+      ]
+    },
+    {
+      "filename": "frame_01013_20250805_153248_478.jpg",
+      "source_image": "frame_01013.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        442,
+        6,
+        497,
+        86
+      ],
+      "timestamp": "20250805_153248_478",
+      "crop_size": [
+        55,
+        80
+      ]
+    },
+    {
+      "filename": "frame_01013_20250805_153251_831.jpg",
+      "source_image": "frame_01013.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        445,
+        22,
+        502,
+        90
+      ],
+      "timestamp": "20250805_153251_831",
+      "crop_size": [
+        57,
+        68
+      ]
+    },
+    {
+      "filename": "frame_01013_20250805_153255_609.jpg",
+      "source_image": "frame_01013.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        435,
+        6,
+        526,
+        128
+      ],
+      "timestamp": "20250805_153255_609",
+      "crop_size": [
+        91,
+        122
+      ]
+    },
+    {
+      "filename": "frame_01013_20250805_153258_334.jpg",
+      "source_image": "frame_01013.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        448,
+        24,
+        500,
+        85
+      ],
+      "timestamp": "20250805_153258_334",
+      "crop_size": [
+        52,
+        61
+      ]
+    },
+    {
+      "filename": "frame_01013_20250805_153301_489.jpg",
+      "source_image": "frame_01013.jpg",
+      "class_id": 0,
+      "class_name": "Speed 50km/h",
+      "crop_coords": [
+        453,
+        33,
+        497,
+        72
+      ],
+      "timestamp": "20250805_153301_489",
+      "crop_size": [
+        44,
+        39
+      ]
+    },
+    {
+      "filename": "frame_01023_20250805_153314_183.jpg",
+      "source_image": "frame_01023.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        447,
+        9,
+        554,
+        122
+      ],
+      "timestamp": "20250805_153314_183",
+      "crop_size": [
+        107,
+        113
+      ]
+    },
+    {
+      "filename": "frame_01023_20250805_153316_041.jpg",
+      "source_image": "frame_01023.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        473,
+        24,
+        531,
+        78
+      ],
+      "timestamp": "20250805_153316_041",
+      "crop_size": [
+        58,
+        54
+      ]
+    },
+    {
+      "filename": "frame_01023_20250805_153319_358.jpg",
+      "source_image": "frame_01023.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        458,
+        21,
+        532,
+        133
+      ],
+      "timestamp": "20250805_153319_358",
+      "crop_size": [
+        74,
+        112
+      ]
+    },
+    {
+      "filename": "frame_01023_20250805_153322_129.jpg",
+      "source_image": "frame_01023.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        458,
+        12,
+        555,
+        178
+      ],
+      "timestamp": "20250805_153322_129",
+      "crop_size": [
+        97,
+        166
+      ]
+    },
+    {
+      "filename": "frame_01023_20250805_153323_831.jpg",
+      "source_image": "frame_01023.jpg",
+      "class_id": 4,
+      "class_name": "Danger",
+      "crop_coords": [
+        458,
+        12,
+        560,
+        104
+      ],
+      "timestamp": "20250805_153323_831",
+      "crop_size": [
+        102,
+        92
+      ]
+    },
+    {
+      "filename": "frame_03014_20250805_153437_537.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        123,
+        2,
+        251,
+        139
+      ],
+      "timestamp": "20250805_153437_537",
+      "crop_size": [
+        128,
+        137
+      ]
+    },
+    {
+      "filename": "frame_03014_20250805_153443_471.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        170,
+        13,
+        246,
+        114
+      ],
+      "timestamp": "20250805_153443_471",
+      "crop_size": [
+        76,
+        101
+      ]
+    },
+    {
+      "filename": "frame_03014_20250805_153445_867.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        172,
+        13,
+        231,
+        117
+      ],
+      "timestamp": "20250805_153445_867",
+      "crop_size": [
+        59,
+        104
+      ]
+    },
+    {
+      "filename": "frame_03014_20250805_153448_580.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        171,
+        10,
+        217,
+        129
+      ],
+      "timestamp": "20250805_153448_580",
+      "crop_size": [
+        46,
+        119
+      ]
+    },
+    {
+      "filename": "frame_03014_20250805_153450_792.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        175,
+        18,
+        240,
+        101
+      ],
+      "timestamp": "20250805_153450_792",
+      "crop_size": [
+        65,
+        83
+      ]
+    },
+    {
+      "filename": "frame_03014_20250805_153453_261.jpg",
+      "source_image": "frame_03014.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        183,
+        0,
+        238,
+        126
+      ],
+      "timestamp": "20250805_153453_261",
+      "crop_size": [
+        55,
+        126
+      ]
+    },
+    {
+      "filename": "frame_03017_20250805_153503_236.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        25,
+        3,
+        152,
+        140
+      ],
+      "timestamp": "20250805_153503_236",
+      "crop_size": [
+        127,
+        137
+      ]
+    },
+    {
+      "filename": "frame_03017_20250805_153505_723.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        6,
+        5,
+        161,
+        189
+      ],
+      "timestamp": "20250805_153505_723",
+      "crop_size": [
+        155,
+        184
+      ]
+    },
+    {
+      "filename": "frame_03017_20250805_153513_124.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        38,
+        10,
+        127,
+        128
+      ],
+      "timestamp": "20250805_153513_124",
+      "crop_size": [
+        89,
+        118
+      ]
+    },
+    {
+      "filename": "frame_03017_20250805_153517_690.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        36,
+        20,
+        120,
+        119
+      ],
+      "timestamp": "20250805_153517_690",
+      "crop_size": [
+        84,
+        99
+      ]
+    },
+    {
+      "filename": "frame_03017_20250805_153520_169.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        38,
+        13,
+        135,
+        122
+      ],
+      "timestamp": "20250805_153520_169",
+      "crop_size": [
+        97,
+        109
+      ]
+    },
+    {
+      "filename": "frame_03017_20250805_153522_159.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        53,
+        13,
+        126,
+        120
+      ],
+      "timestamp": "20250805_153522_159",
+      "crop_size": [
+        73,
+        107
+      ]
+    },
+    {
+      "filename": "frame_03017_20250805_153525_715.jpg",
+      "source_image": "frame_03017.jpg",
+      "class_id": 1,
+      "class_name": "Speed 80km/h",
+      "crop_coords": [
+        37,
+        9,
+        123,
+        121
+      ],
+      "timestamp": "20250805_153525_715",
+      "crop_size": [
+        86,
+        112
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153627_873.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        416,
+        49,
+        510,
+        172
+      ],
+      "timestamp": "20250805_153627_873",
+      "crop_size": [
+        94,
+        123
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153631_571.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        435,
+        56,
+        451,
+        129
+      ],
+      "timestamp": "20250805_153631_571",
+      "crop_size": [
+        16,
+        73
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153634_188.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        447,
+        67,
+        475,
+        165
+      ],
+      "timestamp": "20250805_153634_188",
+      "crop_size": [
+        28,
+        98
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153637_745.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        418,
+        49,
+        493,
+        206
+      ],
+      "timestamp": "20250805_153637_745",
+      "crop_size": [
+        75,
+        157
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153640_937.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        430,
+        57,
+        484,
+        181
+      ],
+      "timestamp": "20250805_153640_937",
+      "crop_size": [
+        54,
+        124
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153643_250.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        431,
+        65,
+        479,
+        182
+      ],
+      "timestamp": "20250805_153643_250",
+      "crop_size": [
+        48,
+        117
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153652_892.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        423,
+        53,
+        489,
+        187
+      ],
+      "timestamp": "20250805_153652_892",
+      "crop_size": [
+        66,
+        134
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153658_672.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        400,
+        52,
+        523,
+        195
+      ],
+      "timestamp": "20250805_153658_672",
+      "crop_size": [
+        123,
+        143
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153707_305.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        322,
+        30,
+        375,
+        138
+      ],
+      "timestamp": "20250805_153707_305",
+      "crop_size": [
+        53,
+        108
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153711_290.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        311,
+        20,
+        393,
+        205
+      ],
+      "timestamp": "20250805_153711_290",
+      "crop_size": [
+        82,
+        185
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153715_339.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        323,
+        37,
+        358,
+        126
+      ],
+      "timestamp": "20250805_153715_339",
+      "crop_size": [
+        35,
+        89
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153718_459.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        326,
+        51,
+        357,
+        122
+      ],
+      "timestamp": "20250805_153718_459",
+      "crop_size": [
+        31,
+        71
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153720_885.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        344,
+        45,
+        359,
+        127
+      ],
+      "timestamp": "20250805_153720_885",
+      "crop_size": [
+        15,
+        82
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153723_337.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        328,
+        48,
+        349,
+        120
+      ],
+      "timestamp": "20250805_153723_337",
+      "crop_size": [
+        21,
+        72
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153727_533.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        329,
+        51,
+        351,
+        114
+      ],
+      "timestamp": "20250805_153727_533",
+      "crop_size": [
+        22,
+        63
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153731_259.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        336,
+        54,
+        353,
+        123
+      ],
+      "timestamp": "20250805_153731_259",
+      "crop_size": [
+        17,
+        69
+      ]
+    },
+    {
+      "filename": "frame_06001_20250805_153734_131.jpg",
+      "source_image": "frame_06001.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        319,
+        41,
+        368,
+        134
+      ],
+      "timestamp": "20250805_153734_131",
+      "crop_size": [
+        49,
+        93
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153739_902.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        301,
+        12,
+        377,
+        145
+      ],
+      "timestamp": "20250805_153739_902",
+      "crop_size": [
+        76,
+        133
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153742_411.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        327,
+        47,
+        369,
+        125
+      ],
+      "timestamp": "20250805_153742_411",
+      "crop_size": [
+        42,
+        78
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153744_096.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        322,
+        45,
+        369,
+        139
+      ],
+      "timestamp": "20250805_153744_096",
+      "crop_size": [
+        47,
+        94
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153746_768.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        326,
+        45,
+        352,
+        124
+      ],
+      "timestamp": "20250805_153746_768",
+      "crop_size": [
+        26,
+        79
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153748_901.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        332,
+        47,
+        363,
+        124
+      ],
+      "timestamp": "20250805_153748_901",
+      "crop_size": [
+        31,
+        77
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153754_280.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        259,
+        44,
+        293,
+        102
+      ],
+      "timestamp": "20250805_153754_280",
+      "crop_size": [
+        34,
+        58
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153757_422.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        270,
+        46,
+        290,
+        98
+      ],
+      "timestamp": "20250805_153757_422",
+      "crop_size": [
+        20,
+        52
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153759_458.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        262,
+        46,
+        290,
+        98
+      ],
+      "timestamp": "20250805_153759_458",
+      "crop_size": [
+        28,
+        52
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153801_639.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        268,
+        49,
+        287,
+        97
+      ],
+      "timestamp": "20250805_153801_639",
+      "crop_size": [
+        19,
+        48
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153803_995.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        255,
+        40,
+        295,
+        113
+      ],
+      "timestamp": "20250805_153803_995",
+      "crop_size": [
+        40,
+        73
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153806_138.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        265,
+        45,
+        297,
+        140
+      ],
+      "timestamp": "20250805_153806_138",
+      "crop_size": [
+        32,
+        95
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153814_659.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        421,
+        62,
+        473,
+        165
+      ],
+      "timestamp": "20250805_153814_659",
+      "crop_size": [
+        52,
+        103
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153817_681.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        447,
+        69,
+        473,
+        165
+      ],
+      "timestamp": "20250805_153817_681",
+      "crop_size": [
+        26,
+        96
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153820_959.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        447,
+        68,
+        485,
+        169
+      ],
+      "timestamp": "20250805_153820_959",
+      "crop_size": [
+        38,
+        101
+      ]
+    },
+    {
+      "filename": "frame_06006_20250805_153825_707.jpg",
+      "source_image": "frame_06006.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        444,
+        69,
+        475,
+        168
+      ],
+      "timestamp": "20250805_153825_707",
+      "crop_size": [
+        31,
+        99
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153932_001.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        257,
+        38,
+        289,
+        106
+      ],
+      "timestamp": "20250805_153932_001",
+      "crop_size": [
+        32,
+        68
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153934_002.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        318,
+        41,
+        365,
+        131
+      ],
+      "timestamp": "20250805_153934_002",
+      "crop_size": [
+        47,
+        90
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153935_755.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        428,
+        54,
+        495,
+        198
+      ],
+      "timestamp": "20250805_153935_755",
+      "crop_size": [
+        67,
+        144
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153938_637.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        452,
+        72,
+        473,
+        169
+      ],
+      "timestamp": "20250805_153938_637",
+      "crop_size": [
+        21,
+        97
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153940_602.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        450,
+        70,
+        481,
+        168
+      ],
+      "timestamp": "20250805_153940_602",
+      "crop_size": [
+        31,
+        98
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153944_460.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        300,
+        55,
+        355,
+        123
+      ],
+      "timestamp": "20250805_153944_460",
+      "crop_size": [
+        55,
+        68
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153947_258.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        262,
+        44,
+        286,
+        107
+      ],
+      "timestamp": "20250805_153947_258",
+      "crop_size": [
+        24,
+        63
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153949_540.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        233,
+        36,
+        303,
+        108
+      ],
+      "timestamp": "20250805_153949_540",
+      "crop_size": [
+        70,
+        72
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153951_731.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        316,
+        50,
+        383,
+        129
+      ],
+      "timestamp": "20250805_153951_731",
+      "crop_size": [
+        67,
+        79
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153954_939.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        429,
+        63,
+        490,
+        180
+      ],
+      "timestamp": "20250805_153954_939",
+      "crop_size": [
+        61,
+        117
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_153958_632.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        451,
+        71,
+        474,
+        170
+      ],
+      "timestamp": "20250805_153958_632",
+      "crop_size": [
+        23,
+        99
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_154001_359.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        332,
+        53,
+        354,
+        123
+      ],
+      "timestamp": "20250805_154001_359",
+      "crop_size": [
+        22,
+        70
+      ]
+    },
+    {
+      "filename": "frame_06031_20250805_154004_253.jpg",
+      "source_image": "frame_06031.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        266,
+        51,
+        280,
+        100
+      ],
+      "timestamp": "20250805_154004_253",
+      "crop_size": [
+        14,
+        49
+      ]
+    },
+    {
+      "filename": "frame_06061_20250805_154023_598.jpg",
+      "source_image": "frame_06061.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        443,
+        68,
+        507,
+        173
+      ],
+      "timestamp": "20250805_154023_598",
+      "crop_size": [
+        64,
+        105
+      ]
+    },
+    {
+      "filename": "frame_06061_20250805_154026_500.jpg",
+      "source_image": "frame_06061.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        463,
+        73,
+        483,
+        173
+      ],
+      "timestamp": "20250805_154026_500",
+      "crop_size": [
+        20,
+        100
+      ]
+    },
+    {
+      "filename": "frame_06061_20250805_154028_754.jpg",
+      "source_image": "frame_06061.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        457,
+        64,
+        496,
+        167
+      ],
+      "timestamp": "20250805_154028_754",
+      "crop_size": [
+        39,
+        103
+      ]
+    },
+    {
+      "filename": "frame_06061_20250805_154030_598.jpg",
+      "source_image": "frame_06061.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        456,
+        63,
+        488,
+        174
+      ],
+      "timestamp": "20250805_154030_598",
+      "crop_size": [
+        32,
+        111
+      ]
+    },
+    {
+      "filename": "frame_06061_20250805_154032_035.jpg",
+      "source_image": "frame_06061.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        435,
+        50,
+        509,
+        179
+      ],
+      "timestamp": "20250805_154032_035",
+      "crop_size": [
+        74,
+        129
+      ]
+    },
+    {
+      "filename": "frame_06061_20250805_154033_710.jpg",
+      "source_image": "frame_06061.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        456,
+        66,
+        502,
+        186
+      ],
+      "timestamp": "20250805_154033_710",
+      "crop_size": [
+        46,
+        120
+      ]
+    },
+    {
+      "filename": "frame_06061_20250805_154035_755.jpg",
+      "source_image": "frame_06061.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        456,
+        66,
+        498,
+        172
+      ],
+      "timestamp": "20250805_154035_755",
+      "crop_size": [
+        42,
+        106
+      ]
+    },
+    {
+      "filename": "frame_06061_20250805_154037_919.jpg",
+      "source_image": "frame_06061.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        456,
+        71,
+        488,
+        174
+      ],
+      "timestamp": "20250805_154037_919",
+      "crop_size": [
+        32,
+        103
+      ]
+    },
+    {
+      "filename": "frame_06061_20250805_154039_776.jpg",
+      "source_image": "frame_06061.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        454,
+        66,
+        509,
+        186
+      ],
+      "timestamp": "20250805_154039_776",
+      "crop_size": [
+        55,
+        120
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154051_244.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        262,
+        44,
+        290,
+        111
+      ],
+      "timestamp": "20250805_154051_244",
+      "crop_size": [
+        28,
+        67
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154053_711.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        269,
+        49,
+        285,
+        100
+      ],
+      "timestamp": "20250805_154053_711",
+      "crop_size": [
+        16,
+        51
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154056_189.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        259,
+        39,
+        295,
+        85
+      ],
+      "timestamp": "20250805_154056_189",
+      "crop_size": [
+        36,
+        46
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154058_462.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        261,
+        53,
+        284,
+        103
+      ],
+      "timestamp": "20250805_154058_462",
+      "crop_size": [
+        23,
+        50
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154101_063.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        261,
+        47,
+        284,
+        100
+      ],
+      "timestamp": "20250805_154101_063",
+      "crop_size": [
+        23,
+        53
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154103_419.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        256,
+        38,
+        299,
+        112
+      ],
+      "timestamp": "20250805_154103_419",
+      "crop_size": [
+        43,
+        74
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154111_806.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        328,
+        48,
+        360,
+        131
+      ],
+      "timestamp": "20250805_154111_806",
+      "crop_size": [
+        32,
+        83
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154113_975.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        327,
+        51,
+        360,
+        131
+      ],
+      "timestamp": "20250805_154113_975",
+      "crop_size": [
+        33,
+        80
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154115_578.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        310,
+        44,
+        384,
+        135
+      ],
+      "timestamp": "20250805_154115_578",
+      "crop_size": [
+        74,
+        91
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154117_963.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        334,
+        54,
+        352,
+        123
+      ],
+      "timestamp": "20250805_154117_963",
+      "crop_size": [
+        18,
+        69
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154120_631.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        331,
+        52,
+        357,
+        122
+      ],
+      "timestamp": "20250805_154120_631",
+      "crop_size": [
+        26,
+        70
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154124_122.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        333,
+        64,
+        352,
+        110
+      ],
+      "timestamp": "20250805_154124_122",
+      "crop_size": [
+        19,
+        46
+      ]
+    },
+    {
+      "filename": "frame_06078_20250805_154129_078.jpg",
+      "source_image": "frame_06078.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        330,
+        59,
+        350,
+        119
+      ],
+      "timestamp": "20250805_154129_078",
+      "crop_size": [
+        20,
+        60
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154144_587.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        375,
+        52,
+        404,
+        100
+      ],
+      "timestamp": "20250805_154144_587",
+      "crop_size": [
+        29,
+        48
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154146_369.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        362,
+        47,
+        412,
+        102
+      ],
+      "timestamp": "20250805_154146_369",
+      "crop_size": [
+        50,
+        55
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154148_092.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        362,
+        47,
+        403,
+        99
+      ],
+      "timestamp": "20250805_154148_092",
+      "crop_size": [
+        41,
+        52
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154150_280.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        377,
+        48,
+        405,
+        100
+      ],
+      "timestamp": "20250805_154150_280",
+      "crop_size": [
+        28,
+        52
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154152_221.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        382,
+        49,
+        396,
+        94
+      ],
+      "timestamp": "20250805_154152_221",
+      "crop_size": [
+        14,
+        45
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154155_220.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        381,
+        46,
+        399,
+        111
+      ],
+      "timestamp": "20250805_154155_220",
+      "crop_size": [
+        18,
+        65
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154157_520.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 6,
+      "class_name": "Traffic Green",
+      "crop_coords": [
+        369,
+        43,
+        408,
+        106
+      ],
+      "timestamp": "20250805_154157_520",
+      "crop_size": [
+        39,
+        63
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154206_259.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        437,
+        22,
+        514,
+        121
+      ],
+      "timestamp": "20250805_154206_259",
+      "crop_size": [
+        77,
+        99
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154209_205.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        432,
+        26,
+        518,
+        119
+      ],
+      "timestamp": "20250805_154209_205",
+      "crop_size": [
+        86,
+        93
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154210_945.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        432,
+        23,
+        517,
+        119
+      ],
+      "timestamp": "20250805_154210_945",
+      "crop_size": [
+        85,
+        96
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154213_573.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        421,
+        23,
+        517,
+        96
+      ],
+      "timestamp": "20250805_154213_573",
+      "crop_size": [
+        96,
+        73
+      ]
+    },
+    {
+      "filename": "frame_07008_20250805_154215_504.jpg",
+      "source_image": "frame_07008.jpg",
+      "class_id": 5,
+      "class_name": "Crosswalk",
+      "crop_coords": [
+        425,
+        9,
+        517,
+        137
+      ],
+      "timestamp": "20250805_154215_504",
+      "crop_size": [
+        92,
+        128
+      ]
+    },
+    {
+      "filename": "frame_07027_20250805_154226_693.jpg",
+      "source_image": "frame_07027.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        376,
+        46,
+        402,
+        103
+      ],
+      "timestamp": "20250805_154226_693",
+      "crop_size": [
+        26,
+        57
+      ]
+    },
+    {
+      "filename": "frame_07027_20250805_154229_003.jpg",
+      "source_image": "frame_07027.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        369,
+        51,
+        404,
+        101
+      ],
+      "timestamp": "20250805_154229_003",
+      "crop_size": [
+        35,
+        50
+      ]
+    },
+    {
+      "filename": "frame_07027_20250805_154231_351.jpg",
+      "source_image": "frame_07027.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        376,
+        49,
+        398,
+        98
+      ],
+      "timestamp": "20250805_154231_351",
+      "crop_size": [
+        22,
+        49
+      ]
+    },
+    {
+      "filename": "frame_07027_20250805_154233_683.jpg",
+      "source_image": "frame_07027.jpg",
+      "class_id": 7,
+      "class_name": "Traffic Red",
+      "crop_coords": [
+        382,
+        48,
+        398,
+        98
+      ],
+      "timestamp": "20250805_154233_683",
+      "crop_size": [
+        16,
+        50
+      ]
+    },
+    {
+      "filename": "frame_07036_20250805_154246_007.jpg",
+      "source_image": "frame_07036.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        369,
+        41,
+        410,
+        109
+      ],
+      "timestamp": "20250805_154246_007",
+      "crop_size": [
+        41,
+        68
+      ]
+    },
+    {
+      "filename": "frame_07036_20250805_154248_179.jpg",
+      "source_image": "frame_07036.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        381,
+        49,
+        399,
+        100
+      ],
+      "timestamp": "20250805_154248_179",
+      "crop_size": [
+        18,
+        51
+      ]
+    },
+    {
+      "filename": "frame_07036_20250805_154251_231.jpg",
+      "source_image": "frame_07036.jpg",
+      "class_id": 8,
+      "class_name": "Traffic Yellow",
+      "crop_coords": [
+        381,
+        49,
+        395,
+        96
+      ],
+      "timestamp": "20250805_154251_231",
+      "crop_size": [
+        14,
+        47
+      ]
     }
   ],
   "session_info": [
@@ -25670,6 +27744,23 @@
         "9": 6
       },
       "images_processed": 1310
+    },
+    {
+      "timestamp": "2025-08-05T15:43:08.301712",
+      "total_crops": 122,
+      "crops_per_class": {
+        "0": 8,
+        "1": 7,
+        "2": 0,
+        "3": 0,
+        "4": 5,
+        "5": 21,
+        "6": 34,
+        "7": 23,
+        "8": 24,
+        "9": 0
+      },
+      "images_processed": 1333
     }
   ]
 }
